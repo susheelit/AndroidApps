@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/margin_150"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_5"
+        android:textSize="@dimen/text_18"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:text="Camera"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_5"
+        android:textSize="@dimen/text_18"
+        android:layout_margin="@dimen/margin_15"
+        android:text="Gallery"/>
+
+</LinearLayout>

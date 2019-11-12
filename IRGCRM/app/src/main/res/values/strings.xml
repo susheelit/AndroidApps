@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">IRG CRM</string>
+
+    <string name="dummy">Dummy</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="no_connection">No Connection</string>
+
+    <string name="change_password">Change Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="submit">Submit</string>
+    <string name="subject">Subject</string>
+    <string name="enter_email_id">Enter Email id</string>
+    <string name="user_id">User ID</string>
+    <string name="email_id">Email ID</string>
+    <string name="h_no_flat">House No</string>
+    <string name="locality">Locality</string>
+    <string name="landmark">Landmark</string>
+    <string name="m_city">City</string>
+    <string name="m_state">State</string>
+    <string name="m_pincode">Pincode</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="message">Message</string>
+    <string name="name">Name</string>
+    <string name="hint_enter_mobile_no">Enter Mobile No</string>
+    <string name="hint_enter_alter_mobile_no">Enter Alternative Mobile no</string>
+    <string name="your_email_id">Enter Email ID</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="pincode">Pincode</string>
+    <string name="locality_area_or_street">Enter Locality</string>
+    <string name="flat_no_building_name">Enter Flat no or Building no</string>
+    <string name="submit_request">Submit</string>
+    <string name="enter_member_id">Enter User ID</string>
+    <string name="shop_name">Shop Name</string>
+    <string name="owner_name">Owner Name</string>
+    <string name="Landline">Landline No.</string>
+    <string name="floor_no">Floor No</string>
+    <string name="shop_no">Shop No</string>
+    <string name="district">District</string>
+    <string name="house_no">House No</string>
+    <string name="shop_address">Shop Address</string>
+    <string name="basic_information">Basic Information</string>
+    <string name="welcome">Welcome</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="login">Login</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="totalamt">Total Amt.</string>
+    <string name="ok">OK</string>
+    <string name="pcs">PCS.</string>
+    <string name="cancel">Cancel</string>
+</resources>

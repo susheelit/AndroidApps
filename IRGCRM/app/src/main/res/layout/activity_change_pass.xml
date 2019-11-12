@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.ChangePassActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/layout_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout style="@style/main_layout">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabelStyle"
+                android:layout_marginTop="@dimen/margin_50"
+                app:hintTextAppearance="@style/TextHintSize"
+                app:passwordToggleEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etOldPass"
+                    style="@style/editTextStyle_2"
+                    android:hint="@string/new_password"
+                    android:inputType="textPassword"
+                    android:maxLength="15" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabelStyle"
+                app:hintTextAppearance="@style/TextHintSize"
+                app:passwordToggleEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etNewPass"
+                    style="@style/editTextStyle_2"
+                    android:hint="@string/confirm_password"
+                    android:inputType="textPassword"
+                    android:maxLength="15" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabelStyle"
+                app:hintTextAppearance="@style/TextHintSize"
+                app:passwordToggleEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etConfirmPass"
+                    style="@style/editTextStyle_2"
+                    android:hint="@string/confirm_password"
+                    android:inputType="textPassword"
+                    android:maxLength="15" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnChangePass"
+                style="@style/androidx.appcompat.widget.AppCompatButtonStyle"
+                android:text="@string/submit" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
+
+

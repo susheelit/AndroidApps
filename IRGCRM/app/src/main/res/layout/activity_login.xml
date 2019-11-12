@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBack"
+    android:orientation="vertical"
+    tools:context=".activities.LoginActivity">
+
+    <LinearLayout style="@style/form_layout">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView3"
+            style="@style/titleStyle"
+            android:layout_marginTop="@dimen/margin_50"
+            android:text="@string/welcome" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextLabelStyle"
+            app:hintTextAppearance="@style/TextHintSize"
+            android:layout_marginTop="@dimen/margin_30">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etUserId"
+                style="@style/editTextStyle_1"
+                android:hint="@string/enter_member_id"
+                android:inputType="textAutoComplete"
+                android:maxLength="20" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextLabelStyle"
+            app:hintTextAppearance="@style/TextHintSize"
+            app:passwordToggleEnabled="true">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPassword"
+                style="@style/editTextStyle_1"
+                android:hint="@string/enter_password"
+                android:inputType="textPassword"
+                android:maxLength="15" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/androidx.appcompat.widget.AppCompatButtonStyle"
+            android:id="@+id/btnLogin"
+            android:text="@string/login" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvForgetPassword"
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:text="@string/forget_password"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/margin_5"
+            android:textColor="@color/textColor" />
+
+       <!-- <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNewMember"
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/new_member"
+            android:textColor="@color/textColor" />
+-->
+    </LinearLayout>
+
+</LinearLayout>

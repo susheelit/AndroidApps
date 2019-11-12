@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for androidx.appcompat.widget.AppCompatButton bars depending on the API level.
+         ?android:attr/androidx.appcompat.widget.AppCompatButtonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="androidx.appcompat.widget.AppCompatButtonBarContainerTheme">
+        <attr name="metaandroidx.appcompat.widget.AppCompatButtonBarStyle" format="reference" />
+        <attr name="metaandroidx.appcompat.widget.AppCompatButtonBarandroidx.appcompat.widget.AppCompatButtonStyle" format="reference" />
+    </declare-styleable>
+
+</resources>

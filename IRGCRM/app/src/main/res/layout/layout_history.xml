@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_5"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivImg"
+            android:layout_width="@dimen/margin_80"
+            android:layout_height="@dimen/margin_80"
+            android:padding="@dimen/margin_5"
+            android:layout_gravity="center"
+            android:src="@drawable/app_logo"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_5"
+            android:orientation="vertical"
+            android:layout_gravity="end">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvShopname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text="Swaroopa Sweets"
+                    android:maxLines="1"
+                    android:textSize="@dimen/text_18"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_red"/>
+            <!-- Owner name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="@dimen/margin_90"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text="Owner"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="@dimen/margin_15"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text=":" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOwnername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text="Susheel Kumar"
+                    android:maxLines="1"
+                    android:textColor="@color/color_green"/>
+
+            </LinearLayout>
+
+            <!-- order date-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="@dimen/margin_90"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text="Order Date"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="@dimen/margin_15"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text=":" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOrderDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text="12/03/2019"
+                    android:maxLines="1"
+                    android:textColor="@color/color_green"/>
+
+            </LinearLayout>
+
+
+            <!-- Order Status-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="@dimen/margin_90"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text="Order Status"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="@dimen/margin_15"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text=":" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOrderStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text="Delivered"
+                    android:maxLines="1"
+                    android:textColor="@color/color_green"/>
+
+            </LinearLayout>
+
+            <!-- Total Item-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="@dimen/margin_90"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text="Total Item"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="@dimen/margin_15"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text=":" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTotalItem"
+                    android:layout_width="@dimen/margin_50"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text="100"
+                    android:textSize="@dimen/text_18"
+                    android:maxLines="1"
+                    android:textColor="@color/color_green"/>
+
+
+            </LinearLayout>
+
+            <!-- Payment Status-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="@dimen/margin_90"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text="Amount"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="@dimen/margin_15"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text=":" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10000"
+                    android:drawableLeft="@drawable/ic_rupee"
+                    android:maxLines="1"
+                    android:padding="@dimen/margin_5"
+                    android:textSize="@dimen/text_18"
+                    android:textColor="#3498db"/>
+
+            </LinearLayout>
+
+            <!-- Payment Status-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="@dimen/margin_90"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text="Payment"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="@dimen/margin_15"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text=":" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPaymentStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text="Pending"
+                    android:maxLines="1"
+                    android:textColor="@color/color_green"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
