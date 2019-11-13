@@ -7,7 +7,6 @@
     android:orientation="vertical"
     tools:context=".activities.ProductListActivity">
 
-
     <include
         android:id="@+id/include"
         layout="@layout/layout_toolbar" />
@@ -54,12 +53,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:textSize="@dimen/text_20"
-                android:padding="@dimen/margin_5"
-                android:text="sdvvvn"
                 android:layout_toRightOf="@+id/tvTotal"
+                android:drawableLeft="@drawable/ic_rupee_w"
+                android:padding="@dimen/margin_5"
                 android:textColor="@color/colorWhite"
-                android:drawableLeft="@drawable/ic_rupee_w" />
+                android:textSize="@dimen/text_20" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnNext"

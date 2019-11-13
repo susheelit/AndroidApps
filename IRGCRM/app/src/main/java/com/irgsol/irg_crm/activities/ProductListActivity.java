@@ -9,6 +9,10 @@ import android.view.View;
 import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.irgsol.irg_crm.MyDB.CartItems;
+import com.irgsol.irg_crm.MyDB.Database;
 import com.irgsol.irg_crm.R;
 import com.irgsol.irg_crm.adapters.AdapterProductList;
 import com.irgsol.irg_crm.common.OprActivity;
@@ -33,6 +37,8 @@ public class ProductListActivity extends AppCompatActivity {
     public static TextView tvTotalAmt;
     public static androidx.appcompat.widget.AppCompatButton btnNext;
 
+    Database myDB;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +58,8 @@ public class ProductListActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         tvTotalAmt = findViewById(R.id.tvTotalAmt);
         btnNext = findViewById(R.id.btnNext);
+
+        myDB = Database.getInstance(this);
         setupDasboard();
     }
 
@@ -109,8 +117,8 @@ public class ProductListActivity extends AppCompatActivity {
         // ontext change qty
         userInput.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+            public void beforeTextChanged(CharSequence s, int start, int count1, int after) {
+              //  Toast.makeText(context, "beforeTextChanged", Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -128,7 +136,7 @@ public class ProductListActivity extends AppCompatActivity {
                     String qty = userInput.getText().toString();
                     String amt = modelProductList.getPrice().toString();
                     totalAmt.setText(""+ totalAmt(qty, amt));
-                  //  Toast.makeText(context, ""+ totalAmt(qty, amt), Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, ""+ qty, Toast.LENGTH_LONG).show();
                 } else {
                     count = 0;
                 }
@@ -136,7 +144,7 @@ public class ProductListActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
+               // Toast.makeText(context, "afterTextChanged", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -145,6 +153,12 @@ public class ProductListActivity extends AppCompatActivity {
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                CartItems cartItems= new CartItems(0, modelProductList.getItemImg(),
+                        modelProductList.getTitle(), userInput.getText().toString(), modelProductList.getPrice());
+
+                myDB.cartItemsDao().insertCartItem(cartItems);
+                showTotalAmt();
                 dialog.dismiss();
             }
         });
@@ -157,6 +171,21 @@ public class ProductListActivity extends AppCompatActivity {
         });
 
         dialog.show();
+
+    }
+
+    private void showTotalAmt() {
+
+        int totalItm=1;
+        double totalAmt =0;
+        List<CartItems> getTotalAmt= myDB.cartItemsDao().getCartItems();
+        for(int i=0;i<getTotalAmt.size();i++){
+            String amt = getTotalAmt.get(i).getPrice();
+            totalAmt = totalAmt+ Double.parseDouble(amt);
+        }
+
+        tvTotalAmt.setText(""+totalAmt+"  ("+totalItm+")");
+
 
     }
 

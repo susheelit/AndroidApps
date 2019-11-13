@@ -4,8 +4,17 @@ public class ModelProductList {
 
     private int itemImg;
     private String title;
-    private String  qty;
+    private String qty;
     private String price;
+    private int itemId;
+
+    public int getItemId() {
+        return itemId;
+    }
+
+    public void setItemId(int itemId) {
+        this.itemId = itemId;
+    }
 
     public int getItemImg() {
         return itemImg;

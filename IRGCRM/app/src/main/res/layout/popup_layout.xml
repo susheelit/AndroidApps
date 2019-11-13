@@ -63,6 +63,7 @@
             android:background="@drawable/popup_edittext_shape"
             android:inputType="numberDecimal"
             android:gravity="center"
+            android:enabled="false"
             android:drawableLeft="@drawable/ic_rupee"
             android:layout_marginRight="@dimen/margin_10"
             android:layout_weight="2"
