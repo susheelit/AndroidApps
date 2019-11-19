@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.PlaceOrderActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/layout_toolbar" />
+
+        <LinearLayout style="@style/main_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Payable Amount" />
+
+                <TextView
+                   style="@style/dot_style"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etTotalItem"
+                    style="@style/editTextStyle_2"
+                    android:text="12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Payable Amount" />
+
+                <TextView
+                    style="@style/dot_style"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etTotalAmt"
+                    style="@style/editTextStyle_2"
+                    android:drawableLeft="@drawable/ic_rupee"
+                    android:text="1230" />
+
+            </LinearLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabelStyle"
+                app:hintTextAppearance="@style/TextHintSize">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etContactPerson"
+                    style="@style/editTextStyle_2"
+                    android:hint="@string/contact_person"
+                    android:inputType="textPersonName"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabelStyle"
+                app:hintTextAppearance="@style/TextHintSize">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etMobileNo"
+                    style="@style/editTextStyle_2"
+                    android:hint="@string/mobile_no"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Payment Mode" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbCash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="CASH"/>
+
+                <RadioButton
+                    android:id="@+id/rbCradit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:text="CRADIT"/>
+
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                style="@style/androidx.appcompat.widget.AppCompatButtonStyle"
+                android:text="@string/submit" />
+
+        </LinearLayout>
+
+</LinearLayout>
+
+

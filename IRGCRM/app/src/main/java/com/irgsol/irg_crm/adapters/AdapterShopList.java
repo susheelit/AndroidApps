@@ -1,7 +1,7 @@
 package com.irgsol.irg_crm.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
-import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,11 +10,13 @@ import android.widget.TextView;
 import com.irgsol.irg_crm.R;
 import com.irgsol.irg_crm.activities.ProductListActivity;
 import com.irgsol.irg_crm.common.OprActivity;
+import com.irgsol.irg_crm.common.SharedPref;
 import com.irgsol.irg_crm.models.ModelShopList;
+import com.irgsol.irg_crm.utils.Config;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -35,7 +37,8 @@ public class AdapterShopList extends RecyclerView.Adapter<AdapterShopList.MyView
         return myViewHolder;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+  //  @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @SuppressLint("NewApi")
     @Override
     public void onBindViewHolder(AdapterShopList.MyViewHolder holder, final int position) {
 
@@ -57,6 +60,7 @@ public class AdapterShopList extends RecyclerView.Adapter<AdapterShopList.MyView
             @Override
             public void onClick(View v) {
                 // gotoActivity(cosition);
+                SharedPref.putSharedPreferences(context, "shopId", ""+shopId);
                 OprActivity.openActivity(context, new ProductListActivity());
             }
         });

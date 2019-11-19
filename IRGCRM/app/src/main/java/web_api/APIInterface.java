@@ -27,8 +27,7 @@ public interface APIInterface {
 //    @POST("/api/users?")
 //    Call<UserList> doCreateUserWithField(@Field("name") String name, @Field("job") String job);
 
-
     @GET("/api/userLogin.php?")
-    Call<ModelUser> userLogin(@Field("Email_id") String email_id, @Field("Password")String password);
+    Call<ModelUser> userLogin(@Query("email_id") String email_id, @Query("password") String password);
 
 }

@@ -7,23 +7,29 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.irgsol.irg_crm.R;
-import com.irgsol.irg_crm.activities.ProductListActivity;
-import com.irgsol.irg_crm.models.ModelProductList;
-import java.util.ArrayList;
-import java.util.List;
 
 import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.irgsol.irg_crm.MyDB.CartItems;
+import com.irgsol.irg_crm.MyDB.Database;
+import com.irgsol.irg_crm.R;
+import com.irgsol.irg_crm.activities.ProductListActivity;
+import com.irgsol.irg_crm.common.SharedPref;
+import com.irgsol.irg_crm.dao.CartItemsDao;
+import com.irgsol.irg_crm.utils.Config;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class AdapterProductList extends RecyclerView.Adapter<AdapterProductList.MyViewHolder> {
 
-    List<ModelProductList> modelProductListArrayList = new ArrayList<ModelProductList>();
+    List<CartItems> modelProductListArrayList = new ArrayList<CartItems>();
     Context context;
     private ProductListActivity mAct;
 
-    public AdapterProductList(Context context, List<ModelProductList> modelProductList) {
+    public AdapterProductList(Context context, List<CartItems> modelProductList) {
         this.context = context;
         this.modelProductListArrayList = modelProductList;
         this.mAct = (ProductListActivity)context;
@@ -40,7 +46,7 @@ public class AdapterProductList extends RecyclerView.Adapter<AdapterProductList.
     @Override
     public void onBindViewHolder(AdapterProductList.MyViewHolder holder, final int position) {
 
-        final ModelProductList modelProductList = modelProductListArrayList.get(position);
+        final CartItems modelProductList = modelProductListArrayList.get(position);
 
         final String pName = modelProductList.getTitle();
         final String price = modelProductList.getPrice();
@@ -52,13 +58,21 @@ public class AdapterProductList extends RecyclerView.Adapter<AdapterProductList.
         // OprImage.setImageWithUrl(imgUrl, holder.ivServiceImg, context);
 
         holder.tvProductNam.setText(pName);
-        holder.tvPrice.setText("Rs." + price);
-        holder.tvQty.setText("Qty:" + qty);
+        holder.tvPrice.setText(""+price);
+        holder.tvQty.setText(""+qty);
         holder.btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // open cart dialog
-                mAct.addItemDialog(modelProductList);
+                Database myDb = Database.getInstance(context);
+                String shopId = SharedPref.getSharedPreferences(context, "shopId","");
+                List<CartItems>cartItems = myDb.cartItemsDao().checkCartItem(modelProductList.getProdId(), shopId);
+
+                if(cartItems.size()>0){
+                    Config.alertBox("Item is already added ", context);
+                }else {
+                    mAct.addItemDialog(modelProductList);
+                }
             }
         });
 

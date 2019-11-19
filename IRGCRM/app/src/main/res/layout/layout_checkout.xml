@@ -30,7 +30,7 @@
                 android:id="@+id/ll1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toLeftOf="@id/btnAdd"
+                android:layout_toLeftOf="@id/btnDelete"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
@@ -45,21 +45,19 @@
                     android:textSize="@dimen/text_16"
                     android:text="Product"/>
 
-
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="@dimen/margin_40"
+                        android:layout_width="@dimen/margin_50"
                         android:layout_height="wrap_content"
                         android:maxLines="1"
                         android:text="QTY" />
+
                     <androidx.appcompat.widget.AppCompatTextView
-                        style="@style/dot_style"
-                        />
+                        style="@style/dot_style" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/tvQty"
@@ -76,7 +74,7 @@
                     android:orientation="horizontal">
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="@dimen/margin_40"
+                        android:layout_width="@dimen/margin_50"
                         android:layout_height="wrap_content"
                         android:maxLines="1"
                         android:gravity="center_vertical"
@@ -95,17 +93,41 @@
                         android:text="100"/>
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="@dimen/margin_50"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:gravity="center_vertical"
+                        android:text="Total"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/dot_style" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTotalAmt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:drawableLeft="@drawable/ic_rupee"
+                        android:gravity="center_vertical"
+                        android:text="100"/>
+                </LinearLayout>
 
 
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnAdd"
-                android:layout_width="@dimen/margin_60"
+                android:id="@+id/btnDelete"
+                android:layout_width="@dimen/margin_80"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-               android:layout_centerInParent="true"
-                android:text="ADD" />
+                android:layout_centerInParent="true"
+                android:text="DELETE" />
 
         </RelativeLayout>
     </LinearLayout>

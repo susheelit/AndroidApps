@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.PlaceOrderActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/layout_toolbar" />
+
+    <LinearLayout style="@style/main_layout">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/editTextStyle_2"
+                android:gravity="center"
+                android:textSize="@dimen/text_22"
+                android:textStyle="bold"
+                android:text="Thank you for shopping with us." />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOrderNo"
+                style="@style/editTextStyle_2"
+                android:textSize="@dimen/text_22"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Order No. is : 01234" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnContinue"
+            style="@style/androidx.appcompat.widget.AppCompatButtonStyle"
+            android:text="@string/continue_shopping" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

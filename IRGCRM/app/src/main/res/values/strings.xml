@@ -50,4 +50,8 @@
     <string name="ok">OK</string>
     <string name="pcs">PCS.</string>
     <string name="cancel">Cancel</string>
+    <string name="contact_person">Contact Person</string>
+    <string name="place_order">Place Order</string>
+    <string name="mobile_no">Mobile No.</string>
+    <string name="continue_shopping">Continue Shopping</string>
 </resources>

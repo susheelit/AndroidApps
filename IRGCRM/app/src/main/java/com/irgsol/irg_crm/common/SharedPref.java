@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 
 public class SharedPref {
 
-    public static String preferences = "pref_CARE";
+    public static String preferences = "pref_irg_crm";
 
     public static void putSharedPreferences(Context context, String key, String value) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(preferences, Context.MODE_PRIVATE);

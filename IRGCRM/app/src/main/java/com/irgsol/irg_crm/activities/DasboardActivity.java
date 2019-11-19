@@ -8,6 +8,8 @@ import com.irgsol.irg_crm.R;
 import com.irgsol.irg_crm.adapters.AdapterDasboard;
 import com.irgsol.irg_crm.common.OprActivity;
 import com.irgsol.irg_crm.models.ModelDasboard;
+import com.irgsol.irg_crm.utils.Config;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,4 +64,9 @@ public class DasboardActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
+    @Override
+    public void onBackPressed() {
+       // super.onBackPressed();
+        Config.alertClose("Do you want to close", context);
+    }
 }

@@ -13,20 +13,14 @@ public abstract class Database extends RoomDatabase {
     private static final String db_name = "irg_crmDB";
     private static Database instance;
 
-
     public static synchronized Database getInstance(Context context){
 
         if(instance == null) {
-
-          /*  instance = Room.databaseBuilder(context.getApplicationContext(), Database.class, db_name)
-                    .fallbackToDestructiveMigration()
-                    .build();*/
 
             instance = Room.databaseBuilder(context.getApplicationContext(),
                     Database.class, db_name)
                     .allowMainThreadQueries()
                     .build();
-
 
         }
         return instance;

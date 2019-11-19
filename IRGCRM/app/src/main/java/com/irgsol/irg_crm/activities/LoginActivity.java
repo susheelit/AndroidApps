@@ -2,11 +2,21 @@ package com.irgsol.irg_crm.activities;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
+
 import com.irgsol.irg_crm.R;
+import com.irgsol.irg_crm.models.ModelUser;
 import com.irgsol.irg_crm.utils.Config;
 import androidx.appcompat.app.AppCompatActivity;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import web_api.APIClient;
+import web_api.APIInterface;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -45,37 +55,41 @@ public class LoginActivity extends AppCompatActivity {
         }else if(password.compareTo("")==0){
             Config.alertBox("Please enter password", context);
         }else {
-          //  attemptLogin(userId, password);
+            attemptLogin(userId, password);
         }
     }
 
-    /*private void attemptLogin(String userId, String password) {
+    private void attemptLogin(String userId, String password) {
+        APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
 
-        Call<UserList> call2 = apiInterface.doGetUserList("2");
-        call2.enqueue(new Callback<UserList>() {
+        Call<ModelUser> call2 = apiInterface.userLogin(userId, password);
+        call2.enqueue(new Callback<ModelUser>() {
             @Override
-            public void onResponse(Call<UserList> call, Response<UserList> response) {
+            public void onResponse(Call<ModelUser> call, Response<ModelUser> response) {
 
-                UserList userList = response.body();
+                Log.e("response ", ""+response);
+/*
+                ModelUser userList = response.body();
                 Integer text = userList.page;
                 Integer total = userList.total;
                 Integer totalPages = userList.totalPages;
-                List<UserList.Datum> datumList = userList.data;
+                List<ModelUser.Datum> datumList = userList.data;
                 Toast.makeText(getApplicationContext(), text + " page\n" + total + " total\n" + totalPages + " totalPages\n", Toast.LENGTH_SHORT).show();
 
-                for (UserList.Datum datum : datumList) {
+                for (ModelUser.Datum datum : datumList) {
                     Toast.makeText(getApplicationContext(), "id : " + datum.id + " name: " + datum.first_name + " " + datum.last_name + " avatar: " + datum.avatar, Toast.LENGTH_SHORT).show();
-                }
+                }*/
 
 
             }
 
             @Override
-            public void onFailure(Call<UserList> call, Throwable t) {
-                call.cancel();
+            public void onFailure(Call<ModelUser> call, Throwable t) {
+                Log.e("response 2", ""+call.toString());
             }
+
         });
-    }*/
+    }
 
     @Override
     public void onBackPressed() {

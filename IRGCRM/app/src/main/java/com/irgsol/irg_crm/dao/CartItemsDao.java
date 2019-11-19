@@ -13,8 +13,11 @@ import java.util.List;
 @Dao
 public interface CartItemsDao {
 
-    @Query("SELECT * FROM CartItems")
-    List<CartItems> getCartItems();
+    @Query("SELECT * FROM CartItems where prodId = :prodId AND shopId = :shopId")
+    List<CartItems> checkCartItem(int prodId, String shopId);
+
+    @Query("SELECT * FROM CartItems where shopId = :shopId")
+    List<CartItems> getCartItem(String shopId);
 
     @Insert
     void insertCartItem(CartItems cartItems);

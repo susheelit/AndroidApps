@@ -22,14 +22,19 @@ public class CartItems {
     @ColumnInfo(name = "price")
     private String price;
 
-    public CartItems() { }
+    @ColumnInfo(name = "shopId")
+    private String shopId;
 
-    public CartItems(int id, int itemImg, String title, String qty, String price) {
-        Id = id;
+    @ColumnInfo(name = "prodId")
+    private int prodId;
+
+    public CartItems(int prodId, int itemImg, String title, String qty, String price, String shopId) {
+        this.prodId = prodId;
         this.itemImg = itemImg;
         this.title = title;
         this.qty = qty;
         this.price = price;
+        this.shopId = shopId;
     }
 
     public int getId() {
@@ -38,6 +43,14 @@ public class CartItems {
 
     public void setId(int id) {
         Id = id;
+    }
+
+    public int getProdId() {
+        return prodId;
+    }
+
+    public void setProdId(int prodId) {
+        this.prodId = prodId;
     }
 
     public int getItemImg() {
@@ -70,5 +83,13 @@ public class CartItems {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getShopId() {
+        return shopId;
+    }
+
+    public void setShopId(String shopId) {
+        this.shopId = shopId;
     }
 }
