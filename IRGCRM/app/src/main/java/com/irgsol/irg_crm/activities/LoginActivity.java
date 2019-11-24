@@ -7,10 +7,15 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.TypeAdapter;
 import com.irgsol.irg_crm.R;
 import com.irgsol.irg_crm.models.ModelUser;
 import com.irgsol.irg_crm.utils.Config;
+
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.io.IOException;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -46,48 +51,45 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void validate() {
-        String userId="", password="";
+        String userId = "", password = "";
         userId = etUserId.getText().toString();
         password = etPassword.getText().toString();
 
-        if(userId.compareTo("")==0){
+        if (userId.compareTo("") == 0) {
             Config.alertBox("Please enter user name", context);
-        }else if(password.compareTo("")==0){
+        } else if (password.compareTo("") == 0) {
             Config.alertBox("Please enter password", context);
-        }else {
+        } else {
             attemptLogin(userId, password);
         }
     }
 
     private void attemptLogin(String userId, String password) {
-        APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
 
-        Call<ModelUser> call2 = apiInterface.userLogin(userId, password);
-        call2.enqueue(new Callback<ModelUser>() {
+        APIInterface service = APIClient.getClient().create(APIInterface.class);
+        Call<ModelUser> result = service.userLogin(userId, password);
+        result.enqueue(new Callback<ModelUser>() {
+
             @Override
             public void onResponse(Call<ModelUser> call, Response<ModelUser> response) {
 
-                Log.e("response ", ""+response);
-/*
+                String didItWork = String.valueOf(response.isSuccessful());
+                Log.e("response 1", didItWork);
+
+                Log.e("response 2", "" + response.message());
+                Log.e("response 3", "" + response.raw());
                 ModelUser userList = response.body();
-                Integer text = userList.page;
-                Integer total = userList.total;
-                Integer totalPages = userList.totalPages;
-                List<ModelUser.Datum> datumList = userList.data;
-                Toast.makeText(getApplicationContext(), text + " page\n" + total + " total\n" + totalPages + " totalPages\n", Toast.LENGTH_SHORT).show();
+                String ss = userList.getEmailId();
 
-                for (ModelUser.Datum datum : datumList) {
-                    Toast.makeText(getApplicationContext(), "id : " + datum.id + " name: " + datum.first_name + " " + datum.last_name + " avatar: " + datum.avatar, Toast.LENGTH_SHORT).show();
-                }*/
-
+                Log.e("response 4", "" + response.body().toString());
+                Log.e("response 5", "" + ss);
 
             }
 
             @Override
             public void onFailure(Call<ModelUser> call, Throwable t) {
-                Log.e("response 2", ""+call.toString());
+                t.printStackTrace();
             }
-
         });
     }
 
