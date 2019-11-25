@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.AddShopActivity_2">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/layout_toolbar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout style="@style/main_layout">
+
+
+            <!--House No-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabelStyle"
+                app:hintTextAppearance="@style/TextHintSize">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/ethouseno"
+                    style="@style/editTextStyle_2"
+                    android:hint="@string/house_no"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Shop No-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabelStyle"
+                app:hintTextAppearance="@style/TextHintSize">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etShopno"
+                    style="@style/editTextStyle_2"
+                    android:hint="@string/shop_no"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Floor No-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabelStyle"
+                app:hintTextAppearance="@style/TextHintSize">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etFloor_no"
+                    style="@style/editTextStyle_2"
+                    android:hint="@string/floor_no"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Street name-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabelStyle"
+                app:hintTextAppearance="@style/TextHintSize">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etStreet_name"
+                    style="@style/editTextStyle_2"
+                    android:hint="@string/flat_no_building_name"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--landmark-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabelStyle"
+                app:hintTextAppearance="@style/TextHintSize">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etLandmark"
+                    style="@style/editTextStyle_2"
+                    android:hint="@string/landmark"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--City name-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabelStyle"
+                app:hintTextAppearance="@style/TextHintSize">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etCity"
+                    style="@style/editTextStyle_2"
+                    android:focusable="false"
+                    android:hint="@string/city"
+                    android:inputType="text"
+                    android:longClickable="false" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--District Name-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabelStyle"
+                app:hintTextAppearance="@style/TextHintSize">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etDistrict"
+                    style="@style/editTextStyle_2"
+                    android:focusable="false"
+                    android:hint="@string/district"
+                    android:inputType="textPersonName"
+                    android:longClickable="false" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--State name-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabelStyle"
+                app:hintTextAppearance="@style/TextHintSize">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etState"
+                    style="@style/editTextStyle_2"
+                    android:focusable="false"
+                    android:hint="@string/state"
+                    android:inputType="textPersonName"
+                    android:longClickable="false" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Pincode-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabelStyle"
+                app:hintTextAppearance="@style/TextHintSize">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etPincode"
+                    style="@style/editTextStyle_2"
+                    android:hint="@string/pincode"
+                    android:inputType="number"
+                    android:maxLength="6" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmit"
+        style="@style/androidx.appcompat.widget.AppCompatButtonStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin_20"
+        android:text="@string/submit_request" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
