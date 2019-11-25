@@ -7,19 +7,27 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
 import com.irgsol.irg_crm.R;
 import com.irgsol.irg_crm.models.ModelUser;
 import com.irgsol.irg_crm.utils.Config;
+import com.irgsol.irg_crm.utils.MySingleton;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 
 import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Response;
 import web_api.APIClient;
 import web_api.APIInterface;
 
@@ -66,31 +74,30 @@ public class LoginActivity extends AppCompatActivity {
 
     private void attemptLogin(String userId, String password) {
 
-        APIInterface service = APIClient.getClient().create(APIInterface.class);
-        Call<ModelUser> result = service.userLogin(userId, password);
-        result.enqueue(new Callback<ModelUser>() {
-
+        // String apiUrl= Config.baseUrl+"userLogin.php?email_id="+userId+"&password="+password;
+        String apiUrl = "http://192.168.0.105/irg_crm/api/userLogin.php?&email_id=test%40test.com&password=12345";
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, apiUrl, new Response.Listener<String>() {
             @Override
-            public void onResponse(Call<ModelUser> call, Response<ModelUser> response) {
+            public void onResponse(String response) {
+                Log.e("response", response);
 
-                String didItWork = String.valueOf(response.isSuccessful());
-                Log.e("response 1", didItWork);
 
-                Log.e("response 2", "" + response.message());
-                Log.e("response 3", "" + response.raw());
-                ModelUser userList = response.body();
-                String ss = userList.getEmailId();
-
-                Log.e("response 4", "" + response.body().toString());
-                Log.e("response 5", "" + ss);
 
             }
-
+        }, new Response.ErrorListener() {
             @Override
-            public void onFailure(Call<ModelUser> call, Throwable t) {
-                t.printStackTrace();
+            public void onErrorResponse(VolleyError error) {
+                Log.e("response", error.toString());
+
             }
         });
+
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                100000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+        MySingleton.getInstance(context).addToRequestQueue(stringRequest);
     }
 
     @Override

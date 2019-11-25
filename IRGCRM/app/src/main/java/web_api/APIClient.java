@@ -13,8 +13,8 @@ public class APIClient {
     //http://localhost/irg_crm/api/userLogin.php?email_id=test@test.com&password=12345
     //http://192.168.0.100/irg_crm/api/userLogin.php?email_id=test@test.com&password=123456
 
-   // private static final String baseUrl="http://10.0.2.2/irg_crm/";
-   private static final String baseUrl="http://192.168.0.103/irg_crm/";
+  //  private static final String baseUrl="http://10.0.2.2/irg_crm/";
+   private static final String baseUrl="http://192.168.0.105/irg_crm/";
     public static Retrofit getClient() {
 
         Retrofit retrofit = new Retrofit.Builder()

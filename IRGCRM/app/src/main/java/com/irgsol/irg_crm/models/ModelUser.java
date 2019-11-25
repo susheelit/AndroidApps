@@ -1,146 +1,61 @@
 package com.irgsol.irg_crm.models;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
 public class ModelUser {
 
-    @SerializedName("reg_id")
-    @Expose
-    private String regId;
-    @SerializedName("user_name")
-    @Expose
-    private String userName;
-    @SerializedName("mobile_no")
-    @Expose
-    private String mobileNo;
-    @SerializedName("alt_mobile_no")
-    @Expose
-    private String altMobileNo;
-    @SerializedName("email_id")
-    @Expose
-    private String emailId;
-    @SerializedName("house_no")
-    @Expose
-    private String houseNo;
-    @SerializedName("locality")
-    @Expose
-    private String locality;
-    @SerializedName("landmark")
-    @Expose
-    private String landmark;
-    @SerializedName("city")
-    @Expose
-    private String city;
-    @SerializedName("state")
-    @Expose
-    private String state;
-    @SerializedName("pincode")
-    @Expose
-    private String pincode;
-    @SerializedName("user_image")
-    @Expose
-    private String userImage;
-    @SerializedName("password")
-    @Expose
+    private String reg_id;
+    private String user_name;
+    private String mobile_no;
+    private String alt_mobile_no;
+    private String email_id;
+    private String user_image;
     private String password;
 
-    private final static long serialVersionUID = -4767201598746981330L;
-
-    public String getRegId() {
-        return regId;
+    public String getReg_id() {
+        return reg_id;
     }
 
-    public void setRegId(String regId) {
-        this.regId = regId;
+    public void setReg_id(String reg_id) {
+        this.reg_id = reg_id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUser_name() {
+        return user_name;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 
-    public String getMobileNo() {
-        return mobileNo;
+    public String getMobile_no() {
+        return mobile_no;
     }
 
-    public void setMobileNo(String mobileNo) {
-        this.mobileNo = mobileNo;
+    public void setMobile_no(String mobile_no) {
+        this.mobile_no = mobile_no;
     }
 
-    public String getAltMobileNo() {
-        return altMobileNo;
+    public String getAlt_mobile_no() {
+        return alt_mobile_no;
     }
 
-    public void setAltMobileNo(String altMobileNo) {
-        this.altMobileNo = altMobileNo;
+    public void setAlt_mobile_no(String alt_mobile_no) {
+        this.alt_mobile_no = alt_mobile_no;
     }
 
-    public String getEmailId() {
-        return emailId;
+    public String getEmail_id() {
+        return email_id;
     }
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setEmail_id(String email_id) {
+        this.email_id = email_id;
     }
 
-    public String getHouseNo() {
-        return houseNo;
+    public String getUser_image() {
+        return user_image;
     }
 
-    public void setHouseNo(String houseNo) {
-        this.houseNo = houseNo;
-    }
-
-    public String getLocality() {
-        return locality;
-    }
-
-    public void setLocality(String locality) {
-        this.locality = locality;
-    }
-
-    public String getLandmark() {
-        return landmark;
-    }
-
-    public void setLandmark(String landmark) {
-        this.landmark = landmark;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public String getPincode() {
-        return pincode;
-    }
-
-    public void setPincode(String pincode) {
-        this.pincode = pincode;
-    }
-
-    public String getUserImage() {
-        return userImage;
-    }
-
-    public void setUserImage(String userImage) {
-        this.userImage = userImage;
+    public void setUser_image(String user_image) {
+        this.user_image = user_image;
     }
 
     public String getPassword() {

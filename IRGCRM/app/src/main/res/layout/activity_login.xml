@@ -19,13 +19,14 @@
         <com.google.android.material.textfield.TextInputLayout
             style="@style/TextLabelStyle"
             app:hintTextAppearance="@style/TextHintSize"
-            android:layout_marginTop="@dimen/margin_30">
+            android:layout_marginTop="@dimen/margin_60">
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/etUserId"
                 style="@style/editTextStyle_1"
                 android:hint="@string/enter_member_id"
                 android:inputType="textAutoComplete"
+                android:text="test@test.com"
                 android:maxLength="20" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -40,6 +41,7 @@
                 style="@style/editTextStyle_1"
                 android:hint="@string/enter_password"
                 android:inputType="textPassword"
+                android:text="12345"
                 android:maxLength="15" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -49,14 +51,14 @@
             android:id="@+id/btnLogin"
             android:text="@string/login" />
 
-        <androidx.appcompat.widget.AppCompatTextView
+      <!--  <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvForgetPassword"
             style="@style/textViewStyle"
             android:layout_width="wrap_content"
             android:text="@string/forget_password"
             android:layout_gravity="end"
             android:layout_marginTop="@dimen/margin_5"
-            android:textColor="@color/textColor" />
+            android:textColor="@color/textColor" />-->
 
        <!-- <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvNewMember"
