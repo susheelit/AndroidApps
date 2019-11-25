@@ -15,12 +15,15 @@ import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
 import com.irgsol.irg_crm.R;
+import com.irgsol.irg_crm.common.OprActivity;
+import com.irgsol.irg_crm.common.SharedPref;
 import com.irgsol.irg_crm.models.ModelUser;
 import com.irgsol.irg_crm.utils.Config;
 import com.irgsol.irg_crm.utils.MySingleton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -34,7 +37,7 @@ import web_api.APIInterface;
 public class LoginActivity extends AppCompatActivity {
 
     private androidx.appcompat.widget.AppCompatButton btnLogin;
-    Context context;
+    static Context context;
     private EditText etUserId, etPassword;
 
     @Override
@@ -68,11 +71,11 @@ public class LoginActivity extends AppCompatActivity {
         } else if (password.compareTo("") == 0) {
             Config.alertBox("Please enter password", context);
         } else {
-            attemptLogin(userId, password);
+            attemptLogin(context, userId, password);
         }
     }
 
-    private void attemptLogin(String userId, String password) {
+    public static void attemptLogin( final Context context, String userId, String password) {
 
         // String apiUrl= Config.baseUrl+"userLogin.php?email_id="+userId+"&password="+password;
         String apiUrl = "http://192.168.0.105/irg_crm/api/userLogin.php?&email_id=test%40test.com&password=12345";
@@ -81,7 +84,28 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(String response) {
                 Log.e("response", response);
 
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
 
+                    String resultCode = jsonObject.getString("ResultCode");
+                    Config.toastShow(jsonObject.getString("Message"), context);
+                    if (resultCode.equalsIgnoreCase("1")){
+                        JSONArray jsonArray= jsonObject.getJSONArray("Data");
+                        JSONObject jsonObject1 = jsonArray.getJSONObject(0);
+
+                        SharedPref.putRegId(context, jsonObject1.getString("reg_id"));
+                        SharedPref.putUserName(context, jsonObject1.getString("user_name"));
+                        SharedPref.putMobileNo(context, jsonObject1.getString("mobile_no"));
+                        SharedPref.putAltmobileno(context, jsonObject1.getString("alt_mobile_no"));
+                        SharedPref.putEmailId(context, jsonObject1.getString("email_id"));
+                        SharedPref.putUserImage(context, jsonObject1.getString("user_image"));
+                        SharedPref.putPassword(context, jsonObject1.getString("password"));
+
+                        OprActivity.finishAllOpenNewActivity(context, new DasboardActivityNew());
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
             }
         }, new Response.ErrorListener() {

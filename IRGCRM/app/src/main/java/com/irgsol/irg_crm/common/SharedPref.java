@@ -27,16 +27,20 @@ public class SharedPref {
         editor.commit();
     }
 
-    public static void putMemberName(Context context, String memberID) {
-        putSharedPreferences(context, "MemberName", memberID);
+    public static void putRegId(Context context, String reg_id) {
+        putSharedPreferences(context, "reg_id", reg_id);
     }
 
-    public static String getMemberName(Context context) {
-        return getSharedPreferences(context, "MemberName", "");
+    public static String getRegId(Context context) {
+        return getSharedPreferences(context, "reg_id", "");
     }
 
-    public static void putMemberID(Context context, String memberID) {
-        putSharedPreferences(context, "MemberID", memberID);
+    public static void putUserName(Context context, String user_name) {
+        putSharedPreferences(context, "user_name", user_name);
+    }
+
+    public static String getUserName(Context context) {
+        return getSharedPreferences(context, "user_name", "");
     }
 
     public static void putPassword(Context context, String password) {
@@ -45,11 +49,6 @@ public class SharedPref {
 
     public static String getPassword(Context context) {
         return getSharedPreferences(context, "Password", "");
-    }
-
-
-    public static String getMemberID(Context context) {
-        return getSharedPreferences(context, "MemberID", "");
     }
 
     public static void putUserID(Context context, String userID) {
@@ -68,38 +67,30 @@ public class SharedPref {
         return getSharedPreferences(context, "MobileNo", "");
     }
 
-    public static void putIsShow(Context context, String isAllService) {
-        putSharedPreferences(context, "ServiceList", isAllService);
+    public static void putAltmobileno(Context context, String alt_mobile_no) {
+        putSharedPreferences(context, "alt_mobile_no", alt_mobile_no);
     }
 
-    public static String getIsShow(Context context) {
-        return getSharedPreferences(context, "ServiceList", "");
-    }
-
-
-    public static void putMemberPackageID(Context context, String MemberPackageID) {
-        putSharedPreferences(context, "MemberPackageID", MemberPackageID);
-    }
-
-    public static String getMemberPackageID(Context context) {
-        return getSharedPreferences(context, "MemberPackageID", "");
-    }
-
-    public static void putreferralcode(Context context, String referralcode) {
-        putSharedPreferences(context, "referralcode", referralcode);
-    }
-
-    public static String getreferralcode(Context context) {
-        return getSharedPreferences(context, "referralcode", "");
+    public static String getAltmobileno(Context context) {
+        return getSharedPreferences(context, "alt_mobile_no", "");
     }
 
 
-    public static void putAddService(Context context, String isAdd ) {
-        putSharedPreferences(context, "AddService", isAdd);
+    public static void putEmailId(Context context, String email_id) {
+        putSharedPreferences(context, "email_id", email_id);
     }
 
-    public static String getAddService(Context context) {
-        return getSharedPreferences(context, "AddService", "");
+    public static String getEmailId(Context context) {
+        return getSharedPreferences(context, "email_id", "");
+    }
+
+
+    public static void putUserImage(Context context, String user_image ) {
+        putSharedPreferences(context, "user_image", user_image);
+    }
+
+    public static String getUserImage(Context context) {
+        return getSharedPreferences(context, "user_image", "");
     }
 
 }

@@ -11,14 +11,17 @@
     <application
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning"
         tools:targetApi="n">
-
-        <activity android:name=".activities.WelcomeActivity"/>
+        <activity
+            android:name=".activities.DasboardActivityNew"
+            android:label="@string/title_activity_dasboard_new"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".activities.WelcomeActivity" />
         <activity android:name=".activities.PlaceOrderActivity" />
         <activity android:name=".activities.CheckoutActivity" />
         <activity
@@ -32,7 +35,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".activities.DasboardActivity" />
         <activity android:name=".activities.ChangePassActivity" />
         <activity android:name=".activities.LoginActivity" />
@@ -44,7 +46,6 @@
         <activity android:name=".activities.HistoryActivity" />
         <activity android:name=".activities.AddShopActivity_2" />
         <activity android:name=".activities.ShopListActivity" />
-
     </application>
 
 </manifest>

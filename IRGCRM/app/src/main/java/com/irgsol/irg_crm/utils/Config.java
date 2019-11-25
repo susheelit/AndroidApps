@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.irgsol.irg_crm.R;
+import com.irgsol.irg_crm.activities.DasboardActivity;
 import com.irgsol.irg_crm.activities.LoginActivity;
 import com.irgsol.irg_crm.common.OprActivity;
 import com.irgsol.irg_crm.common.SharedPref;
@@ -149,9 +150,7 @@ public class Config {
     }
 
     public static void logoutUser(Context context) {
-        String memberId = SharedPref.getMemberID(context);
         SharedPref.clearSharedPreferences(context);
-        //SharedPref.putMemberID(context, memberId);
         OprActivity.finishAllOpenNewActivity(context, new LoginActivity());
 
     }

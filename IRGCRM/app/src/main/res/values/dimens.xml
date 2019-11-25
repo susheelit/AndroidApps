@@ -5,8 +5,7 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">160dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
-    <dimen name="design_navigation_icon_size"
-        tools:override="true">32dp</dimen>
+    <dimen name="design_navigation_icon_size" tools:override="true">32dp</dimen>
 
     <dimen name="margin_1">1dp</dimen>
     <dimen name="margin_2">2dp</dimen>
@@ -39,7 +38,6 @@
     <dimen name="text_22">22sp</dimen>
     <dimen name="text_25">25sp</dimen>
     <dimen name="text_30">30sp</dimen>
-
 
 
     <dimen name="pin_content_layout_padding">40dp</dimen>
