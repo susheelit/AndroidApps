@@ -1,28 +1,3 @@
-<!-- <resources xmlns:tools="http://schemas.android.com/tools">
-
-    &lt;!&ndash; Base application theme. &ndash;&gt;
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        &lt;!&ndash; Customize your theme here. &ndash;&gt;
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
-    <style name="FullscreenTheme" parent="AppTheme">
-        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
-        <item name="android:windowActionBarOverlay">true</item>
-        <item name="android:windowBackground">@null</item>
-        <item name="metaandroidx.appcompat.widget.AppCompatButtonBarStyle">?android:attr/androidx.appcompat.widget.AppCompatButtonBarStyle</item>
-        <item name="metaandroidx.appcompat.widget.AppCompatButtonBarandroidx.appcompat.widget.AppCompatButtonStyle">?android:attr/androidx.appcompat.widget.AppCompatButtonBarandroidx.appcompat.widget.AppCompatButtonStyle</item>
-    </style>
-
-    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/black_overlay</item>
-    </style>
-
-</resources> -->
-
-
 <resources>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -190,8 +165,17 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">@dimen/text_22</item>
         <item name="android:textColor">@color/colorBlack</item>
+    </style>
 
+    <style name="RippleStyleWhite">
+        <item name="mrl_rippleOverlay">true</item>
+        <item name="mrl_rippleColor">#80FFFFFF</item>
+        <item name="mrl_rippleHover">true</item>
+        <item name="mrl_rippleAlpha">0.2</item>
+    </style>
 
+    <style name="RippleStyleBlack" parent="RippleStyleWhite">
+        <item name="mrl_rippleColor">#8096989A</item>
     </style>
 
 </resources>

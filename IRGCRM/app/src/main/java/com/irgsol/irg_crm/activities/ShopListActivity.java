@@ -32,14 +32,14 @@ public class ShopListActivity extends AppCompatActivity {
 
     private void initView() {
         context = ShopListActivity.this;
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         OprActivity.setUpToolbarWithTitle(toolbar, "Our Shops",context );
 
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 
-        llEmptyView = (LinearLayout) findViewById(R.id.llEmptyView);
+        llEmptyView = findViewById(R.id.llEmptyView);
         setupDasboard();
     }
 

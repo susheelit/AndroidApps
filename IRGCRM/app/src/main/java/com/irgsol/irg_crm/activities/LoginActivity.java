@@ -5,19 +5,15 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.google.gson.Gson;
-import com.google.gson.TypeAdapter;
 import com.irgsol.irg_crm.R;
 import com.irgsol.irg_crm.common.OprActivity;
 import com.irgsol.irg_crm.common.SharedPref;
-import com.irgsol.irg_crm.models.ModelUser;
 import com.irgsol.irg_crm.utils.Config;
 import com.irgsol.irg_crm.utils.MySingleton;
 
@@ -26,13 +22,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.IOException;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import web_api.APIClient;
-import web_api.APIInterface;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -101,7 +90,7 @@ public class LoginActivity extends AppCompatActivity {
                         SharedPref.putUserImage(context, jsonObject1.getString("user_image"));
                         SharedPref.putPassword(context, jsonObject1.getString("password"));
 
-                        OprActivity.finishAllOpenNewActivity(context, new DasboardActivityNew());
+                        OprActivity.finishAllOpenNewActivity(context, new DasboardNewActivity());
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

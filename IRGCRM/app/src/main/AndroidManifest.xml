@@ -17,10 +17,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning"
         tools:targetApi="n">
-        <activity
-            android:name=".activities.DasboardActivityNew"
-            android:label="@string/title_activity_dasboard_new"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".activities.DasboardNewActivity"></activity>
         <activity android:name=".activities.WelcomeActivity" />
         <activity android:name=".activities.PlaceOrderActivity" />
         <activity android:name=".activities.CheckoutActivity" />

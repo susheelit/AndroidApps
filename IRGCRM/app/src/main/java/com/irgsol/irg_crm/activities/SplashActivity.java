@@ -7,8 +7,8 @@ import android.os.Handler;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
+
 import com.irgsol.irg_crm.R;
-import com.irgsol.irg_crm.common.SharedPref;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -37,16 +37,16 @@ public class SplashActivity extends AppCompatActivity {
 
     private void openDasboard() {
 
-       /* new Handler().postDelayed(new Runnable() {
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                final Intent mainIntent = new Intent(SplashActivity.this, LoginActivity.class);
+                final Intent mainIntent = new Intent(SplashActivity.this, DasboardNewActivity.class);
                 SplashActivity.this.startActivity(mainIntent);
                 SplashActivity.this.finish();
             }
-        }, 3000);*/
+        }, 1000);
 
-       LoginActivity.attemptLogin(context, SharedPref.getUserID(context), SharedPref.getPassword(context));
+     //  LoginActivity.attemptLogin(context, SharedPref.getUserID(context), SharedPref.getPassword(context));
 
 
     }
