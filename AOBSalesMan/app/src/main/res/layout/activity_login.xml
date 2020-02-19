@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activities.activities.SplashActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:background="#f4f4f4"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background=" #f4f4f4"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimaryLight"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
+            <TextView
+                android:id="@+id/main_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:text="Log In"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rewrite your Destiny"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:layout_marginBottom="20dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary" />
+
+
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:elevation="800dp"
+            android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_mlarge">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email ID"
+                    android:textAlignment="center"
+                    android:textSize="15sp"
+                    android:textColor="#383838" />
+
+
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:textSize="14sp"
+                    android:padding="11dp"
+                    android:maxLength="100"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:id="@+id/email_id"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:background="@drawable/et_background"
+                    android:layout_height="45dp" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textAlignment="center"
+                    android:textSize="15sp"
+                    android:textColor="#383838" />
+
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:padding="11dp"
+                    android:maxLength="100"
+                    android:maxLines="1"
+                    android:textSize="14sp"
+                    android:id="@+id/password"
+                    android:inputType="textPassword"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:background="@drawable/et_background"
+                    android:layout_height="45dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_medium" />
+
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:elevation="5dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/btn_rounded_primary"
+                android:text="Log In"
+                android:textAllCaps="false"
+                android:textStyle="normal"
+                android:textColor="@android:color/white"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_large" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/grey_40" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Forgot Your Password?"
+                    android:textAlignment="center"
+                    android:id="@+id/forgot_password"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorPrimary" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:gravity="center"
+            android:elevation="4dp"
+            android:background="@drawable/btn_rounded_primary"
+            android:text="Not a Member? Join Now"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:textAllCaps="false"
+            android:layout_marginTop="30dp"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&#169; 2019 "
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:textColor="@color/colorPrimary" />
+            <TextView
+                android:id="@+id/webside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="aobindia.com"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:textColor="@color/colorPrimaryLight"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=", All rights reserved |"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:textColor="@color/colorPrimary" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Privacy Policy"
+                android:id="@+id/privacy"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:textColor="@color/colorPrimaryLight" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+   </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_sale"
+        android:padding="24dp"
+        style="@style/Drawer.Custom.Dark"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/sel_image"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="-4dp"
+        android:layout_marginRight="-4dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/btn_rounded_primary"
+        android:text="Select Image"
+        android:textAllCaps="false"
+        android:enabled="true"
+        android:textSize="22dp"
+        android:textColor="@android:color/white"
+        />
+    <Button
+   android:id="@+id/sel_pdf"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:layout_marginLeft="-4dp"
+    android:layout_marginRight="-4dp"
+    android:layout_margin="16dp"
+    android:background="@drawable/btn_rounded_primary"
+    android:text="Open Camera"
+    android:textAllCaps="false"
+    android:enabled="true"
+    android:textSize="22dp"
+    android:textColor="@android:color/white"
+    />
+</LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

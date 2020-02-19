@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="social_images">
+    <item>@drawable/ic_location</item>
+    <item>@drawable/ic_location</item>
+    <item>@drawable/ic_location</item>
+    <item>@drawable/ic_location</item>
+    <item>@drawable/ic_location</item>
+    <item>@drawable/ic_location</item>
+    <item>@drawable/ic_location</item>
+    <item>@drawable/ic_location</item>
+    <item>@drawable/ic_location</item>
+
+
+</integer-array>
+    <integer-array name="persion_images">
+        <item>@drawable/profile</item>
+        <item>@drawable/profile</item>
+        <item>@drawable/profile</item>
+        <item>@drawable/profile</item>
+        <item>@drawable/profile</item>
+        <item>@drawable/profile</item>
+        <item>@drawable/profile</item>
+        <item>@drawable/profile</item>
+        <item>@drawable/profile</item>
+
+
+
+    </integer-array>
+    <string-array name="social_names">
+    <item>Delhi</item>
+    <item>Noida</item>
+    <item>Aligarh</item>
+    <item>Kanpur</item>
+    <item>Mombai</item>
+    <item>Panjab</item>
+    <item>chennai</item>
+    <item>Jaipur</item>
+    <item>Gungaon</item>
+    </string-array>
+    <string-array name="person_names">
+        <item>Dhruv</item>
+        <item>Dheeraj</item>
+        <item>Abhijeet</item>
+        <item>yash</item>
+        <item>Sager</item>
+        <item>Pulkit</item>
+        <item>Amit</item>
+        <item>Mukesh</item>
+        <item>Akash</item>
+    </string-array>
+
+
+
+</resources>

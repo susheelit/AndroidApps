@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbar"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@id/appbar">
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:id="@+id/bottom"
+            android:background="@color/colorlabel"
+            android:orientation="vertical"
+            android:elevation="10dp"
+            >
+            <com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/RippleStyleBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:clickable="true"
+                    android:background="@color/colorWhite"
+                    android:id="@+id/DSR_name"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="DSR Report(Name based)"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/colorSecondary"/>
+
+                </LinearLayout>
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+            <com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/RippleStyleBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/DSR_project"
+                    android:clickable="true"
+                    android:padding="10dp"
+                    android:background="@drawable/color_selector"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="DSR Report(Project based)"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/colorSecondary"/>
+
+                </LinearLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+            <com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/RippleStyleBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:background="@drawable/color_selector"
+                    android:id="@+id/visit"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Visit Summary"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/colorSecondary"/>
+
+
+                </LinearLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+            <com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/RippleStyleBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:background="@drawable/color_selector"
+                    android:id="@+id/logs"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Logs"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/colorSecondary"/>
+
+
+                </LinearLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/DSR_report_project"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:visibility="gone"
+                android:paddingTop="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Project Name"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/grey_80" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_mlarge" />
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView_project_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:inputType="text|textCapSentences"
+                    android:maxLength="100"
+                    android:maxLines="3"
+                    android:hint="Enter Project Name"
+                    android:visibility="visible"
+                    android:layout_gravity="center_horizontal"
+                    android:theme="@style/EditText.Grey"
+                    android:ems="10" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Employee Name"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/grey_80" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_mlarge" />
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView_employee_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:hint="Enter Employee Name"
+                    android:inputType="text|textCapSentences"
+                    android:maxLength="100"
+                    android:maxLines="3"
+                    android:visibility="visible"
+                    android:layout_gravity="center_horizontal"
+                    android:theme="@style/EditText.Grey"
+                    android:ems="10" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/grey_80" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_mlarge" />
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView_location1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:hint="Enter Location"
+                    android:inputType="text|textCapSentences"
+                    android:maxLength="100"
+                    android:maxLines="3"
+                    android:visibility="visible"
+                    android:layout_gravity="center_horizontal" android:theme="@style/EditText.Grey"
+                    android:ems="10" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/grey_80" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_mlarge" />
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:hint="Enter Date"
+                    android:inputType="text|textCapSentences"
+                    android:maxLength="100"
+                    android:maxLines="3"
+                    android:visibility="visible"
+                    android:layout_gravity="center_horizontal" android:theme="@style/EditText.Grey"
+                    android:ems="10" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date Upto"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/grey_80" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_mlarge" />
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView_date_upto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:hint="Enter date Upto"
+                    android:inputType="text|textCapSentences"
+                    android:maxLength="100"
+                    android:maxLines="3"
+                    android:visibility="visible"
+                    android:layout_gravity="center_horizontal" android:theme="@style/EditText.Grey"
+                    android:ems="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/DSR_report_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:visibility="visible"
+                android:paddingTop="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/grey_80" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_mlarge" />
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:inputType="text|textCapSentences"
+                    android:maxLength="100"
+                    android:maxLines="3"
+                    android:hint="Enter Name"
+                    android:visibility="visible"
+                    android:layout_gravity="center_horizontal"
+                    android:theme="@style/EditText.Grey"
+                    android:ems="10" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/grey_80" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_mlarge" />
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:hint="Enter Location"
+                    android:inputType="text|textCapSentences"
+                    android:maxLength="100"
+                    android:maxLines="3"
+                    android:visibility="visible"
+                    android:layout_gravity="center_horizontal"
+                    android:theme="@style/EditText.Grey"
+                    android:ems="10" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/grey_80" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_mlarge" />
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:hint="Enter Date"
+                    android:inputType="text|textCapSentences"
+                    android:maxLength="100"
+                    android:maxLines="3"
+                    android:visibility="visible"
+                    android:layout_gravity="center_horizontal" android:theme="@style/EditText.Grey"
+                    android:ems="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Visit_summary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:visibility="gone"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/grey_80" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_mlarge" />
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView_location_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:hint="Enter Location"
+                    android:inputType="text|textCapSentences"
+                    android:maxLength="100"
+                    android:maxLines="3"
+                    android:visibility="visible"
+                    android:layout_gravity="center_horizontal"
+                    android:theme="@style/EditText.Grey"
+                    android:ems="10" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date Form*"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/grey_80" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_mlarge" />
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView_summary_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:hint="Enter Date"
+                    android:inputType="text|textCapSentences"
+                    android:maxLength="100"
+                    android:maxLines="3"
+                    android:visibility="visible"
+                    android:layout_gravity="center_horizontal"
+                    android:theme="@style/EditText.Grey"
+                    android:ems="10" />
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:background="@color/colorWhite"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:textSize="16dp"
+            android:textColor="@color/colorBlack"
+            android:text="Clear Filter"
+            />
+        <TextView
+            android:id="@+id/Apply"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:background="@color/colorPrimary"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:textSize="16dp"
+            android:textColor="@color/colorWhite"
+            android:text="Apply"
+            />
+    </LinearLayout>
+</RelativeLayout>

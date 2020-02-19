@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "873907168862",
+    "firebase_url": "https://spoton-f205d.firebaseio.com",
+    "project_id": "spoton-f205d",
+    "storage_bucket": "spoton-f205d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:873907168862:android:b8d6e8d2d915c89d",
+        "android_client_info": {
+          "package_name": "com.aob.salestracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "873907168862-7d7r9goqma35mi97kemkdtv1f6i0ivub.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aob.salestracker",
+            "certificate_hash": "71a18ab5b000930ae9f3a357275d10101ffde919"
+          }
+        },
+        {
+          "client_id": "873907168862-h6vd38g02lal8lgh58cn45hn18o1re1l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPJRi-YvEtir1kacyqibeo-4yirzh_Z9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "873907168862-h6vd38g02lal8lgh58cn45hn18o1re1l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

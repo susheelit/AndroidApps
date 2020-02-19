@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">SpotOn</string>
+    <string name="update_text">A new version on Google play store will be download and installed.</string>
+    <string name="title_activity_autocomplete_support">AutocompleteSupportActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo1">TODO</string>
+    <string name="aob_salesman_download">AOB SalesMan \n DownLoad</string>
+
+    <string name="place_api_key">AIzaSyB2ddOWpo8Cq3NJfVYl_gKkkt8B-skgOOE</string>
+
+    <string name="host_name">https://aobindia.in</string>
+    <string name="host_name1">https://aobindia.com</string>
+
+    <string name="download">AOB Salesman Downloads</string>
+
+
+    <string name="tab_Location">Location</string>
+    <string name="tab_Project">Project</string>
+
+
+</resources>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frame_allprojects"
+    tools:context=".activities.Fragements.FragmentAllProjects">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_linear"
+        android:orientation="vertical"
+        >
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_fragall"
+            android:layout_below="@id/image"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="5dp"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentBottom="true">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/RippleStyleBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear_register"
+                android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:id="@+id/tv_register_status"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="40% Registration Complete"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimary" />
+
+
+
+            <ProgressBar
+                android:id="@+id/progressBarHorizontal"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:indeterminate="false"
+                android:progress="40"
+                android:progressBackgroundTint="@android:color/darker_gray"
+                android:progressTint="@color/colorPrimary" />
+            </LinearLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="8dp" />
+
+    <com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/RippleStyleBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/kyc_linear">
+
+        <com.kofigyan.stateprogressbar.StateProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:spb_maxStateNumber="three"
+            android:layout_marginBottom="15dp"
+            app:spb_stateDescriptionSize="12sp"
+            app:spb_descriptionTopSpaceIncrementer="3dp"
+            app:spb_stateTextSize="12sp"
+            android:id="@+id/state_progress"
+            app:spb_stateBackgroundColor="#BDBDBD"
+            app:spb_stateForegroundColor="@color/colorPrimary"
+            app:spb_stateNumberBackgroundColor="#808080"
+            app:spb_stateNumberForegroundColor="#eeeeee"
+            app:spb_currentStateDescriptionColor="@color/colorPrimary"
+            app:spb_stateDescriptionColor="@color/colorPrimary"
+            app:spb_checkStateCompleted="true"/>
+    </LinearLayout>
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+</LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingTop="@dimen/spacing_middle"
+                android:paddingLeft="@dimen/spacing_middle"
+                android:paddingRight="@dimen/spacing_middle"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/et_background"
+                    android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/search_box"
+                android:layout_width="0dp"
+                android:background="@android:color/transparent"
+                android:layout_weight="0.9"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:padding="8dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:hint="Search" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:visibility="visible"
+                        android:layout_height="20dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/searchicon" />
+
+                </LinearLayout>
+
+                <com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    style="@style/RippleStyleBlack"
+                    android:layout_width="0dp"
+                    android:visibility="gone"
+                    android:layout_weight="0.14"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/sort_image"
+                        android:layout_width="50dp"
+                        android:visibility="gone"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="3dp"
+                        android:padding="8dp"
+                        android:src="@drawable/sort_icon" />
+
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    style="@style/RippleStyleBlack"
+                    android:layout_width="0dp"
+                    android:visibility="gone"
+                    android:layout_weight="0.14"
+                    android:layout_marginRight="3dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/filter_image"
+                        android:layout_width="45dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="3dp"
+                        android:visibility="gone"
+                        android:padding="8dp"
+                        android:src="@drawable/round_filter_list_white_48"/>
+
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        <!--<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swiperefresh_all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">-->
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swiperefresh_allprojects"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_no_data_lead"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Apply to your favourite projects"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:visibility="invisible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_all"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:scrollbars="none"
+                android:scrollingCache="true" />
+
+<!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+        </FrameLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

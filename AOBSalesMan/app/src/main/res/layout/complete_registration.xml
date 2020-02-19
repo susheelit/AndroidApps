@@ -1,0 +1,1731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grey_3"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimaryLight"
+                android:padding="13dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:id="@+id/back_image"
+                    android:padding="8dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/outline_keyboard_backspace_white_48"
+                    />
+
+
+                <TextView
+                    android:id="@+id/main_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:text="Hi Vishal"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+
+
+            </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:id="@+id/head_city"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"
+                android:text="City *"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:id="@+id/city_error"
+                android:visibility="gone"
+                android:textSize="14dp"
+                android:textColor="@color/red_A400"
+                android:text="(Please select)"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_size"
+                    android:id="@+id/city1"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:text="Delhi/NCR" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_size"
+                    android:id="@+id/city2"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:text="Mumbai" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:id="@+id/city3"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+                    android:text="Navi Mumbai" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:id="@+id/city4"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+                    android:text="Ajmer"
+                   />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:id="@+id/city5"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+
+                    android:text="Amritsar"/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/city6"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+
+                    android:text="Bhopal"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:id="@+id/city7"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+
+                    android:text="Banaras"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_size"
+                    android:id="@+id/city8"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+
+                    android:text="Chandigarh"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:id="@+id/city9"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+
+                    android:text="Dehradun"/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:id="@+id/city10"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+
+                    android:text="Indore"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:id="@+id/city11"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+
+                    android:text="Jaipur"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_size"
+                    android:id="@+id/city12"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+
+                    android:text="Karnal"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/city13"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+
+                    android:text="Kanpur"/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/city14"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+
+                    android:text="Kota"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/city15"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+
+                    android:text="Lucknow"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:id="@+id/city16"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+                    android:text="Ludhiana"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:id="@+id/city17"
+                    android:textSize="@dimen/button_size"
+                    android:text="Pune" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:id="@+id/city18"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+                    android:text="Sonipat" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:id="@+id/city19"
+                    android:textSize="@dimen/button_size"
+                    android:text="Thane" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:textAllCaps="false"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:id="@+id/city21"
+                    android:textSize="@dimen/button_size"
+                    android:text="Others" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/city_other"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:padding="11dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="1dp"
+                    android:inputType="textCapSentences"
+                    android:maxLength="100"
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    android:background="@drawable/et_background"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your city here" />
+
+            </LinearLayout>
+
+</LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:id="@+id/head_age"
+                android:textSize="18dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Age *"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:id="@+id/age_error"
+                android:visibility="gone"
+                android:textSize="14dp"
+                android:textColor="@color/red_A400"
+                android:text="(Please select)"/>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+
+
+
+            <LinearLayout
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_bg"
+                android:elevation="1dp"
+                >
+                <com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    style="@style/RippleStyleBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:id="@+id/age"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="0.1"
+                            android:layout_marginRight="5dp"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/age_icon"
+                                />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="0.8"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:textColor="@color/colorlabel"
+                                android:text="My Age is"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="11sp"
+                                android:textColor="@color/colorlabel"
+                                android:id="@+id/tv_age"
+                                android:text="Click To Fill"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="0.1"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:src="@drawable/outline_navigate_next_black_48"
+                                android:layout_gravity="center_vertical" />
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:id="@+id/head_gender"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"
+                android:text="Gender *"/>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:id="@+id/gender_error"
+                android:visibility="gone"
+                android:textSize="14dp"
+                android:textColor="@color/red_A400"
+                android:text="(Please select)"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btn_male"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.5"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_size"
+                    android:background="@drawable/btn_bg"
+                    android:text="Male" />
+
+
+                <TextView
+                    android:id="@+id/btn_female"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.5"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_size"
+                    android:background="@drawable/btn_bg"
+                    android:text="Female" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:textSize="18dp"
+                android:textAllCaps="false"
+                android:id="@+id/head_vehicle"
+                android:textColor="@color/colorPrimary"
+                android:text="Do You Own A Vehicle? *"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:id="@+id/vehicle_error"
+                android:visibility="gone"
+                android:textSize="14dp"
+                android:textColor="@color/red_A400"
+                android:text="(Please select)"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:id="@+id/btn_2wheeler"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.5"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_size"
+                    android:background="@drawable/btn_bg"
+                    android:text="2 Wheeler" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/btn_4wheeler"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_size"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/btn_bg"
+                    android:text="4 Wheeler" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/btn_novehicle"
+                    android:layout_weight="0.5"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_size"
+                    android:background="@drawable/btn_bg"
+                    android:text="No Vehicle" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:id="@+id/head_qual"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"
+                android:text="Qualification *"/>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:id="@+id/qual_error"
+                android:focusable="true"
+                android:visibility="gone"
+                android:textSize="14dp"
+                android:textColor="@color/red_A400"
+                android:text="(Please select)"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/spacing_large"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/button_size"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/qual1"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:text="Intermediate" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:id="@+id/qual2"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+                    android:text="Graduate" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:background="@drawable/btn_bg"
+                    android:id="@+id/qual3"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+                    android:text="Post Graduate" />
+
+            </LinearLayout>
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp">
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:padding="10dp"
+                  android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Highest Qualification"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack" />
+
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:padding="11dp"
+                android:maxLength="100"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:inputType="textCapSentences"
+                android:id="@+id/highest_qualification"
+                android:hint="Enter your highest qualification"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:background="@drawable/et_background"
+                android:layout_height="wrap_content" />
+
+              </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+
+            <TextView
+                android:id="@+id/head_fresher"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:text="I am Fresher/Experienced *"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:id="@+id/fresher_error"
+                android:visibility="gone"
+                android:textSize="14dp"
+                android:textColor="@color/red_A400"
+                android:text="(Please select)"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:id="@+id/btn_fresher"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+                    android:textAllCaps="false"
+                    android:text="Fresher" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:id="@+id/btn_experience"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="5dp"
+                    android:text="Experienced" />
+
+            </LinearLayout>
+
+
+       <!--     <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_password"
+                android:layout_width="match_parent"
+                android:padding="8dp"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/input_password"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:hint="Industry Of Interest"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>-->
+
+        <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+            android:id="@+id/experience_full"
+            android:visibility="gone"
+    android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:textSize="18dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="5dp"
+                android:id="@+id/head_experience_years"
+                android:text="No. Of Years Of Experience *"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:id="@+id/experience_years_error"
+                android:visibility="gone"
+                android:textSize="14dp"
+                android:textColor="@color/red_A400"
+                android:text="(Please select)"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+                    android:id="@+id/exp1"
+                    android:text="Below 6 Months" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+                    android:id="@+id/exp2"
+                    android:text="6 Months-1 Year" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/button_size"
+                    android:id="@+id/exp3"
+                    android:text="1-2 Years" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:id="@+id/exp4"
+                    android:textSize="@dimen/button_size"
+                    android:text="2-5 Years" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="1dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:text="Above 5 Years"
+                    android:textSize="@dimen/button_size"
+                    android:id="@+id/exp5"
+                    android:visibility="visible" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:layout_weight="0.5"
+                    android:visibility="invisible" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:id="@+id/head_industry"
+                android:textColor="@color/colorPrimary"
+
+                android:textSize="18dp"
+                android:text="Industry Of Interest *"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:id="@+id/industry_error"
+                android:visibility="gone"
+                android:textSize="14dp"
+                android:textColor="@color/red_A400"
+                android:text="(Please select)"/>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+
+
+
+            <LinearLayout
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_bg"
+                android:elevation="1dp"
+                >
+                <com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    style="@style/RippleStyleBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:paddingBottom="6dp"
+                        android:paddingTop="6dp"
+                        android:id="@+id/industry_of_interest"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="0.1"
+                            android:layout_marginRight="5dp"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/outline_work_outline_black_48"
+                                />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="0.8"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:text="I am interested in"/>
+
+                            <com.google.android.material.chip.ChipGroup
+                                android:id="@+id/chipgroup_main"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="0.1"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:src="@drawable/outline_navigate_next_black_48"
+                                android:layout_gravity="center_vertical" />
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+
+            </LinearLayout>
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:textSize="18dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/head_experience_details"
+                android:text="Experience Details *"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:id="@+id/experience_details_error"
+                android:visibility="gone"
+                android:textSize="14dp"
+                android:textColor="@color/red_A400"
+                android:text="(Please fill minimum 1)"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp">
+
+            <com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/RippleStyleBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_experience"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_rounded_transparent"
+                    android:padding="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:paddingRight="5dp"
+                        android:textSize="14sp"
+                        android:text="Experience Details"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_80" />
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:singleLine="true"
+                        android:layout_marginLeft="3dp"
+                        android:src="@drawable/ic_add"
+                        android:textColor="@color/grey_80" />
+
+
+                </LinearLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/exp_linear1"
+                android:layout_marginTop="20dp"
+                android:visibility="visible"
+                card_view:cardCornerRadius="4dp">
+
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                >
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Company Name"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorBlack" />
+
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:padding="6dp"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:textSize="14sp"
+                            android:id="@+id/et_company1"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="@drawable/et_background"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Duration of Experience"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorBlack" />
+
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:padding="6dp"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:id="@+id/et_dur1"
+                            android:textSize="14sp"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="@drawable/et_background"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="What have you sold?"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorBlack" />
+
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:padding="6dp"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:minLines="2"
+                            android:maxLength="1000"
+                            android:id="@+id/et_exp1"
+                            android:textSize="14sp"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="@drawable/et_background"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/exp_linear2"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                card_view:cardCornerRadius="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    >
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="end"
+                            android:layout_height="wrap_content">
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.9"
+                                android:layout_height="wrap_content" />
+
+
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:id="@+id/remove_exp2"
+                                android:layout_marginLeft="3dp"
+                                android:src="@drawable/outline_remove_circle_outline_black_48"
+                                android:textColor="@color/grey_80" />
+
+
+
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Company Name"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorBlack" />
+
+
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:padding="6dp"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:textSize="14sp"
+                            android:id="@+id/et_company2"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="@drawable/et_background"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Duration of Experience"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorBlack" />
+
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:padding="6dp"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:textSize="14sp"
+                            android:id="@+id/et_dur2"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="@drawable/et_background"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="What have you sold?"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorBlack" />
+
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:padding="6dp"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:minLines="2"
+                            android:id="@+id/et_exp2"
+                            android:textSize="14sp"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="@drawable/et_background"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/exp_linear3"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                card_view:cardCornerRadius="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    >
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.9"
+                            android:layout_height="wrap_content" />
+
+
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:id="@+id/remove_exp3"
+                            android:layout_marginLeft="3dp"
+                            android:src="@drawable/outline_remove_circle_outline_black_48"
+                            android:textColor="@color/grey_80" />
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Company Name"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorBlack" />
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:padding="6dp"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:textSize="14sp"
+                            android:id="@+id/et_company3"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="@drawable/et_background"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Duration of Experience"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorBlack" />
+
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:padding="6dp"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:textSize="14sp"
+                            android:id="@+id/et_dur3"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="@drawable/et_background"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="What have you sold?"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorBlack" />
+
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:padding="6dp"
+                            android:minLines="2"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:textSize="14sp"
+                            android:id="@+id/et_exp3"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="@drawable/et_background"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_xlarge" />
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/btn_rounded_primary"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+
+
+
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

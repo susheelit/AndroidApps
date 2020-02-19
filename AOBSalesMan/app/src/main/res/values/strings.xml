@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">AOB Salesman</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="hostName">http://aobindia.com</string>
+
+    <string name="about">Opportunity for Greatest Earning ever. Opportunity For Salesmen.
+\nOpportunity unveils on 1st June 2019.
+\nWatchout for this space!</string>
+
+
+    <string name="youtube_API_key">AIzaSyB9dcZ-79jpUwQTE3SfVFwhA9jy_XHQ8BQ</string>
+
+    <string name="facebook_app_id">379718596066851</string>
+
+    <string name="Qualification">Qualification</string>
+
+
+
+    <string name="q1">Why should I work as a freelance Salesman?</string>
+    <string name="q2">Can I work as a freelancer without quitting my job?</string>
+    <string name="q3">Will I be given training on Product/Services that I wish to sell?</string>
+    <string name="q4">How do I register a sale/lead in AOB Salesman App?</string>
+    <string name="q5">Why am I required to do KYC before applying for the projects? Also, why is it necessary as I am a
+freelancer not a full-time agent?</string>
+    <string name="q6">Why do I have to furnish my bank details?</string>
+    <string name="q7">Can I update my bank account later?</string>
+    <string name="q8">Will I get visiting card or other publicity material?</string>
+    <string name="q9">How much time does it take for my commission/incentive to reach my account?</string>
+    <string name="q10">Is there a limit on how many projects one can apply for?</string>
+    <string name="q11">Will I get travel allowances to meet the prospective clients?</string>
+    <string name="q12">How do I claim Rs. 500 from My Earnings page that is given at the time of registration?</string>
+
+    <string name="ans1">Over the years, you as a salesman have acquired skills and knowledge in your domain. In this
+process, you must have met businesses/people who could not become your customer. You, now
+have an opportunity to monetize your knowledge and make money by selling the
+product/service of your choice from the new businesses listed in AOB Salesman app.</string>
+    <string name="ans2">Yes! You can. The AOB Salesman App gives you the flexibility to work on projects of your choice
+at your own will. There is no commitment of time or any work-related pressure. You can work at
+your convenience and earn money by making sales in your free time.</string>
+    <string name="ans3">Yes, training will be given to you on technical aspects of the product as well as on selling USP.
+Also, in case of any queries or concerns related to the project, you can call up the Project
+Manager at any time during the working hours. Moreover, most of the brands/companies those
+have listed their projects on our app, conduct webinars and live training sessions at select
+locations regularly.</string>
+    <string name="ans4">It’s simple. The My Projects section contains all the projects that you have applied for. Once you
+make a sale for a certain project, click on the project from the My Project section and tap on the
+Register Sale option. All you need to do is, fill in the details of the sale that you have made.</string>
+    <string name="ans5">Well firstly, we must know the salesmen who are working with us. Secondly, completing the KYC
+will ease the payment process. We want the commission and incentives hitting the salesman’s
+bank account in minimum time possible.</string>
+    <string name="ans6">We are looking forward for a safe and secure money transfer to ensure a hassle-free cordial
+relation with you. Once the sales are verified, the amount will be directly transferred to your
+bank account. The bank details ensure safe transfer of your commission/incentives with utmost
+ease and convenience.
+Download the App, Complete the KYC and Start selling. You make the sale. We assure your
+paycheck.</string>
+    <string name="ans7">Yes, you can update your bank account at any point of time. You just need to contact our
+Customer Care. The AOB Salesman customer support system is always available to help you
+out in every step of your freelancing journey.</string>
+    <string name="ans8">Since you are a freelancer, no visiting card will be provided. However, you shall be provided with all the MCM that is required to do the sale. The MCM will include the presentation, brochure and video of the product.</string>
+    <string name="ans9">It takes a maximum of 3 days time to verify the sales/leads that you have generated. Once we verify the sales/leads generated by you, the amount is directly transferred to your account. We have 2 payment cycles every month, i.e. every 14th and 28th. The commission and incentives will be transferred on 14th and 28th of every month. </string>
+    <string name="ans10">Though there is no such limit on the projects that you want to work for, it is recommended that you pick only those projects that you are confident and comfortable in generating sales/leads for. AOB Salesman app provides multiple earning options and if you think you can sell it, you are good to go.</string>
+    <string name="ans11">No, the incentive/commission provided for the project is all that you get for the sales that you make. There are no extra allowances provided for sundry expenses. AOB Salesman app does not pay you any fixed/incidental expenses that you may incur at any point.</string>
+    <string name="ans12">After you have signed up in the app, Rs 500 will be added directly to your My Earnings page.
+Once you fill in the profile details and complete your KYC, you can start applying for the
+projects and can register the sales. When your first sale is verified, this amount of 500 Rs.
+will be directly added to your first commission. You can claim the amount along with the
+commission.</string>
+
+
+</resources>

@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.activities.SplashActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimaryLight"
+                android:padding="13dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:id="@+id/back_image"
+                    android:padding="8dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/outline_keyboard_backspace_white_48"
+                    />
+
+
+                <TextView
+                    android:id="@+id/main_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:text="KYC"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18dp" />
+
+
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_below="@id/image"
+                android:background="@android:color/transparent"
+                android:layout_alignParentBottom="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_mlarge">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pan Number *"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorlabel" />
+
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:padding="11dp"
+                            android:maxLength="10"
+                            android:maxLines="1"
+                            android:id="@+id/pan_no"
+                            android:inputType="textCapCharacters"
+                            android:textSize="14sp"
+                            android:hint="Enter your Pan Number"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="@drawable/et_background"
+                            android:layout_height="wrap_content" />
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/upload_pan"
+                            android:layout_width="150dp"
+                            android:layout_height="55dp"
+                            android:elevation="5dp"
+                            android:gravity="center"
+                            android:background="@drawable/btn_rounded_primary"
+                            android:text="Upload Document *"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:textSize="14sp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:id="@+id/tv_pan"
+                                android:textColor="@color/colorBlack" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/spacing_small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Aadhaar Number *"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorlabel" />
+
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:padding="11dp"
+                            android:maxLength="12"
+                            android:maxLines="1"
+                            android:textSize="14sp"
+                            android:id="@+id/aadhar_no"
+                            android:inputType="number"
+                            android:hint="Enter your Aadhaar Number"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="@drawable/et_background"
+                            android:layout_height="wrap_content" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/upload_aadhaar"
+                                android:layout_width="150dp"
+                                android:layout_height="55dp"
+                                android:background="@drawable/btn_rounded_primary"
+                                android:text="Upload Document *"
+                                android:gravity="center"
+                                android:elevation="5dp"
+                                android:textAllCaps="false"
+                                android:textColor="@android:color/white"
+                                 />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:textSize="14sp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:id="@+id/tv_aadhaar"
+                                android:textColor="@color/colorBlack" />
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/spacing_small" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:padding="8dp"
+                        android:id="@+id/head_city"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18dp"
+                        android:text="Account Details"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Beneficiary Name *"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorlabel" />
+
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:padding="11dp"
+                            android:maxLength="100"
+                            android:maxLines="1"
+                            android:textSize="14sp"
+                            android:id="@+id/bank_account_name"
+                            android:inputType="textCapSentences"
+                            android:hint="Enter Beneficiary Name"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="@drawable/et_background"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/spacing_small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bank Account Number *"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorlabel" />
+
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:padding="11dp"
+                            android:maxLength="100"
+                            android:maxLines="1"
+                            android:textSize="14sp"
+                            android:id="@+id/bank_account_number"
+                            android:inputType="number"
+                            android:hint="Enter your Bank Account Number"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="@drawable/et_background"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/spacing_small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bank Name *"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorlabel" />
+
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:padding="11dp"
+                            android:maxLength="100"
+                            android:maxLines="1"
+                            android:id="@+id/bank_name"
+                            android:inputType="textCapSentences"
+                            android:textSize="14sp"
+                            android:hint="Enter your Bank Name"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="@drawable/et_background"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/spacing_small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Branch *"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorlabel" />
+
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:padding="11dp"
+                            android:maxLength="100"
+                            android:maxLines="1"
+                            android:textSize="14sp"
+                            android:hint="Enter your Branch"
+                            android:id="@+id/bank_branch"
+                            android:inputType="textCapSentences"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="@drawable/et_background"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/spacing_small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="IFSC Code *"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorlabel" />
+
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:padding="11dp"
+                            android:maxLength="11"
+                            android:maxLines="1"
+                            android:textSize="14sp"
+                            android:id="@+id/ifsc_code"
+                            android:inputType="textCapCharacters"
+                            android:hint="Enter your IFSC Code *"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="@drawable/et_background"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Upload Canceled Cheque *"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorlabel" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/upload_canceled_cheque"
+                                android:layout_width="150dp"
+                                android:layout_height="55dp"
+                                android:elevation="5dp"
+                                android:gravity="center"
+                                android:background="@drawable/btn_rounded_primary"
+                                android:text="Upload Document"
+                                android:textAllCaps="false"
+                                android:textColor="@android:color/white"
+                                 />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:id="@+id/tv_canceled_cheque"
+                                android:textColor="@color/colorBlack" />
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/spacing_xlarge" />
+
+                    <TextView
+                        android:id="@+id/kyc_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="60dp"
+                        android:background="@drawable/btn_rounded_primary"
+                        android:text="Submit"
+                        android:elevation="3dp"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/spacing_xlarge" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

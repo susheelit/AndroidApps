@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_medium"
+        >
+
+        <ImageButton
+            android:id="@+id/navigation"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="fitXY"
+            android:background="@drawable/navigation_button"
+            android:layout_centerVertical="true"    />
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="90dp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/spotonlogo" />
+
+            <TextView
+                android:id="@+id/agent_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorAccentLight"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/version1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginRight="4dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorAccentLight"
+                android:textSize="14dp" />
+
+    </RelativeLayout>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="20dp"
+    app:cardBackgroundColor="@color/overlay_light_20">
+<LinearLayout
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="12dp"
+    android:visibility="gone"
+    android:paddingBottom="12dp"
+    android:paddingLeft="16dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="My Current City : "/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_marginRight="16dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:clickable="false"
+            android:text="Select Location"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</LinearLayout>
+</androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+             android:layout_marginBottom="60dp">
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/swiperefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:scrollbars="none"
+                    android:scrollingCache="true" />
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </LinearLayout>
+        <View
+            android:id="@+id/overlap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/overlay_dark_20"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/checkIn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/btn_rounded_primary_disable"
+        android:text="C H E C K - I N"
+        android:textAllCaps="false"
+        android:enabled="false"
+        android:textColor="@color/grey_40"
+        android:textStyle="bold" />
+</LinearLayout>
+

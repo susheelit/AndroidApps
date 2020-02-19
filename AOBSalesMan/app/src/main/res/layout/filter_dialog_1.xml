@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="300dp"
+    android:layout_height="460dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/background_sale"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:id="@+id/heading_dialog"
+        android:textSize="18dp"
+        android:textColor="@color/colorBlack"
+        android:text="Industry Of Interest"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:padding="8dp"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:text="Industries You Selected:"/>
+
+
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup_dialog"
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <!-- <com.google.android.material.chip.Chip
+             style="@style/Widget.MaterialComponents.Chip.Filter"
+             android:layout_width="wrap_content"
+             android:id="@+id/dialog_chip1"
+             app:chipBackgroundColor="@color/colorTransparent"
+             app:chipStrokeColor="@color/colorPrimary"
+             app:chipCornerRadius="20dp"
+             app:chipStrokeWidth="1dp"
+             android:layout_height="wrap_content"
+             android:text="Fire" />
+
+         <com.google.android.material.chip.Chip
+             style="@style/Widget.MaterialComponents.Chip.Filter"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/dialog_chip2"
+             app:chipBackgroundColor="@color/colorTransparent"
+             app:chipStrokeColor="@color/colorPrimary"
+             app:chipCornerRadius="20dp"
+             app:chipStrokeWidth="1dp"
+             android:text="Water" />
+
+         <com.google.android.material.chip.Chip
+             style="@style/Widget.MaterialComponents.Chip.Filter"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/dialog_chip3"
+             app:chipBackgroundColor="@color/colorTransparent"
+             app:chipStrokeColor="@color/colorPrimary"
+             app:chipCornerRadius="20dp"
+             app:chipStrokeWidth="1dp"
+             android:text="Psychic" />
+
+         <com.google.android.material.chip.Chip
+             style="@style/Widget.MaterialComponents.Chip.Filter"
+             android:layout_width="wrap_content"
+             app:chipBackgroundColor="@color/colorTransparent"
+             app:chipStrokeColor="@color/colorPrimary"
+             app:chipCornerRadius="20dp"
+             app:chipStrokeWidth="1dp"
+             android:id="@+id/chip4"
+             android:layout_height="wrap_content"
+             android:text="Fire" />
+
+         <com.google.android.material.chip.Chip
+             style="@style/Widget.MaterialComponents.Chip.Filter"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/dialog_chip5"
+             app:chipBackgroundColor="@color/colorTransparent"
+             app:chipStrokeColor="@color/colorPrimary"
+             app:chipCornerRadius="20dp"
+             app:chipStrokeWidth="1dp"
+             android:text="Water" />
+
+         <com.google.android.material.chip.Chip
+             style="@style/Widget.MaterialComponents.Chip.Filter"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/dialog_chip6"
+             app:chipBackgroundColor="@color/colorTransparent"
+             app:chipStrokeColor="@color/colorPrimary"
+             app:chipCornerRadius="20dp"
+             app:chipStrokeWidth="1dp"
+             android:text="Psychic" />
+
+         <com.google.android.material.chip.Chip
+             style="@style/Widget.MaterialComponents.Chip.Filter"
+             android:layout_width="wrap_content"
+             app:chipBackgroundColor="@color/colorTransparent"
+             app:chipStrokeColor="@color/colorPrimary"
+             app:chipCornerRadius="20dp"
+             android:id="@+id/dialog_chip7"
+             app:chipStrokeWidth="1dp"
+             android:layout_height="wrap_content"
+             android:text="Fire" />
+
+         <com.google.android.material.chip.Chip
+             style="@style/Widget.MaterialComponents.Chip.Filter"
+             android:layout_width="wrap_content"
+             android:id="@+id/dialog_chip8"
+             app:chipBackgroundColor="@color/colorTransparent"
+             app:chipStrokeColor="@color/colorPrimary"
+             app:chipCornerRadius="20dp"
+             app:chipStrokeWidth="1dp"
+             android:layout_height="wrap_content"
+             android:text="Water" />
+
+         <com.google.android.material.chip.Chip
+             style="@style/Widget.MaterialComponents.Chip.Filter"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/dialog_chip9"
+             app:chipBackgroundColor="@color/colorTransparent"
+             app:chipStrokeColor="@color/colorPrimary"
+             app:chipCornerRadius="20dp"
+             app:chipStrokeWidth="1dp"
+             android:text="Psychic" />
+
+         <com.google.android.material.chip.Chip
+             style="@style/Widget.MaterialComponents.Chip.Filter"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/dialog_chip10"
+             app:chipBackgroundColor="@color/colorTransparent"
+             app:chipStrokeColor="@color/colorPrimary"
+             app:chipCornerRadius="20dp"
+             app:chipStrokeWidth="1dp"
+             android:text="Water" />-->
+
+
+    </com.google.android.material.chip.ChipGroup>
+
+
+    <!--<LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:padding="8dp"
+        android:id="@+id/ind1"
+        android:textSize="12sp"
+        android:text="Experience Details"
+        android:background="@drawable/btn_rounded_transparent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/grey_80" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:padding="8dp"
+            android:id="@+id/ind2"
+            android:textSize="12sp"
+            android:text="Experience Details"
+            android:background="@drawable/btn_rounded_transparent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/grey_80" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:padding="8dp"
+            android:id="@+id/ind3"
+            android:textSize="12sp"
+            android:text="Experience Details"
+            android:background="@drawable/btn_rounded_transparent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/grey_80" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:padding="8dp"
+            android:id="@+id/ind4"
+            android:textSize="12sp"
+            android:text="Experience Details"
+            android:background="@drawable/btn_rounded_transparent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/grey_80" />
+
+
+    </LinearLayout>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_industry"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_margin="8dp"
+        android:scrollbars="none"
+        android:visibility="visible"
+        android:scrollingCache="true" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/submit_industry"
+        android:textColor="@color/colorPrimary"
+        android:layout_gravity="end"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/colorTransparent"
+        android:text="Submit" />
+
+
+</LinearLayout>
+
+

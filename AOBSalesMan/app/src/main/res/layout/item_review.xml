@@ -1,0 +1,68 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_middle"
+        android:textStyle="bold"
+        android:layout_marginRight="@dimen/spacing_middle"
+        android:text="Samsung"
+        android:textSize="16sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorPrimary" />
+            <TextView
+                android:id="@+id/review_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/user_review"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_middle"
+            android:layout_marginRight="@dimen/spacing_middle"
+            android:text="Samsung"
+            android:textSize="14sp"
+            android:textColor="@color/grey_90" />
+        <TextView
+            android:id="@+id/review_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_middle"
+            android:layout_marginRight="@dimen/spacing_middle"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            />
+    </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_10" />
+
+
+</LinearLayout>

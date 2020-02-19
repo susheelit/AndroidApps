@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/RippleStyleBlack"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/lyt_parent"
+        android:layout_width="match_parent"
+        style="?android:attr/dropDownItemStyle"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:padding="8dp"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+    <TextView
+    android:layout_width="0dp"
+    android:layout_weight="0.8"
+    style="?android:attr/dropDownItemStyle"
+    android:text="IT and Hardware"
+    android:textSize="14sp"
+    android:ellipsize="marquee"
+    android:id="@+id/name_industry"
+    android:layout_height="wrap_content" />
+
+
+        <CheckBox
+
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:textSize="16sp"
+            android:clickable="false"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:id="@+id/industry_check"
+            android:visibility="visible"
+            />
+
+    </LinearLayout>
+
+</com.balysv.materialripple.MaterialRippleLayout>

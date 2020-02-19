@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".activities.activities.HomeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimaryLight"
+            android:padding="13dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:id="@+id/back_image"
+                android:padding="8dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackground"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/outline_keyboard_backspace_white_48"
+                />
+
+
+            <TextView
+                android:id="@+id/main_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackground"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:id="@+id/call"
+                android:padding="8dp"
+                android:layout_height="40dp"
+                android:tint="@color/colorWhite"
+                android:layout_alignParentEnd="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/call_icon"
+                />
+
+        </RelativeLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs_desc"
+            android:layout_width="match_parent"
+            android:background="@color/transparent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            android:visibility="gone"
+            app:tabBackground="@drawable/tab_color_selector"
+            app:tabInlineLabel="true"
+            app:tabSelectedTextColor="@color/colorSecondary"
+            app:tabTextAppearance="@style/TextAppearance.Design.Tab1"
+            app:tabTextColor="@color/colorlabel"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_desc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

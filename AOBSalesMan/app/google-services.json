@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "959160835124",
+    "firebase_url": "https://aob-salesman-f9916.firebaseio.com",
+    "project_id": "aob-salesman-f9916",
+    "storage_bucket": "aob-salesman-f9916.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959160835124:android:565866d5303574a2",
+        "android_client_info": {
+          "package_name": "com.aob.aobsalesman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959160835124-mfnnn44jmto9mgmapc9347kraufjango.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aob.aobsalesman",
+            "certificate_hash": "71a18ab5b000930ae9f3a357275d10101ffde919"
+          }
+        },
+        {
+          "client_id": "959160835124-eemnu9392pcougin4q14a5rjipkm0cbg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVDRdgQELlDRTuS5ERs4yu-6EmSeD3dKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959160835124-eemnu9392pcougin4q14a5rjipkm0cbg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

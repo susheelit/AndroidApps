@@ -1,0 +1,1908 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swiperefresh_desc3"
+        android:layout_width="match_parent"
+        tools:context="com.aob.aobsalesman.activities.Fragements.ProjectDescriptionDetailFragment"
+        android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/desc3_full"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:id="@+id/head_project"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"
+                    android:text="Project Name"/>
+
+
+                <ImageView
+                    android:id="@+id/share_image_apply1"
+                    android:layout_width="25dp"
+                    android:padding="2dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="end|center"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_height="25dp"
+                    android:src="@drawable/share" />
+
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#c0c0c0"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmedium" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.45"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Product/Service Name "/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="5dp"
+                    android:src="@drawable/lefticon"/>
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/colorlabel"
+                    android:id="@+id/product_name"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    />
+
+
+
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_medium" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.45"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Price (Incl. of GST)"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="5dp"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/lefticon"/>
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:id="@+id/price_project"
+                    android:textColor="@color/colorlabel"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    />
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="@dimen/spacing_medium" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.32"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Project Incentive :"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:id="@+id/project_incentive"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    />
+
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_medium" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.45"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Project Offers/Discounts"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:padding="5dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/lefticon"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/colorlabel"
+                    android:id="@+id/project_offers"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    />
+
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmedium" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#c0c0c0"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmedium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Project Description:"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textColor="@color/colorlabel"
+                    android:id="@+id/project_description"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    />
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmedium" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#c0c0c0"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_medium" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Project Cities:"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_medium" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textColor="@color/colorlabel"
+                    android:id="@+id/project_cities"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp" />
+
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmedium" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#c0c0c0"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_medium" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.45"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Total Incentive Earned"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:padding="5dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/lefticon"/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/colorlabel"
+                    android:id="@+id/total_incentive"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp" />
+
+
+
+            </LinearLayout>
+
+
+
+
+
+            <!--  <View
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/spacing_medium" />
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:layout_height="wrap_content">
+
+                  <TextView
+                      android:layout_width="0dp"
+                      android:layout_weight="0.3"
+                      android:layout_height="wrap_content"
+                      android:textSize="14sp"
+                      android:text="Sales Criteria :"/>
+
+                  <TextView
+                      android:layout_width="0dp"
+                      android:layout_weight="0.5"
+                      android:id="@+id/project_criteria"
+                      android:layout_height="wrap_content"
+                      android:textSize="14sp"
+                      />
+
+
+
+              </LinearLayout>-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_medium"
+                android:visibility="gone"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.32"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Project Status :"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:id="@+id/project_status"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    />
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_medium" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.45"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Active Salesmen"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:padding="5dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/lefticon"/>
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/colorlabel"
+                    android:id="@+id/project_no_salesman"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    />
+
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_medium" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.45"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Project Website"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:padding="5dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/lefticon"/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:autoLink="web"
+                    android:textColor="@color/colorlabel"
+                    android:id="@+id/project_industries"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp" />
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_medium" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/product_link_linear"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.45"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginRight="5dp"
+                    android:text="Product Link"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:padding="5dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/lefticon"/>
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:autoLink="web"
+                    android:textColor="@color/colorlabel"
+                    android:id="@+id/product_link"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp" />
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmedium" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#c0c0c0"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@id/b2b_linear">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"
+                    android:text="B2B Sales Information"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.32"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="Business Type :"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:id="@+id/businesstype_b2b"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        />
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_medium" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.45"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Business Categories"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/lefticon"/>
+
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:id="@+id/b2b_category"
+                        android:textColor="@color/colorlabel"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        />
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_medium" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.45"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Industries to sell"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/lefticon"/>
+
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:id="@+id/b2b_industries"
+                        android:textColor="@color/colorlabel"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        />
+
+
+
+                </LinearLayout>
+
+
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_large" />
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmedium" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/b2c_linear">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"
+                    android:text="B2C Sales Information"/>
+
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_large" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.45"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Age Group"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/lefticon"/>
+
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:id="@+id/age_group"
+                        android:textColor="@color/colorlabel"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        />
+
+
+
+                </LinearLayout>
+
+
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_medium" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.45"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Marital Status"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/lefticon"/>
+
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:id="@+id/marital_status"
+                        android:textColor="@color/colorlabel"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        />
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_medium" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.45"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Gender"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/lefticon"/>
+
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:id="@+id/b2c_gender"
+                        android:textColor="@color/colorlabel"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_medium" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.45"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Interested in"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/lefticon"/>
+
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:id="@+id/b2c_interested"
+                        android:textColor="@color/colorlabel"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        />
+
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_large" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmedium" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+            </LinearLayout>
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/sales_criteria_linear">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"
+                    android:text="What is sale?"/>
+
+
+                <LinearLayout
+                    android:id="@+id/SalesCriteria_layout"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_middle" />
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_weight="0.45"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Sales Criteria:"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_medium" />
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:id="@+id/sales_criteria"
+                        android:textColor="@color/colorlabel"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_medium" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/LeadCriteria_layout"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_weight="0.45"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Lead Criteria:"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_medium" />
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:id="@+id/lead_criteria"
+                        android:textColor="@color/colorlabel"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_medium" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_medium" />
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_large" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmedium" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/commission_Structure_linear">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"
+                    android:text="Commission Structure"/>
+
+
+
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_large" />
+                <LinearLayout
+                    android:id="@+id/SalesCommission_layout"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.45"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Sale Commission"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/lefticon"/>
+
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:id="@+id/sales_Commission"
+                        android:textColor="@color/colorlabel"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_medium" />
+                <LinearLayout
+                    android:id="@+id/LeadCommission_layout"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.45"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Lead Commission"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/lefticon"/>
+
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:id="@+id/lead_Commission"
+                        android:textColor="@color/colorlabel"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_large" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmedium" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#c0c0c0"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/Expected_Sales_linear">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"
+                    android:text="Expected Sale"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_large" />
+                <LinearLayout
+                    android:id="@+id/ExpectedSales_layout"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="Expected Sales  "/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="In 30 days"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/lefticon"/>
+
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.4"
+                        android:id="@+id/in_30_days"
+                        android:textColor="@color/colorlabel"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        />
+
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_medium" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="Expected Sales  "/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="In 60 days"/>
+
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/lefticon"/>
+
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.4"
+                        android:id="@+id/in_60_days"
+                        android:textColor="@color/colorlabel"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        />
+
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_medium" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="Expected Sales  "/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="In 90 days"/>
+
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/lefticon"/>
+
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.4"
+                        android:id="@+id/in_90_days"
+                        android:textColor="@color/colorlabel"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_large" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/Expected_Lead_linear">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"
+                    android:text="Expected Lead"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_large" />
+                <LinearLayout
+                    android:id="@+id/Expected_Lead_layout"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="Expected Lead  "/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="In 30 days"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/lefticon"/>
+
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.4"
+                        android:id="@+id/in_30_days1"
+                        android:textColor="@color/colorlabel"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        />
+
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_medium" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="Expected Lead  "/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="In 60 days"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/lefticon"/>
+
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.4"
+                        android:id="@+id/in_60_days1"
+                        android:textColor="@color/colorlabel"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        />
+
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_medium" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="Expected Lead  "/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="In 90 days"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/lefticon"/>
+
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.4"
+                        android:id="@+id/in_90_days1"
+                        android:textColor="@color/colorlabel"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_large" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmedium" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#c0c0c0"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/mcm_criteria_linear">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"
+                    android:text="MCM"/>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/ppt"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:elevation="3dp"
+                        android:visibility="visible"
+                        android:background="@drawable/btn_rounded_primary"
+                        android:text="PPT"
+                        android:layout_gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        />
+
+                    <TextView
+                        android:id="@+id/brochure"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:visibility="visible"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:elevation="3dp"
+                        android:text="Brochure"
+                        android:background="@drawable/btn_rounded_primary"
+                        android:layout_gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/video"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:visibility="visible"
+                        android:gravity="center"
+                        android:elevation="3dp"
+                        android:layout_height="40dp"                    android:text="Film/Video"
+                        android:background="@drawable/btn_rounded_primary"
+                        android:layout_gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        />
+
+
+                </LinearLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_large" />
+
+
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/sm_linear">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"
+                    android:text="Social Media Links"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/fb"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="40dp"                    android:visibility="visible"
+                        android:background="@drawable/btn_rounded_primary"
+                        android:text="Facebook"
+                        android:gravity="center"
+                        android:elevation="3dp"
+                        android:layout_gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        />
+
+                    <TextView
+                        android:id="@+id/linkedin"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:visibility="visible"
+                        android:gravity="center"
+                        android:elevation="3dp"
+                        android:layout_height="40dp"                    android:text="LinkedIn"
+                        android:background="@drawable/btn_rounded_primary"
+                        android:layout_gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/insta"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:visibility="visible"
+                        android:gravity="center"
+                        android:elevation="3dp"
+                        android:layout_height="40dp"                    android:text="Instagram"
+                        android:background="@drawable/btn_rounded_primary"
+                        android:layout_gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_large" />
+
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/training_linear">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"
+                    android:text="Training"/>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/train_ppt"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:background="@drawable/btn_rounded_primary"
+                        android:text="PPT"
+                        android:gravity="center"
+                        android:elevation="3dp"
+                        android:layout_gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        />
+
+                    <TextView
+                        android:id="@+id/train_brochure"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:visibility="visible"
+                        android:gravity="center"
+                        android:elevation="3dp"
+                        android:layout_height="wrap_content"
+                        android:text="Training \n Material"
+                        android:background="@drawable/btn_rounded_primary"
+                        android:layout_gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/train_video"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:visibility="visible"
+                        android:layout_height="wrap_content"
+                        android:text="Training Video"
+                        android:gravity="center"
+                        android:elevation="3dp"
+                        android:background="@drawable/btn_rounded_primary"
+                        android:layout_gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        />
+
+
+                </LinearLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_large" />
+
+
+            </LinearLayout>
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_medium" />
+            <RelativeLayout
+                android:id="@+id/Application_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_rounded_primary"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:elevation="3dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:id="@+id/download"
+                    android:padding="10dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:tint="@color/colorWhite"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_file_download_black_24dp"
+                    />
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/btn_rounded_primary"
+                    android:text="Application Form"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/register_sale"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:elevation="5dp"
+                    android:background="@drawable/btn_rounded_primary"
+                    android:text="Register Sale"
+                    android:layout_gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/register_lead"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:elevation="5dp"
+                    android:layout_height="wrap_content"
+                    android:text="Register Lead"
+                    android:background="@drawable/btn_rounded_primary"
+                    android:layout_gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/register_close"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:elevation="5dp"
+                    android:layout_height="wrap_content"
+                    android:text="Project Closed"
+                    android:background="@drawable/btn_rounded_primary"
+                    android:layout_gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xlarge" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

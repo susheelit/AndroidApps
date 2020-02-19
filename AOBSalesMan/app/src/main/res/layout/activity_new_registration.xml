@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.activities.NewRegistrationActivity">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.activities.SplashActivity">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:background="#f4f4f4"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="@color/colorPrimaryLight"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+
+                    <TextView
+                        android:id="@+id/main_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:padding="8dp"
+                        android:text="Registration"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18dp" />
+
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/logo" />
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rewrite your Destiny"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_marginBottom="20dp"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimary" />
+
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="800dp"
+                    android:visibility="visible"
+                    android:layout_below="@id/image"
+                    android:background="@android:color/transparent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_mlarge">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Name"
+                                android:textAlignment="center"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorBlack" />
+
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:layout_width="match_parent"
+                                android:padding="11dp"
+                                android:maxLength="100"
+                                android:maxLines="1"
+                                android:textSize="14sp"
+                                android:id="@+id/name"
+                                android:inputType="textCapSentences"
+                                android:layout_marginTop="@dimen/spacing_middle"
+                                android:background="@drawable/et_background"
+                                android:layout_height="45dp"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mobile Number"
+                                android:textAlignment="center"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorBlack" />
+
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:layout_width="match_parent"
+                                android:padding="11dp"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:longClickable="false"
+                                android:textSize="14sp"
+                                android:importantForAutofill="no"
+                                android:id="@+id/p"
+                                android:inputType="number"
+                                android:layout_marginTop="@dimen/spacing_middle"
+                                android:background="@drawable/et_background"
+                                android:layout_height="45dp" />
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Email ID"
+                                android:textAlignment="center"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorBlack" />
+
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:layout_width="match_parent"
+                                android:padding="11dp"
+                                android:maxLength="100"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:id="@+id/email_id"
+                                android:layout_marginTop="@dimen/spacing_middle"
+                                android:background="@drawable/et_background"
+                                android:layout_height="45dp"/>
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Password"
+                                android:textAlignment="center"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorBlack" />
+
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:layout_width="match_parent"
+                                android:padding="11dp"
+                                android:maxLength="100"
+                                android:maxLines="1"
+                                android:longClickable="false"
+                                android:textSize="14sp"
+                                android:inputType="textPassword"
+                                android:id="@+id/password"
+                                android:layout_marginTop="@dimen/spacing_middle"
+                                android:background="@drawable/et_background"
+                                android:layout_height="45dp" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Referral Code (if any)"
+                                    android:textAlignment="center"
+                                    android:textSize="15sp"
+                                    android:textColor="@color/colorBlack" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:layout_width="match_parent"
+                                        android:padding="11dp"
+                                        android:maxLength="10"
+                                        android:layout_weight="1"
+                                        android:maxLines="1"
+                                        android:singleLine="true"
+                                        android:inputType="number"
+                                        android:longClickable="false"
+                                        android:textSize="14sp"
+                                        android:importantForAutofill="noExcludeDescendants"
+                                        android:id="@+id/referral_code"
+                                        android:layout_marginTop="@dimen/spacing_middle"
+                                        android:background="@drawable/et_background"
+                                        android:layout_height="45dp"
+                                      />
+
+                                    <ImageButton
+                                        android:id="@+id/done"
+                                        android:layout_width="@dimen/spacing_xmlarge"
+                                        android:layout_height="@dimen/spacing_xmlarge"
+                                        android:background="@android:color/transparent"
+                                        android:tint="@color/green_400"
+                                        android:visibility="gone"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="@dimen/spacing_medium"
+                                        app:srcCompat="@drawable/ic_check_circle" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_large" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="By clicking Register, you agree to AOB India's"
+                    android:textAlignment="center"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Terms and Conditions"
+                    android:textAlignment="center"
+                    android:textSize="13sp"
+                    android:id="@+id/terms"
+                    android:textColor="@color/colorPrimaryLight" />
+
+
+
+
+                            <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/spacing_medium" />
+
+                        <TextView
+                            android:id="@+id/new_register"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginRight="60dp"
+                            android:gravity="center"
+                            android:elevation="5dp"
+                            android:background="@drawable/btn_rounded_primary"
+                            android:text="Register"
+                            android:textSize="16sp"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/spacing_xlarge" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

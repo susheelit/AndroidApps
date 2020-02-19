@@ -1,0 +1,75 @@
+<LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/background_listbtn"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_1"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_marginRight="10dp"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_bg"
+        android:text="12th Pass" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_2"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_bg"
+        android:text="Under Graduate" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_3"
+            android:textAllCaps="false"
+            android:padding="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"
+            android:background="@drawable/btn_bg"
+            android:text="Graduate" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_4"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:background="@drawable/btn_bg"
+            android:text="Post Graduate" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+

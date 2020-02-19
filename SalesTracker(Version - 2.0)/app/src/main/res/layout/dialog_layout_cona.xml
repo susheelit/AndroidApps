@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/checkin_dialog_background"
+    android:padding="24dp"
+    style="@style/Drawer.Custom.Dark"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+        <LinearLayout
+            android:id="@+id/llbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--<Button
+                android:id="@+id/btn_contractor"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:layout_margin="10dp"
+                android:onClick="pmConaFeature"
+                android:background="@drawable/btn_rounded_primary"
+                android:text="C O N T R A C T O R"
+                android:textAllCaps="false"
+                android:enabled="true"
+                android:textSize="22dp"
+                android:textColor="@android:color/white" />
+            <Button
+                android:id="@+id/btn_electrician"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="-4dp"
+                android:onClick="pmConaFeature"
+                android:layout_marginRight="-4dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_rounded_primary"
+                android:text="E L E C T R I C I A N"
+                android:textAllCaps="false"
+                android:enabled="true"
+                android:textSize="22dp"
+                android:textColor="@android:color/white" />
+            <Button
+                android:id="@+id/btn_retailer"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:onClick="pmConaFeature"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_rounded_primary"
+                android:text="R E T A I L E R"
+                android:textAllCaps="false"
+                android:enabled="true"
+                android:textSize="22dp"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_dealer"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:onClick="pmConaFeature"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_rounded_primary"
+                android:text="D E A L E R"
+                android:textAllCaps="false"
+                android:enabled="true"
+                android:textSize="22dp"
+                android:textColor="@android:color/white" />
+            <Button
+                android:id="@+id/btn_architect"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:onClick="pmConaFeature"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_rounded_primary"
+                android:text="A R C H I T E C T"
+                android:textAllCaps="false"
+                android:enabled="true"
+                android:textSize="22dp"
+                android:textColor="@android:color/white" />
+            <Button
+                android:id="@+id/btn_builder"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:onClick="pmConaFeature"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_rounded_primary"
+                android:text="B U I L D E R"
+                android:textAllCaps="false"
+                android:enabled="true"
+                android:textSize="22dp"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_company"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:onClick="pmConaFeature"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_rounded_primary"
+                android:text="C O M P A N Y"
+                android:textAllCaps="false"
+                android:enabled="true"
+                android:textSize="22dp"
+                android:textColor="@android:color/white" />
+-->
+        </LinearLayout>
+
+    </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

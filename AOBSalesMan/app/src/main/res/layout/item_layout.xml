@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/RippleStyleBlack"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/lyt_parent"
+        android:clickable="true"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+
+        <View
+            android:layout_width="@dimen/spacing_medium"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/spacing_middle"
+                android:paddingLeft="10dp"
+                android:paddingBottom="@dimen/spacing_middle">
+
+
+                <TextView
+                    android:id="@+id/company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_middle"
+                    android:layout_marginRight="@dimen/spacing_middle"
+                    android:text="Samsung"
+                    android:textSize="16sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary" />
+
+                 <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_middle"
+                     android:layout_marginTop="3dp"
+                     android:layout_marginRight="@dimen/spacing_middle"
+                    android:layout_marginBottom="5dp"
+                     android:text="New Delhi"
+                     android:textSize="12dp"
+                    android:textColor="@color/colorlabel" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                 <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="4dp"
+                     android:src="@drawable/views"
+                     android:layout_marginTop="3dp"
+                   />
+
+                   <!-- <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="4dp"
+                        android:text="Views:"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorlabel"/>
+-->
+
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:layout_marginTop="3dp"
+                    android:text="Delhi"
+                    android:id="@+id/views"
+                    android:textColor="@color/colorlabel" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/salesman"
+                    android:layout_marginTop="3dp"
+                    />
+<!--
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="4dp"
+                    android:text="Active Salesmen: "
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorlabel"/>
+-->
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:layout_marginTop="3dp"
+                    android:text="12"
+                    android:id="@+id/no_of_salesman"
+                    android:textColor="@color/colorlabel" />
+
+            </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/incentive"
+                        android:layout_marginTop="3dp"
+                        />
+
+                   <!-- <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="4dp"
+                        android:text="Total Incentive Earned: "
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorlabel"/>-->
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:layout_marginTop="3dp"
+                        android:id="@+id/incentive_earned_total"
+                        android:textColor="@color/colorlabel" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/project"
+                        android:layout_marginTop="3dp"
+                        />
+<!--
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="4dp"
+                        android:text="Nature of Project: "
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorlabel"/>
+
+-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:layout_marginTop="3dp"
+                        android:id="@+id/nature_of_project"
+                        android:textColor="@color/colorlabel" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/sales_criteria"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_middle"
+                    android:layout_marginRight="@dimen/spacing_middle"
+                    android:textSize="12dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/grey_90" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_marginTop="@dimen/spacing_middle"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:orientation="vertical">
+
+
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="70dp"
+                android:layout_gravity="center"
+                android:layout_height="70dp"
+                android:src="@drawable/logo" />
+
+
+            <TextView
+                android:id="@+id/apply_rv"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/btn_rounded_primary"
+                android:text="Apply"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:layout_gravity="end"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                 />
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="end"
+             android:layout_marginTop="16dp"
+             android:layout_marginEnd="2dp">
+             <ImageView
+                 android:id="@+id/call"
+                 android:layout_width="40dp"
+                 android:background="?attr/selectableItemBackground"
+                 android:padding="10dp"
+                 android:paddingTop="10dp"
+                 android:paddingBottom="10dp"
+                 android:layout_marginRight="20dp"
+                 android:layout_height="40dp"
+                 android:src="@drawable/call_icon" />
+             <ImageView
+                 android:id="@+id/share_image"
+                 android:layout_width="40dp"
+                 android:background="?attr/selectableItemBackground"
+                 android:padding="10dp"
+                 android:layout_alignParentRight="true"
+                 android:paddingTop="10dp"
+                 android:paddingBottom="10dp"
+                 android:layout_height="40dp"
+                 android:src="@drawable/share_icon"/>
+         </RelativeLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey_40" />
+
+
+    </LinearLayout>
+
+</com.balysv.materialripple.MaterialRippleLayout>

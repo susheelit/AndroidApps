@@ -1,0 +1,258 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryLight"
+        android:padding="13dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:id="@+id/back_image"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/outline_keyboard_backspace_white_48"
+            />
+
+
+        <TextView
+            android:id="@+id/main_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:text="My Earnings"
+            android:textColor="@color/colorWhite"
+            android:textSize="18dp" />
+
+
+
+    </RelativeLayout>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorWhite">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/et_background"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
+
+            <EditText
+                android:id="@+id/search_box_mysale"
+                android:layout_width="0dp"
+                android:background="@android:color/transparent"
+                android:layout_weight="0.9"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:padding="8dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:hint="Search"
+                />
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:visibility="visible"
+                android:layout_height="20dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/searchicon" />
+
+        </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="50dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/linear"
+                android:gravity="center_horizontal"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textSize="20dp"
+
+                    android:textColor="@color/colorlabel" />
+                <TextView
+                    android:id="@+id/label1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textSize="26dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="4dp"
+            android:layout_marginTop="4dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+                    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/swiperefresh_mysales"
+                        android:layout_width="match_parent"
+                        android:layout_above="@id/bottom"
+                        android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView_trans"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="none"
+                            android:visibility="visible"
+                            android:scrollingCache="true" />
+                        <TextView
+                            android:id="@+id/tv_no_data_lead"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Register Lead/Sale to start earning"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:visibility="gone" />
+                        </RelativeLayout>
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bottom"
+                    android:elevation="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorbackground">
+                    <com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        style="@style/RippleStyleBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:id="@+id/mylead"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:clickable="false"
+                                android:background="@drawable/my_leads"
+                                android:layout_height="25dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14dp"
+                                android:textColor="@color/colorSecondary"
+                                android:text="My Leads"/>
+                        </LinearLayout>
+                    </com.balysv.materialripple.MaterialRippleLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/colorSecondary"/>
+                    <com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        style="@style/RippleStyleBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:id="@+id/mysales"
+                            android:padding="10dp"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:clickable="false"
+                                android:background="@drawable/my_sales"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14dp"
+                                android:textColor="@color/colorSecondary"
+                                android:text="My Sales"/>
+                        </LinearLayout>
+                    </com.balysv.materialripple.MaterialRippleLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/colorSecondary"/>
+                    <com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        style="@style/RippleStyleBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:id="@+id/myearning"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:clickable="false"
+                                android:background="@drawable/my_earning"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14dp"
+                                android:textColor="@color/colorSecondary"
+                                android:text="My Earnings"/>
+                        </LinearLayout>
+                    </com.balysv.materialripple.MaterialRippleLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</FrameLayout>
+
+</LinearLayout>

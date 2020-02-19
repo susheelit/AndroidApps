@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Fragements.LeadFragement">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingTop="@dimen/spacing_middle"
+        android:paddingLeft="@dimen/spacing_middle"
+        android:paddingRight="@dimen/spacing_middle"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/et_background"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/search_box_myleads"
+                android:layout_width="0dp"
+                android:background="@android:color/transparent"
+                android:layout_weight="0.9"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:padding="8dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:hint="Search"
+                />
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:visibility="visible"
+                android:layout_height="20dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/searchicon" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swiperefresh_myleads"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_no_data_lead"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="No Leads Registered"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:visibility="gone" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lead_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:scrollbars="none"
+                    android:scrollingCache="true" />
+
+            </FrameLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+</FrameLayout>
