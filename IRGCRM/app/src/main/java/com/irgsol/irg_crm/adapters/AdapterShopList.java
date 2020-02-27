@@ -44,10 +44,10 @@ public class AdapterShopList extends RecyclerView.Adapter<AdapterShopList.MyView
 
         ModelShopList modelShopList = modelShopListArrayList.get(position);
 
-        final int shopImg = modelShopList.getShopImg();
-        final String shopName = modelShopList.getShopName();
-        final String shopId = modelShopList.getShopId();
-        final String shopOwnerName = modelShopList.getShopOwnerName();
+        final String shopImg = modelShopList.getShop_img();
+        final String shopName = modelShopList.getShop_name();
+        final String shopId = modelShopList.getShop_id();
+        final String shopOwnerName = modelShopList.getOwner_name();
 
         holder.ivImg.setImageDrawable(context.getDrawable(R.drawable.app_logo));
         // String imgUrl = modelSubService.getSubCategoryImage();

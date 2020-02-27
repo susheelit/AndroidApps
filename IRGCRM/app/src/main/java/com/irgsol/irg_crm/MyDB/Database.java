@@ -6,8 +6,9 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
 import com.irgsol.irg_crm.dao.CartItemsDao;
+import com.irgsol.irg_crm.models.ModelProduct;
 
-@androidx.room.Database(entities = {CartItems.class}, version = 1, exportSchema = false)
+@androidx.room.Database(entities = {ModelProduct.class}, version = 1, exportSchema = false)
 public abstract class Database extends RoomDatabase {
 
     private static final String db_name = "irg_crmDB";

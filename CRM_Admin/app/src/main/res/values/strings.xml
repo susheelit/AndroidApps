@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">CRM_Admin</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_shoplist">Shop List</string>
+    <string name="menu_orderhistory">Order History</string>
+    <string name="menu_paymenthistory">Payment History</string>
+    <string name="menu_myproduct">My Product</string>
+    <string name="menu_mysalesman">My Salesman</string>
+    <string name="menu_logout">Logout</string>
+    <string name="no_connection">No internet connection.</string>
+    <string name="delete">DELETE</string>
+    <string name="update">UPDATE</string>
+    <string name="qty">QTY</string>
+    <string name="price">Price</string>
+    <string name="area">Area</string>
+    <string name="mobile">Mobile</string>
+    <string name="remove">REMOVE</string>
+</resources>

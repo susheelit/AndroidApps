@@ -16,12 +16,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.irgsol.irg_crm.MyDB.CartItems;
 import com.irgsol.irg_crm.MyDB.Database;
 import com.irgsol.irg_crm.R;
 import com.irgsol.irg_crm.adapters.AdapterCheckout;
 import com.irgsol.irg_crm.common.OprActivity;
 import com.irgsol.irg_crm.common.SharedPref;
+import com.irgsol.irg_crm.models.ModelProduct;
 
 import java.util.List;
 
@@ -83,7 +83,7 @@ public class CheckoutActivity extends AppCompatActivity {
             swipeRefreshLayout.setRefreshing(false);
         }
 
-        final List<CartItems> getTotalAmt= myDB.cartItemsDao().getCartItem(shopId);
+        final List<ModelProduct> getTotalAmt= myDB.cartItemsDao().getCartItem(shopId);
 
         final AdapterCheckout mAdapter = new AdapterCheckout(context, getTotalAmt);
         recyclerView.setVisibility(View.VISIBLE);
@@ -92,7 +92,7 @@ public class CheckoutActivity extends AppCompatActivity {
 
         mAdapter.setOnItemClickListener(new AdapterCheckout.OnItemClickListener() {
             @Override
-            public void onItemClick(View view, final CartItems obj, int position) {
+            public void onItemClick(View view, final ModelProduct obj, int position) {
 
                AlertDialog.Builder dialog = new AlertDialog.Builder(context);
                dialog.setTitle("Do you want to delete item");
@@ -104,7 +104,7 @@ public class CheckoutActivity extends AppCompatActivity {
                        showTotalAmt();
                        getTotalAmt.clear();
 
-                       final List<CartItems> getTotalAmt= myDB.cartItemsDao().getCartItem(shopId);
+                       final List<ModelProduct> getTotalAmt= myDB.cartItemsDao().getCartItem(shopId);
 
                        final AdapterCheckout mAdapter = new AdapterCheckout(context, getTotalAmt);
                        recyclerView.setVisibility(View.VISIBLE);
@@ -127,10 +127,10 @@ public class CheckoutActivity extends AppCompatActivity {
     private void showTotalAmt() {
 
         double totalAmt =0;
-        List<CartItems> getTotalAmt= myDB.cartItemsDao().getCartItem(shopId);
+        List<ModelProduct> getTotalAmt= myDB.cartItemsDao().getCartItem(shopId);
         for(int i=0;i<getTotalAmt.size();i++){
-            String amt = getTotalAmt.get(i).getPrice();
-            int qty = Integer.parseInt(getTotalAmt.get(i).getQty());
+            String amt = getTotalAmt.get(i).getProd_price();
+            int qty = Integer.parseInt(getTotalAmt.get(i).getProd_qty());
             totalAmt = totalAmt+ Double.parseDouble(amt)*qty;
         }
 

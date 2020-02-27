@@ -2,7 +2,6 @@ package com.irgsol.irg_crm.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,30 +11,27 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.irgsol.irg_crm.MyDB.CartItems;
-import com.irgsol.irg_crm.MyDB.Database;
 import com.irgsol.irg_crm.R;
-import com.irgsol.irg_crm.activities.CheckoutActivity;
-import com.irgsol.irg_crm.activities.ProductListActivity;
-import com.irgsol.irg_crm.models.ModelProductList;
+import com.irgsol.irg_crm.models.ModelProduct;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterCheckout extends RecyclerView.Adapter<AdapterCheckout.MyViewHolder> {
 
-    List<CartItems> modelCartItemsArrayList = new ArrayList<CartItems>();
+    List<ModelProduct> modelCartItemsArrayList = new ArrayList<ModelProduct>();
     private OnItemClickListener mOnItemClickListener;
     Context context;
 
 
-    public AdapterCheckout(Context context, List<CartItems> modelCartItemsArrayList) {
+    public AdapterCheckout(Context context, List<ModelProduct> modelCartItemsArrayList) {
         this.context = context;
         this.modelCartItemsArrayList = modelCartItemsArrayList;
         this.context = context;
     }
 
     public interface OnItemClickListener {
-        void onItemClick(View view, CartItems obj, int position);
+        void onItemClick(View view, ModelProduct obj, int position);
     }
 
     public void setOnItemClickListener(final OnItemClickListener mItemClickListener) {
@@ -53,12 +49,12 @@ public class AdapterCheckout extends RecyclerView.Adapter<AdapterCheckout.MyView
    @Override
     public void onBindViewHolder(AdapterCheckout.MyViewHolder holder, final int position) {
 
-        final CartItems modelCartItems = modelCartItemsArrayList.get(position);
+        final ModelProduct modelCartItems = modelCartItemsArrayList.get(position);
 
-        final String pName = modelCartItems.getTitle();
-        final String price = modelCartItems.getPrice();
-        final String qty = modelCartItems.getQty();
-        final int imgUrl = modelCartItems.getItemImg();
+        final String pName = modelCartItems.getProd_name();
+        final String price = modelCartItems.getProd_price();
+        final String qty = modelCartItems.getProd_qty();
+        //final int imgUrl = modelCartItems.getProd_img();
 
         holder.ivImg.setImageDrawable(context.getDrawable(R.drawable.app_logo));
         // String imgUrl = modelSubService.getSubCategoryImage();

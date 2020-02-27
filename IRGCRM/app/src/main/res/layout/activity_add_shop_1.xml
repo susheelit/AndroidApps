@@ -11,112 +11,217 @@
         android:id="@+id/include"
         layout="@layout/layout_toolbar" />
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/llPhoto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/margin_5">
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llButton"
+            android:layout_marginTop="@dimen/margin_5">
 
-        <LinearLayout style="@style/main_layout">
+            <LinearLayout style="@style/main_layout">
 
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ivShopImg"
-            android:layout_width="@dimen/margin_120"
-            android:layout_height="@dimen/margin_120"
-            android:layout_gravity="center"
-            android:scaleType="fitXY"
-            android:src="@drawable/app_logo" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="@dimen/margin_120"
+                    android:layout_height="@dimen/margin_120"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/app_logo" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnUpload"
-            android:layout_width="wrap_content"
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnUpload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_10"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_5"
+                    android:text="UPLOAD" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextLabelStyle"
+                    android:layout_marginTop="@dimen/margin_10"
+                    app:hintTextAppearance="@style/TextHintSize">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etShopName"
+                        style="@style/editTextStyle_2"
+                        android:hint="@string/shop_name"
+                        android:inputType="textPersonName" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextLabelStyle"
+                    app:hintTextAppearance="@style/TextHintSize">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etOwner"
+                        style="@style/editTextStyle_2"
+                        android:hint="@string/owner_name"
+                        android:inputType="textPersonName" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextLabelStyle"
+                    app:hintTextAppearance="@style/TextHintSize">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etEmail"
+                        style="@style/editTextStyle_2"
+                        android:hint="@string/your_email_id"
+                        android:inputType="textEmailAddress" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextLabelStyle"
+                    app:hintTextAppearance="@style/TextHintSize">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etMobile"
+                        style="@style/editTextStyle_2"
+                        android:maxLength="10"
+                        android:hint="@string/hint_enter_mobile_no"
+                        android:inputType="number" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--Landline no-->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextLabelStyle"
+                    app:hintTextAppearance="@style/TextHintSize">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etLandline"
+                        style="@style/editTextStyle_2"
+                        android:hint="@string/Landline"
+                        android:inputType="number"
+                        android:maxLength="12" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- <androidx.appcompat.widget.AppCompatButton
+                     android:id="@+id/btnSubmit"
+                     style="@style/androidx.appcompat.widget.AppCompatButtonStyle"
+                     android:layout_margin="@dimen/margin_20"
+                     android:text="@string/submit_request" />-->
+
+                <!--House No-->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextLabelStyle"
+                    app:hintTextAppearance="@style/TextHintSize">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etAddress"
+                        style="@style/editTextStyle_2"
+                        android:hint="@string/shop_address"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--City name-->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextLabelStyle"
+                    app:hintTextAppearance="@style/TextHintSize">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etCity"
+                        style="@style/editTextStyle_2"
+                        android:hint="@string/city"
+                        android:inputType="textPersonName"
+                        android:longClickable="false" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--District Name-->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextLabelStyle"
+                    app:hintTextAppearance="@style/TextHintSize">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etDistrict"
+                        style="@style/editTextStyle_2"
+                        android:hint="@string/district"
+                        android:inputType="textPersonName"
+                        android:longClickable="false" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--State name-->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextLabelStyle"
+                    app:hintTextAppearance="@style/TextHintSize">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etState"
+                        style="@style/editTextStyle_2"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:hint="@string/state"
+                        android:inputType="textPersonName"
+                        android:longClickable="false" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--Pincode-->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextLabelStyle"
+                    app:hintTextAppearance="@style/TextHintSize">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etPincode"
+                        style="@style/editTextStyle_2"
+                        android:hint="@string/pincode"
+                        android:inputType="number"
+                        android:maxLength="6" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/llButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/margin_10"
-            android:gravity="center"
-            android:padding="@dimen/margin_5"
-            android:text="UPLOAD" />
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/TextLabelStyle"
-                android:layout_marginTop="@dimen/margin_10"
-                app:hintTextAppearance="@style/TextHintSize">
+            <!-- <androidx.appcompat.widget.AppCompatButton
+                 android:id="@+id/btnCancel"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:background="@drawable/popup_edittext_shape"
+                 android:layout_margin="@dimen/margin_2"
+                 android:text="@string/cancel" />-->
 
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etShopname"
-                    style="@style/editTextStyle_2"
-                    android:hint="@string/shop_name"
-                    android:inputType="textPersonName" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_2"
+                android:layout_weight="1"
+                android:background="@drawable/btn_red_back"
+                android:text="@string/submit_request"
+                android:textColor="@color/mdtp_white"
+                android:textStyle="bold" />
 
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/TextLabelStyle"
-                app:hintTextAppearance="@style/TextHintSize">
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etOwnername"
-                    style="@style/editTextStyle_2"
-                    android:hint="@string/owner_name"
-                    android:inputType="textPersonName" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/TextLabelStyle"
-                app:hintTextAppearance="@style/TextHintSize">
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etEmailId"
-                    style="@style/editTextStyle_2"
-                    android:hint="@string/your_email_id"
-                    android:inputType="textEmailAddress" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/TextLabelStyle"
-                app:hintTextAppearance="@style/TextHintSize">
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etMobileNo"
-                    style="@style/editTextStyle_2"
-                    android:hint="@string/hint_enter_mobile_no"
-                    android:inputType="number" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <!--Landline no-->
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/TextLabelStyle"
-                app:hintTextAppearance="@style/TextHintSize">
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etAlternetContactno"
-                    style="@style/editTextStyle_2"
-                    android:hint="@string/Landline"
-                    android:inputType="number"
-                    android:maxLength="12" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnSubmit"
-        style="@style/androidx.appcompat.widget.AppCompatButtonStyle"
-        android:layout_margin="@dimen/margin_20"
-        android:text="@string/submit_request" />
+            <!-- style="@style/androidx.appcompat.widget.AppCompatButtonStyle"-->
 
         </LinearLayout>
 
-    </ScrollView>
-
-    </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>

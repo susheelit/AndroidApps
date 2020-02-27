@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
@@ -95,17 +96,16 @@
                         android:text="100"/>
                 </LinearLayout>
 
-
-
             </LinearLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
+           <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnAdd"
                 android:layout_width="@dimen/margin_60"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-               android:layout_centerInParent="true"
+                android:layout_centerInParent="true"
                 android:text="ADD" />
+
 
         </RelativeLayout>
     </LinearLayout>

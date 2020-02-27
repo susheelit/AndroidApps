@@ -1,25 +1,34 @@
 package com.irgsol.irg_crm.activities;
 
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
 import com.irgsol.irg_crm.MyDB.CartItems;
 import com.irgsol.irg_crm.MyDB.Database;
 import com.irgsol.irg_crm.R;
 import com.irgsol.irg_crm.adapters.AdapterProductList;
+import com.irgsol.irg_crm.adapters.AdapterShopList;
 import com.irgsol.irg_crm.common.OprActivity;
 import com.irgsol.irg_crm.common.SharedPref;
-import com.irgsol.irg_crm.models.ModelProductList;
+import com.irgsol.irg_crm.models.ModelProduct;
 import com.irgsol.irg_crm.utils.Config;
+import com.irgsol.irg_crm.utils.MySingleton;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -32,6 +41,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class ProductListActivity extends AppCompatActivity {
 
     Context context;
@@ -41,7 +54,7 @@ public class ProductListActivity extends AppCompatActivity {
     public static LinearLayout llEmptyView;
     private float count = 1;
     public static TextView tvTotalAmt;
-    public static androidx.appcompat.widget.AppCompatButton btnNext;
+    public static Button btnNext;
     SwipeRefreshLayout swipeRefreshLayout;
     Database myDB;
     String shopId = "";
@@ -77,46 +90,98 @@ public class ProductListActivity extends AppCompatActivity {
             @Override
             public void onRefresh() {
                 showTotalAmt();
-                setupDasboard();
+                getProductList();
             }
         });
 
         myDB = Database.getInstance(this);
-        setupDasboard();
+        getProductList();
         showTotalAmt();
     }
 
-    private void setupDasboard() {
+    private void getProductList() {
 
-        if (swipeRefreshLayout.isRefreshing()) {
-            swipeRefreshLayout.setRefreshing(false);
-        }
-        int[] itemImg = {R.drawable.app_logo, R.drawable.app_logo, R.drawable.app_logo, R.drawable.app_logo, R.drawable.app_logo, R.drawable.app_logo, R.drawable.app_logo, R.drawable.app_logo, R.drawable.app_logo, R.drawable.app_logo};
-        String[] title = {"Agarbatti 1", "Agarbatti 2", "Agrbatti 3", "Agarbatti 4", "Agarbatti 5", "Agarbatti 6", "Agarbatti 7", "Agarbatti 8", "Agarbatti 9", "Agarbatti 10"};
-        String[] qty = {"200 gm", "300 gm", "40 gm", "100 gm", "200 gm", "100 gm", "30 gm", "400 gm", "200 gm", "1 kg"};
-        String[] price = {"50", "100", "30", "55", "35", "60", "40", "100", "200", "500"};
-        int[] prodId = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        final ProgressDialog progressDialog = ProgressDialog.show(context, "", "Please wait...", true, false);
+        String apiUrl = Config.baseUrl + "/productList.php";
 
-        List<CartItems> titlelist = new ArrayList<CartItems>();
-        for (int i = 0; i < title.length; i++) {
-            CartItems modelProductList = new CartItems(prodId[i], itemImg[i], title[i],
-                    qty[i], price[i], shopId);
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, apiUrl, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
 
-            titlelist.add(modelProductList);
-        }
+                progressDialog.dismiss();
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    String resultCode = jsonObject.getString("ResultCode");
+                    if (resultCode.equalsIgnoreCase("1")) {
+                        List<ModelProduct>productLists= new ArrayList<>();
 
-        AdapterProductList adapter = new AdapterProductList(context, titlelist);
-        recyclerView.setVisibility(View.VISIBLE);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(adapter);
+                        JSONArray jsonArray = jsonObject.getJSONArray("Data");
+                        Log.e("jsonArray", ""+jsonArray.length());
+                        Log.e("productList ", response);
+                        for (int i = 0; i < jsonArray.length(); i++) {
+
+                            JSONObject jsonObject1 = jsonArray.getJSONObject(i);
+
+                            ModelProduct modelProduct = new ModelProduct(
+
+                                   "14",
+                             jsonObject1.getInt("prod_id"),
+                             jsonObject1.getString("prod_name"),
+                             jsonObject1.getString("prod_img"),
+                             jsonObject1.getString("prod_mrp"),
+                             jsonObject1.getString("prod_price"),
+                             jsonObject1.getString("prod_qty"),
+                             jsonObject1.getString("prod_type"),
+                             jsonObject1.getString("total_sticks"),
+                             jsonObject1.getString("prod_color"),
+                             jsonObject1.getString("prod_sent"),
+                             jsonObject1.getString("prod_company"),
+                             jsonObject1.getString("prod_brand"),
+                             jsonObject1.getString("prod_code"),
+                             jsonObject1.getString("prod_offer"),
+                             jsonObject1.getString("prod_instock"),
+                             jsonObject1.getString("prod_desc"),
+                             jsonObject1.getString("isProdActive"));
+
+                            productLists.add(modelProduct);
+                        }
+
+                        AdapterProductList adapter = new AdapterProductList(context, productLists);
+                        recyclerView.setVisibility(View.VISIBLE);
+                        recyclerView.setItemAnimator(new DefaultItemAnimator());
+                        recyclerView.setAdapter(adapter);
+
+                    } else {
+                        Config.toastShow(jsonObject.getString("Message"), context);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.e("error", e.toString());
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("shopList ", error.toString());
+                progressDialog.dismiss();
+            }
+        });
+
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                100000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+        MySingleton.getInstance(context).addToRequestQueue(stringRequest);
     }
 
 
-    public void addItemDialog(final CartItems modelProductList) {
+    public void addItemDialog(final ModelProduct modelProduct) {
 
         // custom dialog
         final TextView item_name, userInput, unit, rate, totalAmt;
-        androidx.appcompat.widget.AppCompatButton btnOk, cancel;
+        Button btnOk, cancel;
 
         final Dialog dialog = new Dialog(context);
 
@@ -133,11 +198,10 @@ public class ProductListActivity extends AppCompatActivity {
         btnOk = dialog.findViewById(R.id.ok);
         cancel = dialog.findViewById(R.id.cancel);
 
-        item_name.setText(modelProductList.getTitle());
+        item_name.setText(modelProduct.getProd_name());
         // unit.setText(modelProductList.getQty());
-        rate.setText(modelProductList.getPrice());
-        item_name.setText(modelProductList.getTitle());
-        item_name.setText(modelProductList.getTitle());
+        rate.setText(modelProduct.getProd_price());
+
 
         // ontext change qty
         userInput.addTextChangedListener(new TextWatcher() {
@@ -156,14 +220,8 @@ public class ProductListActivity extends AppCompatActivity {
                         s = "0.";
                     }
 
-                   /* String qq= String.valueOf(s);
-                    if (qq.isEmpty())
-                        qq="0";
-
-                    count = Float.parseFloat(qq);
-*/
                     String qty = userInput.getText().toString();
-                    String amt = modelProductList.getPrice().toString();
+                    String amt = modelProduct.getProd_price().toString();
                     totalAmt.setText("" + totalAmt(qty, amt));
                 } else {
                     count = 0;
@@ -185,10 +243,18 @@ public class ProductListActivity extends AppCompatActivity {
                     Config.alertBox("Please enter Qty", context);
                 }else {
 
-                    CartItems cartItems = new CartItems(modelProductList.getProdId(), modelProductList.getItemImg(),
-                            modelProductList.getTitle(), userInput.getText().toString(), modelProductList.getPrice(), modelProductList.getShopId());
+                   // ModelProduct cartItems = new ModelProduct(modelProduct.getProdId(), modelProduct.getItemImg(),
+                        //    modelProduct.getTitle(), userInput.getText().toString(), modelProduct.getPrice(), modelProduct.getShopId());
 
-                    myDB.cartItemsDao().insertCartItem(cartItems);
+                    ModelProduct modelProduct1 = new ModelProduct(modelProduct.getShopId(), modelProduct.getProd_id(),
+                            modelProduct.getProd_name(), modelProduct.getProd_img(), modelProduct.getProd_mrp(),
+                            modelProduct.getProd_price(), userInput.getText().toString(), modelProduct.getProd_type(),
+                            modelProduct.getTotal_sticks(),modelProduct.getProd_color(),modelProduct.getProd_sent(),
+                            modelProduct.getProd_company(), modelProduct.getProd_brand(),modelProduct.getProd_code(),
+                            modelProduct.getProd_offer(), modelProduct.getProd_instock(), modelProduct.getProd_desc(),
+                            modelProduct.getIsProdActive());
+
+                    myDB.cartItemsDao().insertCartItem(modelProduct1);
                     showTotalAmt();
                     dialog.dismiss();
                 }
@@ -209,11 +275,11 @@ public class ProductListActivity extends AppCompatActivity {
     private void showTotalAmt() {
         String shopId = SharedPref.getSharedPreferences(context, "shopId", "");
         double totalAmt = 0;
-        List<CartItems> getTotalAmt = myDB.cartItemsDao().getCartItem(shopId);
+        List<ModelProduct> getTotalAmt = myDB.cartItemsDao().getCartItem(shopId);
         for (int i = 0; i < getTotalAmt.size(); i++) {
-            String amt = getTotalAmt.get(i).getPrice();
+            String amt = getTotalAmt.get(i).getProd_price();
 
-            String qty1 = getTotalAmt.get(i).getQty();
+            String qty1 = getTotalAmt.get(i).getProd_qty();
             if(qty1.isEmpty())
                 qty1="0";
             int qty = Integer.parseInt(qty1);

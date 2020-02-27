@@ -6,25 +6,25 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.irgsol.irg_crm.MyDB.CartItems;
+import com.irgsol.irg_crm.models.ModelProduct;
 
 import java.util.List;
 
 @Dao
 public interface CartItemsDao {
 
-    @Query("SELECT * FROM CartItems where prodId = :prodId AND shopId = :shopId")
-    List<CartItems> checkCartItem(int prodId, String shopId);
+    @Query("SELECT * FROM ModelProduct where prod_id = :prod_id AND shopId = :shopId")
+    List<ModelProduct> checkCartItem(int prod_id, String shopId);
 
-    @Query("SELECT * FROM CartItems where shopId = :shopId")
-    List<CartItems> getCartItem(String shopId);
+    @Query("SELECT * FROM ModelProduct where shopId = :shopId")
+    List<ModelProduct> getCartItem(String shopId);
 
     @Insert
-    void insertCartItem(CartItems cartItems);
+    void insertCartItem(ModelProduct cartItems);
 
     @Update
-    void updateCartItems(CartItems cartItems);
+    void updateCartItems(ModelProduct cartItems);
 
     @Delete
-    void deleteCartItems(CartItems cartItems);
+    void deleteCartItems(ModelProduct cartItems);
 }

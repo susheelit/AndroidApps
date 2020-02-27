@@ -32,7 +32,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.DasboardActivity" />
         <activity android:name=".activities.ChangePassActivity" />
         <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.ContactUsActivity" />
@@ -41,8 +40,6 @@
         <activity android:name=".activities.AddShopActivity_1" />
         <activity android:name=".activities.ProductListActivity" />
         <activity android:name=".activities.HistoryActivity" />
-        <activity android:name=".activities.AddShopActivity_2" />
-        <activity android:name=".activities.ShopListActivity" />
     </application>
 
 </manifest>

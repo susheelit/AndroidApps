@@ -66,8 +66,10 @@ public class LoginActivity extends AppCompatActivity {
 
     public static void attemptLogin( final Context context, String userId, String password) {
 
-        // String apiUrl= Config.baseUrl+"userLogin.php?email_id="+userId+"&password="+password;
-        String apiUrl = "http://192.168.0.105/irg_crm/api/userLogin.php?&email_id=test%40test.com&password=12345";
+         String apiUrl= Config.baseUrl+"userLogin.php?email_id="+userId+"&password="+password;
+       // String apiUrl = "http://192.168.0.105/irg_crm/api/userLogin.php?&email_id=test%40test.com&password=12345";
+
+        Log.e("apiUrl", apiUrl);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, apiUrl, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

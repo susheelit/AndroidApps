@@ -9,6 +9,7 @@ import android.view.WindowManager;
 import android.widget.ProgressBar;
 
 import com.irgsol.irg_crm.R;
+import com.irgsol.irg_crm.common.SharedPref;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -46,7 +47,7 @@ public class SplashActivity extends AppCompatActivity {
             }
         }, 1000);
 
-     //  LoginActivity.attemptLogin(context, SharedPref.getUserID(context), SharedPref.getPassword(context));
+     //  LoginActivity.attemptLogin(context, SharedPref.getEmailId(context), SharedPref.getPassword(context));
 
 
     }

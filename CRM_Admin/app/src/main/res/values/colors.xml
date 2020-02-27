@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#02115B</color>
+    <color name="colorPrimaryDark">#030C35</color>
+    <color name="colorAccent">#D60A4F</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="color_splash_back">#d2d2d2</color>
+
+    <color name="colorBack">#f4f4f4</color>
+
+    <color name="colorWindowBackground">#e6dede</color>
+    <color name="textColor">#cf000000</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="titleTextColor">#ffffff</color>
+    <color name="textHintColor">#d9d4d4</color>
+    <color name="editTextBackColor">#f1e9e9</color>
+    <color name="borderColor">#ec9419</color>
+
+    <color name="btn_back">#119981</color>
+    <color name="btn_back_1">#194941</color>
+    <color name="btn_back_2">#046c5a</color>
+
+    <color name="color_red">#c41610</color>
+    <color name="color_red1">#7b0d0d</color>
+    <color name="color_green">#1f6407</color>
+    <color name="color_yellow">#ec9419</color>
+
+    <color name="color_sub1">#30897b</color>
+    <color name="color_ripple">#ecbcbc</color>
+
+    <color name="color_popup">#89a3a6</color>
+
+
+    <color name="color_1">#dcdedd</color>
+    <color name="color_2">#b3aaaa</color>
+
+    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_80">#37474F</color>
+    <color name="colorlabel">#383838</color>
+    <color name="colorAccentLight">#00324D</color>
+</resources>

@@ -1,6 +1,5 @@
 package com.irgsol.irg_crm.utils;
 
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -13,6 +12,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.text.Html;
 import android.text.format.DateUtils;
+import android.util.Base64;
 import android.view.Gravity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -22,12 +22,11 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.irgsol.irg_crm.R;
-import com.irgsol.irg_crm.activities.DasboardActivity;
 import com.irgsol.irg_crm.activities.LoginActivity;
 import com.irgsol.irg_crm.common.OprActivity;
 import com.irgsol.irg_crm.common.SharedPref;
 
+import java.io.ByteArrayOutputStream;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.ParseException;
@@ -38,13 +37,13 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
- * Created by HDI on 11/30/2016.
+ * Created by IRG on 11/30/2016.
  */
 
 public class Config {
 
     //public static final String baseUrl="http://10.0.2.2/irg_crm/api/";
-    public static final String baseUrl="http://10.0.2.2/irg_crm/api/";
+    public static final String baseUrl="http://192.168.0.106/irg_crm/api/";
 
     public static boolean internetStatus = false;
 
@@ -53,7 +52,6 @@ public class Config {
     public static String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
     public static ProgressDialog mProgressDialog = null;
-
 
     public static void showDialog(Context context) {
         mProgressDialog = new ProgressDialog(context);
@@ -290,6 +288,15 @@ public class Config {
                 .load(uri)
                 .apply(RequestOptions.circleCropTransform())
                 .into(imageView);
+    }
+
+    public static String convertBitmapToBase64String(Bitmap image) {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        image.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+        byte[] byteArray = byteArrayOutputStream.toByteArray();
+        String imageString = Base64.encodeToString(byteArray, Base64.DEFAULT);
+        //  Log.d("base64String", imageString);
+        return imageString;
     }
 
 }

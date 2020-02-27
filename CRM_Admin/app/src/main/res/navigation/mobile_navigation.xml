@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.irg.crm_admin.fragment.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_shoplist"
+        android:name="com.irg.crm_admin.fragment.ShopListFragment"
+        android:label="@string/menu_shoplist"
+        tools:layout="@layout/fragment_shop_list" />
+
+    <fragment
+        android:id="@+id/nav_orderhistory"
+        android:name="com.irg.crm_admin.fragment.MyProductFragment"
+        android:label="@string/menu_orderhistory"
+        tools:layout="@layout/fragment_my_product" />
+
+    <fragment
+        android:id="@+id/nav_paymenthistory"
+        android:name="com.irg.crm_admin.fragment.MySalesmanFragment"
+        android:label="@string/menu_paymenthistory"
+        tools:layout="@layout/fragment_my_salesman" />
+
+    <fragment
+        android:id="@+id/nav_myproduct"
+        android:name="com.irg.crm_admin.fragment.PaymentHistoryFragment"
+        android:label="@string/menu_myproduct"
+        tools:layout="@layout/fragment_payment_history" />
+
+    <fragment
+        android:id="@+id/nav_mysaleaman"
+        android:name="com.irg.crm_admin.fragment.OrderHistoryFragment"
+        android:label="@string/menu_mysalesman"
+        tools:layout="@layout/fragment_order_history" />
+</navigation>

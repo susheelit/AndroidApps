@@ -2,7 +2,6 @@
 package com.aob.aobsalesman.activities.utility;
 
 import android.content.Context;
-import android.support.v7.widget.AppCompatSpinner;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.Spinner;
