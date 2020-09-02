@@ -48,6 +48,7 @@ public class AdapterShopList extends RecyclerView.Adapter<AdapterShopList.MyView
         final String shopName = modelShopList.getShop_name();
         final String shopId = modelShopList.getShop_id();
         final String shopOwnerName = modelShopList.getOwner_name();
+        final String shopOwnerMobile = modelShopList.getOwner_mobile();
 
         holder.ivImg.setImageDrawable(context.getDrawable(R.drawable.app_logo));
         // String imgUrl = modelSubService.getSubCategoryImage();
@@ -60,7 +61,9 @@ public class AdapterShopList extends RecyclerView.Adapter<AdapterShopList.MyView
             @Override
             public void onClick(View v) {
                 // gotoActivity(cosition);
-                SharedPref.putSharedPreferences(context, "shopId", ""+shopId);
+                SharedPref.putShopID(context, ""+shopId);
+                SharedPref.putOwnerName(context, ""+shopOwnerName);
+                SharedPref.putOwnerMobile(context, ""+shopOwnerMobile);
                 OprActivity.openActivity(context, new ProductListActivity());
             }
         });

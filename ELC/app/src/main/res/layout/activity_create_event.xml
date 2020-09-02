@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".activity.CreateEventActivity">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/electoral_literacy_club"
+            android:textSize="@dimen/_18sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/titleTextColor" />
+
+        <LinearLayout
+            android:id="@+id/event_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/form_back"
+            android:orientation="vertical"
+            android:padding="@dimen/_20sdp"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/create_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/btn_back"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/create_event"
+                android:textColor="@color/primaryTextColor"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/upload_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/btn_back"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/upload_event"
+                android:textColor="@color/primaryTextColor"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/createEvent_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_3sdp"
+                android:background="@drawable/form_back"
+                android:orientation="vertical"
+                android:padding="@dimen/_20sdp"
+                android:visibility="gone">
+
+                <!--event date & time-->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tveventDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/et_back"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:hint="@string/select_date_time"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/et_back"
+                    android:hint="@string/enter_title"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:padding="@dimen/_3sdp" />
+
+                <!--description-->
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_110sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/et_back"
+                    android:gravity="start"
+                    android:hint="@string/enter_description"
+                    android:maxLines="5"
+                    android:maxLength="1000"
+                    android:inputType="textMultiLine"
+                    android:padding="@dimen/_5sdp" />
+
+                <!--submit-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/btn_back"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/submit"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

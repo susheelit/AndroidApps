@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <import type="android.text.TextUtils"/>
+        <variable
+            name="leftIconClick"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="leftIconTwoClick"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="rightIconClick"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="rightTitleClick"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="title"
+            type="String" />
+        <variable
+            name="subTitle"
+            type="String" />
+        <variable
+            name="rightTitle"
+            type="String" />
+        <variable
+            name="leftIcon"
+            type="android.graphics.drawable.Drawable" />
+        <variable
+            name="leftIconTwo"
+            type="android.graphics.drawable.Drawable" />
+        <variable
+            name="rightIcon"
+            type="android.graphics.drawable.Drawable" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_left_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@{leftIcon}"
+            android:visibility="@{leftIcon==null ? View.GONE : View.VISIBLE}"
+            android:onClick="@{leftIconClick}"/>
+
+        <ImageView
+            android:id="@+id/iv_left_icon_two"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:src="@{leftIconTwo}"
+            android:visibility="@{leftIconTwo==null ? View.GONE : View.VISIBLE}"
+            android:onClick="@{leftIconTwoClick}"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:text="@{title}"
+            android:layout_weight="1"
+            android:visibility="@{TextUtils.isEmpty(title) ? View.GONE : View.VISIBLE}"/>
+
+        <TextView
+            android:id="@+id/textSubTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:layout_weight="1"
+            android:text="@{subTitle}"
+            android:visibility="@{TextUtils.isEmpty(subTitle) ? View.GONE : View.VISIBLE}"/>
+
+        <TextView
+            android:id="@+id/textRightTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:onClick="@{rightTitleClick}"
+            android:text="@{rightTitle}"
+            android:visibility="@{TextUtils.isEmpty(rightTitle) ? View.GONE : View.VISIBLE}"/>
+
+        <ImageView
+            android:id="@+id/iv_right_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@{rightIcon}"
+            android:visibility="@{rightTitle==null ? View.GONE : View.VISIBLE}"
+            android:onClick="@{rightIconClick}"/>
+    </LinearLayout>
+</layout>

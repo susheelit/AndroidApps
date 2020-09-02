@@ -35,7 +35,7 @@ public class CheckoutActivity extends AppCompatActivity {
     public LinearLayout llEmptyView;
     public TextView tvTotalAmt;
     public static androidx.appcompat.widget.AppCompatButton btnNext;
-    String shopId = "";
+   // String shopId = "";
     Database myDB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +48,7 @@ public class CheckoutActivity extends AppCompatActivity {
         context = CheckoutActivity.this;
         toolbar = findViewById(R.id.toolbar);
         OprActivity.setUpToolbarWithTitle(toolbar, "Checkout",context );
-        shopId = SharedPref.getSharedPreferences(context, "shopId", "");
+      //  shopId = SharedPref.getSharedPreferences(context, "shopId", "");
 
         swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
         recyclerView = findViewById(R.id.recycler_view);
@@ -83,7 +83,7 @@ public class CheckoutActivity extends AppCompatActivity {
             swipeRefreshLayout.setRefreshing(false);
         }
 
-        final List<ModelProduct> getTotalAmt= myDB.cartItemsDao().getCartItem(shopId);
+        final List<ModelProduct> getTotalAmt= myDB.cartItemsDao().getCartItem(SharedPref.getShopID(context));
 
         final AdapterCheckout mAdapter = new AdapterCheckout(context, getTotalAmt);
         recyclerView.setVisibility(View.VISIBLE);
@@ -104,7 +104,7 @@ public class CheckoutActivity extends AppCompatActivity {
                        showTotalAmt();
                        getTotalAmt.clear();
 
-                       final List<ModelProduct> getTotalAmt= myDB.cartItemsDao().getCartItem(shopId);
+                       final List<ModelProduct> getTotalAmt= myDB.cartItemsDao().getCartItem(SharedPref.getShopID(context));
 
                        final AdapterCheckout mAdapter = new AdapterCheckout(context, getTotalAmt);
                        recyclerView.setVisibility(View.VISIBLE);
@@ -127,7 +127,7 @@ public class CheckoutActivity extends AppCompatActivity {
     private void showTotalAmt() {
 
         double totalAmt =0;
-        List<ModelProduct> getTotalAmt= myDB.cartItemsDao().getCartItem(shopId);
+        List<ModelProduct> getTotalAmt= myDB.cartItemsDao().getCartItem(SharedPref.getShopID(context));
         for(int i=0;i<getTotalAmt.size();i++){
             String amt = getTotalAmt.get(i).getProd_price();
             int qty = Integer.parseInt(getTotalAmt.get(i).getProd_qty());

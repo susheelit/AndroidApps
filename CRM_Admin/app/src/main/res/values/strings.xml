@@ -22,4 +22,101 @@
     <string name="area">Area</string>
     <string name="mobile">Mobile</string>
     <string name="remove">REMOVE</string>
+
+    <string name="shop_name">Shop Name</string>
+    <string name="owner_name">Owner Name</string>
+    <string name="your_email_id">Email ID</string>
+    <string name="hint_enter_mobile_no">Mobile No</string>
+    <string name="Landline">Landline No.</string>
+    <string name="shop_address">Shop Address</string>
+    <string name="city">City</string>
+    <string name="district">District</string>
+    <string name="m_state">State</string>
+    <string name="m_pincode">Pincode</string>
+    <string name="submit_request">Submit</string>
+    <string name="state">State</string>
+    <string name="upload">UPLOAD</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="con_password">Confirm Password</string>
+    <string name="already_registered">Already Registered ? Sign In</string>
+    <string name="no_account">Don\'t have account? Sign Up</string>
+    <string name="logon">LOGIN</string>
+    <string name="register">Register</string>
+    <string name="menu_profile">Profile</string>
+    <string name="prodName">Product Name</string>
+    <string name="company">Company Name</string>
+    <string name="brand">Brand Name</string>
+    <string name="prodcode">Product Code</string>
+    <string name="mrp">Product Mrp</string>
+    <string name="prod_price">Product Price</string>
+    <string name="offer">Offer on Product</string>
+    <string name="prodqty">Product Qty</string>
+    <string name="sticks">Total Sticks</string>
+    <string name="prod_type">Product Type</string>
+    <string name="prod_color">Product Color</string>
+    <string name="centtype">Incense  Type</string>
+    <string name="totalstock">Total Stock</string>
+    <string name="prod_desc">Description</string>
+    <string name="wieght">Product Weight</string>
+    <string name="add">Add Product</string>
+    <string name="address">Address</string>
+    <string name="add_salesman">ADD SALESMAN</string>
+    <string name="menu_service_area">Service Area</string>
+    <string name="select">---Select---</string>
+    <string name="add_state">ADD NEW STATE</string>
+    <string name="add_district">ADD NEW DISTRICT</string>
+    <string name="add_city">ADD NEW CITY</string>
+    <string name="add_area">ADD NEW AREA</string>
+    <string name="enter_districtname">District Name</string>
+    <string name="enter_city">City Name</string>
+    <string name="enter_area">Area Name</string>
+    <string name="zone_name">Enter Zone Name</string>
+
+    <string-array name="states_list">
+        <!-- <item>Madhya Pradesh</item>-->
+        <item>Andaman and Nicobar Islands</item>
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chandigarh</item>
+        <item>Chhattisgarh</item>
+        <item>Dadra and Nagar Haveli</item>
+        <item>Daman and Diu</item>
+        <item>Delhi</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Lakshadweep</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Orissa</item>
+        <item>Pondicherry</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Telangana</item>
+        <item>Tripura</item>
+        <item>Uttaranchal</item>
+        <item>Uttar Pradesh</item>
+        <item>West Bengal</item>
+    </string-array>
+
+    <!--istrict list-->
+    <string-array name="mp_district">
+
+
+    </string-array>
+
 </resources>

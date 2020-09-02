@@ -42,8 +42,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Config {
 
-    //public static final String baseUrl="http://10.0.2.2/irg_crm/api/";
-    public static final String baseUrl="http://192.168.0.106/irg_crm/api/";
+    public static final String baseUrl="http://10.128.140.43/irg_crm/api/";
+    //public static final String baseUrl="http://192.168.0.106/irg_crm/api/";
 
     public static boolean internetStatus = false;
 

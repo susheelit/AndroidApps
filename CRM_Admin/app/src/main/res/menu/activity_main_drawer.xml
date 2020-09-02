@@ -4,6 +4,7 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
@@ -20,18 +21,30 @@
             android:id="@+id/nav_paymenthistory"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/menu_paymenthistory" />
+        <item
+            android:id="@+id/nav_myproduct"
+            android:icon="@drawable/ic_menu_share"
+            android:title="@string/menu_myproduct" />
+        <item
+            android:id="@+id/nav_mysaleaman"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_mysalesman" />
+
+        <item
+            android:id="@+id/nav_service_area"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_service_area" />
+
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Other">
         <menu>
+
             <item
-                android:id="@+id/nav_myproduct"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/menu_myproduct" />
-            <item
-                android:id="@+id/nav_mysaleaman"
+                android:id="@+id/nav_profile"
                 android:icon="@drawable/ic_menu_send"
-                android:title="@string/menu_mysalesman" />
+                android:title="@string/menu_profile" />
+
             <item
                 android:id="@+id/nav_logout"
                 android:icon="@drawable/ic_menu_send"

@@ -31,7 +31,7 @@
                 android:textAlignment="textEnd"
                 android:textColor="@color/colorBlack"
                 android:layout_alignParentBottom="true"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
 
         <ScrollView

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="ViewModel"
+            type="com.irg.crm_admin.model.ModelSalesman" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivImage"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/app_logo"
+                app:profileImage="@{ViewModel.user_image}" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/etpName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:padding="@dimen/_5sdp"
+                android:text="@={ViewModel.user_name}"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_17sdp"
+                android:textStyle="bold" />
+
+            <!--Email id-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="Email ID" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etEmail"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.email_id}" />
+
+            </LinearLayout>
+
+            <!--Mobile No-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="Mobile No." />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etMobile"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.mobile_no}" />
+
+            </LinearLayout>
+
+            <!--Area-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="Service Area" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etArea"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.area_name}" />
+
+            </LinearLayout>
+
+            <!--City-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="City" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etCity"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.city_name}" />
+
+            </LinearLayout>
+
+            <!--District-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="District" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etP_Price"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.dist_name}" />
+
+            </LinearLayout>
+
+            <!--State-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="State" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etP_Offer"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.state_name}" />
+
+            </LinearLayout>
+
+            <!--Address-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="Address" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pDesc"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.address}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_red_back"
+                    android:text="UPDATE"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDelete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_red_back"
+                    android:text="DELETE"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

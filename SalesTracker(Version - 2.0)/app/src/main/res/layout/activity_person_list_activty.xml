@@ -81,7 +81,7 @@
         <androidx.appcompat.widget.SearchView
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:
+            android:autofillHints="Search here"
             android:background="@drawable/border_shape">
 
         </androidx.appcompat.widget.SearchView>

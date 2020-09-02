@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="ViewModel"
+            type="com.irg.crm_admin.viewModel.AddProductViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.AddShopActivity">
+
+      <!--  <include
+            android:id="@+id/include"
+            layout="@layout/layout_toolbar" />-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                tools:ignore="MissingConstraints">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    app:navigationIcon="?homeAsUpIndicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    app:title="@{ViewModel.mTitle}"
+                    android:onClick="@{(v) -> ViewModel.onClickBackArrow(v)}"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+                <!--app:onNavigationBackClick="@{1}"-->
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/llPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/llButton"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <LinearLayout style="@style/main_layout">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivImage"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="@dimen/_120sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:scaleType="fitXY"
+                        app:imageUrl="@{ViewModel.prod_img}" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnUpload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:onClick="@{(v) -> ViewModel.onClickUploadImage(v)}"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/upload" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etProdName"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/prodName"
+                            android:inputType="textCapWords"
+                            android:text="@={ViewModel.prod_name}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etProdCompany"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/company"
+                            android:inputType="textCapWords"
+                            android:text="@={ViewModel.prod_company}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etProdBrand"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/brand"
+                            android:inputType="textCapWords"
+                            android:text="@={ViewModel.prod_brand}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etProdCode"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/prodcode"
+                            android:inputType="textCapWords"
+                            android:text="@={ViewModel.prod_code}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--prod_mrp-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etProdMrp"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/mrp"
+                            android:inputType="numberDecimal"
+                            android:text="@={ViewModel.prod_mrp}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--prod_price-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etProdPrice"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/prod_price"
+                            android:inputType="numberDecimal"
+                            android:text="@={ViewModel.prod_price}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--prod_offer-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etProdOffer"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/offer"
+                            android:inputType="textCapWords"
+                            android:text="@={ViewModel.prod_offer}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--prod_qty-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etProdQty"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/prodqty"
+                            android:inputType="number"
+                            android:text="@={ViewModel.prod_qty}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--total_sticks-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etTotalSticks"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/sticks"
+                            android:inputType="number"
+                            android:text="@={ViewModel.total_sticks}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--wieght-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etwieght"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/wieght"
+                            android:inputType="text"
+                            android:text="@={ViewModel.prod_weight}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--prod_type-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etProdType"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/prod_type"
+                            android:inputType="textCapWords"
+                            android:text="@={ViewModel.prod_type}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--prod_color-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etProdColor"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/prod_color"
+                            android:inputType="textCapWords"
+                            android:text="@={ViewModel.prod_color}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--prod_sent-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etProdCent"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/centtype"
+                            android:inputType="textCapWords"
+                            android:text="@={ViewModel.prod_sent}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--prod_instock-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etProdInstock"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/totalstock"
+                            android:inputType="number"
+                            android:text="@={ViewModel.prod_instock}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--prod_desc-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etProdDesc"
+                            style="@style/editTextStyle_2"
+                            android:background="@drawable/edit_tv_back"
+                            android:hint="@string/prod_desc"
+                            android:layout_height="@dimen/_100sdp"
+                            android:gravity="center_vertical|top"
+                            android:inputType="textAutoComplete"
+                            android:text="@={ViewModel.prod_desc}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/llButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_red_back"
+                    android:onClick="@{(v) -> ViewModel.onClickAddProduct(v)}"
+                    android:text="@string/submit_request"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

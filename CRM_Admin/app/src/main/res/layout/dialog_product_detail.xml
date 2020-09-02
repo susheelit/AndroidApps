@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="ViewModel"
+            type="com.irg.crm_admin.model.ModelProduct" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivImage"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/app_logo"
+                app:profileImage="@{ViewModel.prod_img}" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/etpName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:padding="@dimen/_5sdp"
+                android:text="@={ViewModel.prod_name}"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_17sdp"
+                android:textStyle="bold" />
+
+            <!--Company name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="Company Name" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etCName"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.prod_company}" />
+
+            </LinearLayout>
+
+            <!--Brand Name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="Brand Name" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etBName"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.prod_brand}" />
+
+            </LinearLayout>
+
+            <!--product code-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="Product Code" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etPCode"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.prod_code}" />
+
+            </LinearLayout>
+
+            <!--Product  MRP-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="Product MRP" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etP_Mrp"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.prod_mrp}" />
+
+            </LinearLayout>
+
+            <!--Product Price-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="Product Price" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etP_Price"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.prod_price}" />
+
+            </LinearLayout>
+
+            <!--Product offer-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="Product Offer" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etP_Offer"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.prod_offer}" />
+
+            </LinearLayout>
+
+            <!--Product QTY-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="Product QTY" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etP_QTY"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.prod_qty}" />
+
+            </LinearLayout>
+
+            <!--Total Sticks-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="Total Sticks" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etT_Sticks"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.total_sticks}" />
+
+            </LinearLayout>
+
+            <!--Product Weight-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="Product Weight" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etP_Weight"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.prod_weight}" />
+
+            </LinearLayout>
+
+            <!--Product Type-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="Product Type" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etP_Type"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.prod_type}" />
+
+            </LinearLayout>
+
+            <!--Product Color-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="Product Color" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etP_Color"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.prod_color}" />
+
+            </LinearLayout>
+
+            <!--Incense Type-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="Incense Type" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etIncenseType"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.prod_sent}" />
+
+            </LinearLayout>
+
+            <!--Total Stocks-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="Total Stocks" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etTotalSticks"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.prod_instock}" />
+
+            </LinearLayout>
+
+            <!--Descrition-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:layout_width="@dimen/_120sdp"
+                    android:text="Descrition" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/pDesc"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.prod_price}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_red_back"
+                    android:text="UPDATE"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDelete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_red_back"
+                    android:text="DELETE"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

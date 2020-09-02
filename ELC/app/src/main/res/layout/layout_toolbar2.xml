@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@color/primaryColor"
+    android:layout_height="?actionBarSize">
+
+    <ImageView
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:src="@drawable/ic_eci_logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textAllCaps="true"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@android:color/white"
+        android:text="@string/cheif_electoral_officer_delhi"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"/>
+
+</RelativeLayout>

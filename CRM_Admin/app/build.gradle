@@ -22,7 +22,6 @@ android {
         enabled = true
     }
 
-
     // Top-level build file where you can add configuration options common to all sub-projects/modules.
     buildscript {
         repositories {
@@ -54,6 +53,7 @@ dependencies {
     //glide for image
     implementation "com.github.bumptech.glide:glide:4.10.0"
     annotationProcessor "com.github.bumptech.glide:compiler:4.9.0"
+
     implementation 'com.balysv:material-ripple:1.0.2'  // ripple effect
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'com.android.volley:volley:1.1.1'

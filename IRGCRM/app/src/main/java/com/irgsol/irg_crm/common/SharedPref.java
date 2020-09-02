@@ -93,4 +93,28 @@ public class SharedPref {
         return getSharedPreferences(context, "user_image", "");
     }
 
+    public static void putShopID(Context context, String shopId ) {
+        putSharedPreferences(context, "ShopId", shopId);
+    }
+
+    public static String getShopID(Context context) {
+        return getSharedPreferences(context, "ShopId", "");
+    }
+
+    public static void putOwnerName(Context context, String OwnerName ) {
+        putSharedPreferences(context, "OwnerName", OwnerName);
+    }
+
+    public static String getOwnerName(Context context) {
+        return getSharedPreferences(context, "OwnerName", "");
+    }
+
+    public static void putOwnerMobile(Context context, String OwnerMobile ) {
+        putSharedPreferences(context, "OwnerMobile", OwnerMobile);
+    }
+
+    public static String getOwnerMobile(Context context) {
+        return getSharedPreferences(context, "OwnerMobile", "");
+    }
+
 }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="presenter"
+            type="com.aob.myapplication.view_models.MainPresenter"
+            />
+    </data>
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <include layout="@layout/custom_toolbar"
+            app:title="@{presenter.mTitle}"
+            app:subTitle="@{presenter.mSubTitle}"
+            app:rightTitle="@{presenter.mRighTitle}"
+            app:leftIcon="@{@drawable/ic_back}"
+            app:leftIconTwo="@{@drawable/ic_close}"
+            app:rightIcon="@{@drawable/ic_refresh}"
+            app:leftIconClick="@{ () -> presenter.onClick(0)}"
+            app:leftIconTwoClick="@{ () -> presenter.onClick(1)}"
+            app:rightTitleClick="@{ () -> presenter.onClick(2)}"
+            app:rightIconClick="@{ () -> presenter.onClick(3)}" />
+
+    </LinearLayout>
+</layout>

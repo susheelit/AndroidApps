@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".activity.RegistrationActivity">
+
+    <include layout="@layout/layout_toolbar2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/electoral_literacy_club"
+            android:textSize="@dimen/_18sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/titleTextColor" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/form_back"
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp">
+
+            <LinearLayout
+                android:id="@+id/llOtp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--Mobile no-->
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/et_back"
+                    android:hint="@string/mobile_no"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:padding="@dimen/_3sdp" />
+
+                <!--OTP-->
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etOTP"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/et_back"
+                    android:hint="@string/enter_received_otp"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:visibility="gone"
+                    android:maxLines="1"
+                    android:padding="@dimen/_3sdp" />
+
+                <!--OTP Validation-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnGetOtp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/btn_back"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/get_otp"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRegform"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        android:paddingLeft="@dimen/_8sdp"
+                        android:text="@string/district_name_and_no"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spDist"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@drawable/spinner_enabled"
+                        android:entries="@array/district_names"
+                        android:gravity="center"
+                        android:padding="@dimen/_3sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:paddingLeft="@dimen/_8sdp"
+                        android:text="@string/ac_name_and_no"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spAC"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@drawable/spinner_enabled"
+                        android:gravity="center"
+                        android:padding="@dimen/_3sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        android:paddingLeft="@dimen/_8sdp"
+                        android:text="@string/select_ps"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spPS"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@drawable/spinner_enabled"
+                        android:gravity="center"
+                        android:padding="@dimen/_3sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        android:paddingLeft="@dimen/_8sdp"
+                        android:text="@string/select_type"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spType"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@drawable/spinner_enabled"
+                        android:entries="@array/reg_type"
+                        android:gravity="center"
+                        android:padding="@dimen/_3sdp" />
+
+                    <!--NAME OF INSTITUTE-->
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etInstNam"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/et_back"
+                        android:hint="@string/name_of_institute"
+                        android:inputType="textPersonName"
+                        android:maxLength="200"
+                        android:maxLines="1"
+                        android:padding="@dimen/_3sdp" />
+
+                    <!--NAME OF NODAL PERSON-->
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etNodalPerson"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/et_back"
+                        android:hint="@string/name_of_nodal_person"
+                        android:inputType="textPersonName"
+                        android:maxLength="200"
+                        android:maxLines="1"
+                        android:padding="@dimen/_3sdp" />
+
+                    <!--DESIGNATION-->
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etDesignation"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/et_back"
+                        android:hint="@string/designation"
+                        android:inputType="textPersonName"
+                        android:maxLength="200"
+                        android:maxLines="1"
+                        android:padding="@dimen/_3sdp" />
+
+                    <!--Address-->
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/et_back"
+                        android:gravity="start"
+                        android:hint="@string/enter_address"
+                        android:inputType="textMultiLine"
+                        android:lines="4"
+                        android:padding="@dimen/_3sdp" />
+
+                    <!--PINCODE-->
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etPincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/et_back"
+                        android:hint="@string/pincode"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:maxLines="1"
+                        android:padding="@dimen/_3sdp" />
+
+                    <!--submit-->
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/btn_back"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/submit"
+                        android:textColor="@color/primaryTextColor"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

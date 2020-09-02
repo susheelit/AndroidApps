@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ViewModel"
+            type="com.irg.crm_admin.viewModel.RegistrationViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.AddShopActivity">
+
+        <!-- <include
+             android:id="@+id/include"
+             layout="@layout/layout_toolbar" />-->
+
+        <LinearLayout
+            android:id="@+id/llPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <LinearLayout style="@style/main_layout">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivImage"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="@dimen/_120sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/app_logo"
+                        app:profileImage="@{ViewModel.userPhoto}" />
+
+                    <!--app:profileImage="@{userRegistration.userPhoto}"-->
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnUpload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:onClick="@{(v) -> ViewModel.onClickUploadImage(v)}"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/upload" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etUserName"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/user_name"
+                            android:inputType="textPersonName"
+                            android:text="@={ViewModel.userName}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etEmail"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/your_email_id"
+                            android:inputType="textEmailAddress"
+                            android:text="@={ViewModel.userEmail}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etMobile"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/hint_enter_mobile_no"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="@={ViewModel.mobileNo}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize"
+                        app:passwordToggleEnabled="true">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etPassword"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/password"
+                            android:inputType="textPassword"
+                            android:maxLength="10"
+                            android:text="@={ViewModel.password}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize"
+                        app:passwordToggleEnabled="true">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etConPassword"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/con_password"
+                            android:inputType="textPassword"
+                            android:maxLength="10"
+                            android:text="@={ViewModel.conPassword}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_red_back"
+                        android:onClick="@{(v) -> ViewModel.onClickRegistration(v)}"
+                        android:text="@string/register"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:onClick="@{(v) -> ViewModel.onClickAlreadyRegistered(v)}"
+                        android:text="@string/already_registered"
+                        android:textSize="@dimen/_13sdp" />
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

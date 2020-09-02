@@ -18,14 +18,14 @@
             android:background="@color/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-        <TextClock
+       <!-- <TextClock
             android:layout_width="@dimen/margin_100"
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_14"
             android:textColor="@color/colorWhite"
             android:layout_centerVertical="true"
             android:padding="@dimen/margin_5"
-            android:layout_alignParentRight="true"/>
+            android:layout_alignParentRight="true"/>-->
 
 
         <androidx.appcompat.widget.AppCompatImageView

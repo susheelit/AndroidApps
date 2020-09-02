@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_blue">#3a4c60</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#009925</color>
+    <color name="hintcolor">#aaffffff</color>
+
+    <color name="white">#ffffff</color>
+    <color name="offwhite">#f5f7f6</color>
+    <color name="transparent">#00000000</color>
+    <color name="grey">#aa585858</color>
+    <color name="darkgrey">#585858</color>
+    <color name="lightgrey">#6E6E6E</color>
+    <color name="grey_background">#e5e5e5</color>
+    <color name="black">#000000</color>
+    <color name="white_alpha">#aaffffff</color>
+
+    <color name="dashboard_blue">#3368e8</color>
+    <color name="dashboard_yellow">#eeb311</color>
+    <color name="dashboard_red">#d50f26</color>
+    <color name="dashboard_green">#009925</color>
+    <color name="text_shadow">#000000</color>
+    <color name="red">#CC0000</color>
+    <color name="green">#00ba2b</color>
+    <color name="textBlue">#0379dd</color>
+    <color name="skyblue">#d1c4e9</color>
+    <color name="greenlight">#c8e6c9</color>
+    <color name="orange">#ff8a80</color>
+    <color name="primaryLightColor">#45738b</color>
+    <color name="primaryDarkColor">#0D3747</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="titleTextColor">#E1DEDE</color>
+
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorSecondary">#616161</color>
+    <color name="grey_40">#999999</color>
+    <color name="light_blue_900">#01579B</color>
+
+</resources>

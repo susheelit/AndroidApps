@@ -1,33 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <data>
+        <variable
+            name="viewModel"
+            type="com.ceo.ecl.viewModel.LoginViewModel" />
+    </data>
+
+   <!-- <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="wrap_content">-->
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    </com.google.android.material.appbar.AppBarLayout>
+           <!-- <include layout="@layout/layout_toolbar" />-->
 
-    <include layout="@layout/content_main" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/electoral_literacy_club"
+                android:textSize="@dimen/_18sdp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_40sdp"
+                android:background="@color/titleTextColor" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                android:background="@drawable/form_back"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:padding="@dimen/_20sdp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/et_back"
+                    android:hint="@string/enter_institution_id"
+                    android:maxLines="1"
+                    android:text="@={viewModel.instID}"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_16sdp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/btn_back"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/login"
+                    android:onClick="@{()-> viewModel.onLoginClicked()}"
+                    bind:toastMessage="@{viewModel.toastMessage}"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    <!--</ScrollView>-->
+
+</layout>

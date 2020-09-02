@@ -1,0 +1,185 @@
+<resources>
+    <string name="app_name">ELC</string>
+
+    <string name="electoral_literacy_club">Electoral Literacy Club</string>
+    <string name="enter_institution_id">Enter Club ID</string>
+    <string name="login">LOGIN</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="select_date_time"><![CDATA[Select Event Date & Time]]></string>
+    <string name="submit">SUBMIT</string>
+    <string name="don_t_have_institution_id">Don\'t have Club ID</string>
+    <string name="cheif_electoral_officer_delhi">Chief Electoral Officer, Delhi</string>
+    <string name="no_internet">Check your internet connection.</string>
+    <string name="enter_address">Enter address*</string>
+    <string name="name_of_institute">Name of institute*</string>
+    <string name="name_of_nodal_person">Name of nodal person*</string>
+    <string name="designation">Designation*</string>
+    <string name="pincode">Pincode*</string>
+    <string name="select_type">Select ELC type*</string>
+    <string name="ac_name_and_no">AC name and no.*</string>
+    <string name="district_name_and_no">District name and no.*</string>
+    <string name="select_ps">Select PS*</string>
+    <string name="enter_title">Enter Title</string>
+    <string name="create_event">Create Event</string>
+    <string name="upload_event">Upload Event Photos</string>
+    <string name="upload_photos">Upload Photos</string>
+    <string name="mobile_no">Enter Mobile no.</string>
+    <string name="enter_received_otp">Enter Received OTP</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="upload_event_photos">Upload Event photos</string>
+    <string name="event_id">Event ID</string>
+    <string name="event_date">Event Date</string>
+
+    <!--district list-->
+    <string-array name="select">
+        <item>---SELECT---</item>
+    </string-array>
+
+    <string-array name="district_names">
+        <item>---SELECT---</item>
+        <item>1-North-West</item>
+        <item>2-North-East</item>
+        <item>3-South</item>
+        <item>4-Central</item>
+        <item>5-South-West</item>
+        <item>6-East</item>
+        <item>7-West</item>
+        <item>8-North</item>
+        <item>9-New Delhi</item>
+        <item>10-Shahdara</item>
+        <item>11-South-East</item>
+    </string-array>
+
+
+    <string-array name="northwest">
+        <item>---SELECT---</item>
+        <item>06-RITHALA</item>
+        <item>08-MUNDKA</item>
+        <item>09-KIRARI</item>
+        <item>10-SULTANPURI</item>
+        <item>12-MANGOL PURI</item>
+        <item>14-SHALIMAR BAGH</item>
+        <item>16-TRI NAGAR</item>
+    </string-array>
+
+    <string-array name="northeast">
+        <item>---SELECT---</item>
+        <item>65-SEELAMPUR</item>
+        <item>66-GHONDA</item>
+        <item>68-GOKALPUR</item>
+        <item>69-MUSTAFABAD</item>
+        <item>70-KARAWAL NAGAR</item>
+    </string-array>
+
+    <string-array name="south">
+        <item>---SELECT---</item>
+        <item>43-MALVIYA NAGAR</item>
+        <item>45-MEHRAULI</item>
+        <item>46-CHHATARPUR</item>
+        <item>47-DEOLI</item>
+        <item>48-AMBEDKAR NAGAR</item>
+    </string-array>
+
+    <string-array name="central">
+        <item>---SELECT---</item>
+        <item>02-BURARI</item>
+        <item>03-TIMARPUR</item>
+        <item>19-SADAR BAZAR</item>
+        <item>20-CHANDNI CHOWK</item>
+        <item>21-MATIA MAHAL </item>
+        <item>22-BALLIMARAN</item>
+        <item>23-KAROL BAGH </item>
+    </string-array>
+
+    <string-array name="southwest">
+        <item>---SELECT---</item>
+        <item>31-VIKASPURI</item>
+        <item>32-UTTAM NAGAR</item>
+        <item>33-DWARKA</item>
+        <item>34-MATIALA </item>
+        <item>35-NAJAFGARH</item>
+        <item>36-BIJWASAN </item>
+        <item>37-PALAM</item>
+    </string-array>
+
+
+    <string-array name="east">
+        <item>---SELECT---</item>
+        <item>55-TRILOKPURI</item>
+        <item>56-KONDLI</item>
+        <item>57-PATPARGANJ</item>
+        <item>58-LAXMI NAGAR</item>
+        <item>60-KRISHNA NAGAR</item>
+        <item>61-GANDHI NAGAR </item>
+    </string-array>
+
+    <string-array name="west">
+        <item>---SELECT---</item>
+        <item>11-NANGLOI JAT</item>
+        <item>25-MOTI NAGAR </item>
+        <item>26-MADIPUR</item>
+        <item>27-RAJOURI GARDEN</item>
+        <item>28-HARI NAGAR</item>
+        <item>29-TILAK NAGAR</item>
+        <item>30-JANAK PURI </item>
+    </string-array>
+
+    <string-array name="north">
+        <item>---SELECT---</item>
+        <item>01-NARELA</item>
+        <item>04-ADARSH NAGAR</item>
+        <item>05-BADLI</item>
+        <item>07-BAWANA</item>
+        <item>13-ROHINI</item>
+        <item>15-SHAKUR BASTI</item>
+        <item>17-WAZIRPUR </item>
+        <item>18-MODEL TOWN</item>
+    </string-array>
+
+    <string-array name="newdelhi">
+        <item>---SELECT---</item>
+        <item>24-PATEL NAGAR</item>
+        <item>38-DELHI CANTT </item>
+        <item>39-RAJENDRA NAGAR </item>
+        <item>40-NEW DELHI</item>
+        <item>44-R.K.PURAM</item>
+        <item>50-GREATER KAILASH</item>
+    </string-array>
+
+    <string-array name="shahdara">
+        <item>---SELECT---</item>
+        <item>59-VISHWAS NAGAR</item>
+        <item>62-SHAHADARA</item>
+        <item>63-SEEMA PURI</item>
+        <item>64-ROHTAS NAGAR</item>
+        <item>67-BABARPUR</item>
+    </string-array>
+
+    <string-array name="southeast">
+        <item>---SELECT---</item>
+        <item>41-JANGPURA</item>
+        <item>42-KASTURBA NAGAR</item>
+        <item>49-SANGAM VIHAR </item>
+        <item>51-KALKAJI</item>
+        <item>52-TUGHLAKABAD</item>
+        <item>53-BADARPUR</item>
+        <item>54-OKHLA</item>
+    </string-array>
+
+    <!--<string-array name="reg_type">
+        <item>-&#45;&#45;SELECT-&#45;&#45;</item>
+        <item>1-ELC FUTURE VOTER</item>
+        <item>2-ELC NEW VOTER</item>
+        <item>3-CHUNAV PATHSHALA</item>
+        <item>4-VAF</item>
+    </string-array>-->
+
+    <string-array name="reg_type">
+        <item>---SELECT---</item>
+        <item>ELC FUTURE VOTER</item>
+        <item>ELC NEW VOTER</item>
+        <item>CHUNAV PATHSHALA</item>
+        <item>VAF</item>
+    </string-array>
+
+</resources>

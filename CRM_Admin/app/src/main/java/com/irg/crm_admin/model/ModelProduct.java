@@ -6,12 +6,13 @@ import androidx.databinding.BindingAdapter;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.irg.crm_admin.R;
 
-public class ModelProduct {
+import java.io.Serializable;
 
-    private int Id;
-    private int prod_id;
+public class ModelProduct implements Serializable {
+
+   // private int Id;
+    private String prod_id;
     private String prod_name;
     private String prod_img;
     private String prod_mrp;
@@ -19,6 +20,7 @@ public class ModelProduct {
     private String prod_qty;
     private String prod_type;
     private String total_sticks;
+    private String prod_weight;
     private String prod_color;
     private String prod_sent;
     private String prod_company;
@@ -29,11 +31,11 @@ public class ModelProduct {
     private String prod_desc;
     private String isProdActive;
 
-    public ModelProduct(int prod_id, String prod_name, String prod_img, String prod_mrp,
+    public ModelProduct(String prod_id, String prod_name, String prod_img, String prod_mrp,
                         String prod_price, String prod_qty, String prod_type, String total_sticks,
-                        String prod_color, String prod_sent, String prod_company, String prod_brand,
-                        String prod_code, String prod_offer, String prod_instock, String prod_desc,
-                        String isProdActive) {
+                        String prod_weight, String prod_color, String prod_sent, String prod_company,
+                        String prod_brand, String prod_code, String prod_offer, String prod_instock,
+                        String prod_desc, String isProdActive) {
         this.prod_id = prod_id;
         this.prod_name = prod_name;
         this.prod_img = prod_img;
@@ -42,6 +44,7 @@ public class ModelProduct {
         this.prod_qty = prod_qty;
         this.prod_type = prod_type;
         this.total_sticks = total_sticks;
+        this.prod_weight = prod_weight;
         this.prod_color = prod_color;
         this.prod_sent = prod_sent;
         this.prod_company = prod_company;
@@ -53,19 +56,44 @@ public class ModelProduct {
         this.isProdActive = isProdActive;
     }
 
-    public int getId() {
+
+    public ModelProduct(String prod_name, String prod_img, String prod_mrp,
+                        String prod_price, String prod_qty, String prod_type, String total_sticks,
+                        String prod_weight, String prod_color, String prod_sent, String prod_company,
+                        String prod_brand, String prod_code, String prod_offer, String prod_instock,
+                        String prod_desc) {
+        this.prod_name = prod_name;
+        this.prod_img = prod_img;
+        this.prod_mrp = prod_mrp;
+        this.prod_price = prod_price;
+        this.prod_qty = prod_qty;
+        this.prod_type = prod_type;
+        this.total_sticks = total_sticks;
+        this.prod_weight = prod_weight;
+        this.prod_color = prod_color;
+        this.prod_sent = prod_sent;
+        this.prod_company = prod_company;
+        this.prod_brand = prod_brand;
+        this.prod_code = prod_code;
+        this.prod_offer = prod_offer;
+        this.prod_instock = prod_instock;
+        this.prod_desc = prod_desc;
+    }
+
+
+   /* public int getId() {
         return Id;
     }
 
     public void setId(int id) {
         Id = id;
-    }
+    }*/
 
-    public int getProd_id() {
+    public String getProd_id() {
         return prod_id;
     }
 
-    public void setProd_id(int prod_id) {
+    public void setProd_id(String prod_id) {
         this.prod_id = prod_id;
     }
 
@@ -123,6 +151,14 @@ public class ModelProduct {
 
     public void setTotal_sticks(String total_sticks) {
         this.total_sticks = total_sticks;
+    }
+
+    public String getProd_weight() {
+        return prod_weight;
+    }
+
+    public void setProd_weight(String prod_weight) {
+        this.prod_weight = prod_weight;
     }
 
     public String getProd_color() {
@@ -197,18 +233,12 @@ public class ModelProduct {
         this.isProdActive = isProdActive;
     }
 
-    @BindingAdapter("prod_img")
-    public static void loadImage1(ImageView view, String imageUrl) {
-        imageUrl = "https://image.shutterstock.com/image-photo/abstract-ocean-art-natural-luxury-600w-1040400583.jpg";
-        Glide.with(view.getContext())
-                .load(imageUrl).apply(new RequestOptions().circleCrop())
-                .into(view);
-    }
-
-    @BindingAdapter("profileImage")
+    @BindingAdapter("imageUrl")
     public static void loadImage(ImageView view, String imageUrl) {
-       Glide.with(view.getContext())
-                .load(view.getContext().getResources().getDrawable(R.drawable.app_logo)).apply(new RequestOptions().circleCrop())
+        imageUrl = "https://i.pinimg.com/236x/ca/76/0b/ca760b70976b52578da88e06973af542.jpg";
+        Glide.with(view.getContext())
+                .load(imageUrl)
+                .apply(new RequestOptions())
                 .into(view);
     }
 

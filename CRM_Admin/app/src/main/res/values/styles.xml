@@ -6,7 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <!--<item name="android:windowBackground">@color/colorWindowBackground</item>-->
+        <item name="android:windowBackground">@color/colorWindowBackground</item>
         <!--<item name="android:windowBackground">@drawable/img_care_bg</item>-->
     </style>
 
@@ -26,11 +26,11 @@
 
     <style name="titleStyle" parent="AppTheme">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/_50sdp</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:gravity">center</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">@dimen/_25sdp</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
         <item name="android:padding">@dimen/_5sdp</item>
     </style>
 
@@ -49,7 +49,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/textColor</item>
-        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textSize">@dimen/_13sdp</item>
         <item name="android:padding">@dimen/_5sdp</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_gravity">center_vertical</item>
@@ -59,8 +59,8 @@
     <style name="main_layout" parent="AppTheme">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_marginStart">@dimen/_20sdp</item>
-        <item name="android:layout_marginEnd">@dimen/_20sdp</item>
+        <item name="android:layout_marginStart">@dimen/_15sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_15sdp</item>
         <item name="android:orientation">vertical</item>
 
     </style>
@@ -68,7 +68,7 @@
     <style name="form_layout" parent="AppTheme">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_margin">@dimen/_20sdp</item>
+        <item name="android:layout_margin">@dimen/_15sdp</item>
         <item name="android:orientation">vertical</item>
 
     </style>
@@ -79,7 +79,7 @@
         <item name="android:textColor">@color/textColor</item>
         <item name="android:padding">@dimen/_8sdp</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textSize">@dimen/_13sdp</item>
         <item name="android:maxLines">1</item>
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:textColorHint">@color/textHintColor</item>
@@ -91,10 +91,10 @@
         <item name="android:textColor">@color/textColor</item>
         <item name="android:padding">@dimen/_8sdp</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textSize">@dimen/_13sdp</item>
         <item name="android:maxLines">1</item>
         <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:textColorHint">@color/textHintColor</item>
+        <item name="android:textColorHint">@color/color_2</item>
     </style>
 
     <style name="androidx.appcompat.widget.AppCompatButtonStyle" parent="AppTheme">
@@ -117,7 +117,7 @@
     </style>
 
     <style name="TextLabelStyle" parent="TextAppearance.Design.Hint">
-        <item name="android:textSize">@dimen/_18sdp</item>
+        <item name="android:textSize">@dimen/_13sdp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">@dimen/_5sdp</item>
@@ -125,18 +125,18 @@
     </style>
 
     <style name="TextHintSize" parent="TextAppearance.Design.Hint">
-        <item name="android:textSize">@dimen/_18sdp</item>
+        <item name="android:textSize">@dimen/_13sdp</item>
     </style>
 
     <style name="cardViewStyle" parent="CardView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="cardBackgroundColor">@color/colorWhite</item>
-        <item name="cardCornerRadius">@dimen/_5sdp</item>
+        <item name="cardCornerRadius">@dimen/_2sdp</item>
         <item name="cardElevation">@dimen/_1sdp</item>
         <item name="elevation">@dimen/_1sdp</item>
         <item name="android:layout_margin">@dimen/_1sdp</item>
-        <item name="cardUseCompatPadding">true</item>
+        <item name="cardUseCompatPadding">false</item>
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
     </style>
 
@@ -150,7 +150,7 @@
         <item name="android:maxLength">1</item>
         <item name="android:minEms">2</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">@dimen/_22sdp</item>
+        <item name="android:textSize">@dimen/_15sdp</item>
         <item name="android:inputType">number</item>
         <item name="android:focusable">true</item>
         <item name="android:focusableInTouchMode">true</item>
@@ -163,8 +163,24 @@
         <item name="android:text">:</item>
         <item name="android:gravity">center</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">@dimen/_22sdp</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
         <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="detail_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/_5sdp</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">@dimen/_15sdp</item>
+    </style>
+
+    <style name="detail_title_style">
+        <item name="android:layout_width">@dimen/_80sdp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/_5sdp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/_15sdp</item>
     </style>
 
     <style name="RippleStyleWhite">

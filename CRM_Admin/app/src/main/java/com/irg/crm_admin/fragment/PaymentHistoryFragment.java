@@ -4,7 +4,6 @@ import androidx.fragment.app.Fragment;
 
 public class PaymentHistoryFragment extends Fragment {
 
-
   /*  FragmentPaymentHistoryBinding binding;
 
     @SuppressLint("FragmentLiveDataObserve")

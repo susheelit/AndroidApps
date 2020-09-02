@@ -70,7 +70,7 @@ public class ProductListActivity extends AppCompatActivity {
         context = ProductListActivity.this;
         toolbar = findViewById(R.id.toolbar);
         OprActivity.setUpToolbarWithTitle(toolbar, "Product", context);
-        shopId = SharedPref.getSharedPreferences(context, "shopId", "");
+        shopId = SharedPref.getShopID(context);
         recyclerView = findViewById(R.id.recycler_view);
         swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
         llEmptyView = findViewById(R.id.llEmptyView);
@@ -123,8 +123,7 @@ public class ProductListActivity extends AppCompatActivity {
                             JSONObject jsonObject1 = jsonArray.getJSONObject(i);
 
                             ModelProduct modelProduct = new ModelProduct(
-
-                                   "14",
+                                    SharedPref.getShopID(context),
                              jsonObject1.getInt("prod_id"),
                              jsonObject1.getString("prod_name"),
                              jsonObject1.getString("prod_img"),
@@ -141,16 +140,14 @@ public class ProductListActivity extends AppCompatActivity {
                              jsonObject1.getString("prod_offer"),
                              jsonObject1.getString("prod_instock"),
                              jsonObject1.getString("prod_desc"),
-                             jsonObject1.getString("isProdActive"));
+                             jsonObject1.getString("isActive"));
 
                             productLists.add(modelProduct);
                         }
-
                         AdapterProductList adapter = new AdapterProductList(context, productLists);
                         recyclerView.setVisibility(View.VISIBLE);
                         recyclerView.setItemAnimator(new DefaultItemAnimator());
                         recyclerView.setAdapter(adapter);
-
                     } else {
                         Config.toastShow(jsonObject.getString("Message"), context);
                     }
@@ -189,7 +186,6 @@ public class ProductListActivity extends AppCompatActivity {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.popup_layout);
 
-
         item_name = dialog.findViewById(R.id.item_name);
         userInput = dialog.findViewById(R.id.userInput);
         unit = dialog.findViewById(R.id.unit);
@@ -202,7 +198,6 @@ public class ProductListActivity extends AppCompatActivity {
         // unit.setText(modelProductList.getQty());
         rate.setText(modelProduct.getProd_price());
 
-
         // ontext change qty
         userInput.addTextChangedListener(new TextWatcher() {
             @Override
@@ -214,11 +209,12 @@ public class ProductListActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count1) {
 
                if (!s.equals("") || !s.toString().isEmpty() ) {
+                  // if (s.toString().trim().length()>0) {
 
-                    if (s.toString().compareTo(".") == 0) {
-                        userInput.setText("" + 0.);
-                        s = "0.";
-                    }
+                   if (s.toString().compareTo(".") == 0) {
+                       userInput.setText("" + 0);
+                       s = "0";
+                   }
 
                     String qty = userInput.getText().toString();
                     String amt = modelProduct.getProd_price().toString();
@@ -226,6 +222,7 @@ public class ProductListActivity extends AppCompatActivity {
                 } else {
                     count = 0;
                 }
+
             }
 
             @Override
@@ -242,10 +239,6 @@ public class ProductListActivity extends AppCompatActivity {
                 if(userInput.getText().toString().trim().equals("0") || userInput.getText().toString().trim().isEmpty()){
                     Config.alertBox("Please enter Qty", context);
                 }else {
-
-                   // ModelProduct cartItems = new ModelProduct(modelProduct.getProdId(), modelProduct.getItemImg(),
-                        //    modelProduct.getTitle(), userInput.getText().toString(), modelProduct.getPrice(), modelProduct.getShopId());
-
                     ModelProduct modelProduct1 = new ModelProduct(modelProduct.getShopId(), modelProduct.getProd_id(),
                             modelProduct.getProd_name(), modelProduct.getProd_img(), modelProduct.getProd_mrp(),
                             modelProduct.getProd_price(), userInput.getText().toString(), modelProduct.getProd_type(),
@@ -273,7 +266,7 @@ public class ProductListActivity extends AppCompatActivity {
     }
 
     private void showTotalAmt() {
-        String shopId = SharedPref.getSharedPreferences(context, "shopId", "");
+        String shopId = SharedPref.getShopID(context);
         double totalAmt = 0;
         List<ModelProduct> getTotalAmt = myDB.cartItemsDao().getCartItem(shopId);
         for (int i = 0; i < getTotalAmt.size(); i++) {

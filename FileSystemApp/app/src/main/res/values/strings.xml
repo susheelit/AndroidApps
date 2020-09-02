@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">FileApp</string>
+
+    <string name="chief_electoral_officer_delhi">Chief Electoral Officer, Delhi</string>
+
+    <string name="mob_not_reg">Mobile number not registered</string>
+    <!--    <string name="mob_no">9818041897</string>-->
+    <string name="mob_no">8285121470</string>
+    <!--    <string name="mob_no">9650215678</string>-->
+<!--    <string name="mob_no">8285121470</string>-->
+    <string name="error">Some error occurred, please try again</string>
+    <string name="no_rec">No Record found</string>
+    <string name="officer_list">Name &amp; Designation of Officers</string>
+
+    <string name="fcm_token">FCM Token: %s</string>
+
+    <string-array name="status">
+        <item>Select status</item>
+        <item>Approved</item>
+        <item>Approved with comments</item>
+        <item>Remarks</item>
+        <item>Instructions to PA</item>
+
+    </string-array>
+
+    <string-array name="assemblies">
+        <item>NARELA</item>
+        <item>BURARI</item>
+        <item>TIMARPUR</item>
+        <item>ADARSH NAGAR  </item>
+        <item>BADLI</item>
+        <item>RITHALA</item>
+        <item>BAWANA</item>
+        <item>MUNDKA</item>
+        <item>KIRARI</item>
+        <item>SULTANPURI</item>
+        <item>NANGLOI JAT</item>
+        <item>MANGOL PURI</item>
+        <item>ROHINI</item>
+        <item>SHALIMAR BAGH</item>
+        <item>SHAKUR BASTI</item>
+        <item>TRI NAGAR</item>
+        <item>WAZIRPUR </item>
+        <item>MODEL TOWN</item>
+        <item>SADAR BAZAR</item>
+        <item>CHANDNI CHOWK</item>
+        <item>MATIA MAHAL </item>
+        <item>BALLIMARAN</item>
+        <item>KAROL BAGH </item>
+        <item>PATEL NAGAR</item>
+        <item>MOTI NAGAR </item>
+        <item>MADIPUR  </item>
+        <item>RAJOURI GARDEN</item>
+        <item>HARI NAGAR</item>
+        <item>TILAK NAGAR</item>
+        <item>JANAK PURI </item>
+        <item>VIKASPURI</item>
+        <item>UTTAM NAGAR</item>
+        <item>DWARKA</item>
+        <item>MATIALA </item>
+        <item>NAJAFGARH</item>
+        <item>BIJWASAN </item>
+        <item>PALAM</item>
+        <item>DELHI CANTT </item>
+        <item>RAJENDRA NAGAR </item>
+        <item>NEW DELHI</item>
+        <item>JANGPURA</item>
+        <item>KASTURBA NAGAR  </item>
+        <item>MALVIYA NAGAR</item>
+        <item>R.K.PURAM</item>
+        <item>MEHRAULI</item>
+        <item>CHHATARPUR</item>
+        <item>DEOLI </item>
+        <item>AMBEDKAR NAGAR</item>
+        <item>SANGAM VIHAR </item>
+        <item>GREATER KAILASH</item>
+        <item>KALKAJI</item>
+        <item>TUGHLAKABAD </item>
+        <item>BADARPUR</item>
+        <item>OKHLA </item>
+        <item>TRILOKPURI</item>
+        <item>KONDLI</item>
+        <item>PATPARGANJ </item>
+        <item>LAXMI NAGAR</item>
+        <item>VISHWAS NAGAR</item>
+        <item>KRISHNA NAGAR</item>
+        <item>GANDHI NAGAR </item>
+        <item>SHAHADARA</item>
+        <item>SEEMA PURI</item>
+        <item>ROHTAS NAGAR</item>
+        <item>SEELAMPUR</item>
+        <item>GHONDA</item>
+        <item>BABARPUR</item>
+        <item>GOKALPUR</item>
+        <item>MUSTAFABAD</item>
+        <item>KARAWAL NAGAR</item>
+    </string-array>
+</resources>

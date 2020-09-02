@@ -49,8 +49,6 @@ public class AdapterProductList extends RecyclerView.Adapter<AdapterProductList.
 
         final ModelProduct modelProduct = modelProductList.get(position);
 
-
-
         holder.ivImg.setImageDrawable(context.getDrawable(R.drawable.app_logo));
         // String imgUrl = modelSubService.getSubCategoryImage();
         // OprImage.setImageWithUrl(imgUrl, holder.ivServiceImg, context);
@@ -63,7 +61,7 @@ public class AdapterProductList extends RecyclerView.Adapter<AdapterProductList.
             public void onClick(View v) {
                 // open cart dialog
                 Database myDb = Database.getInstance(context);
-                String shopId = SharedPref.getSharedPreferences(context, "shopId","");
+                String shopId = SharedPref.getShopID(context);
                 List<ModelProduct>modelProducts1 = myDb.cartItemsDao().checkCartItem(modelProduct.getProd_id(), shopId);
 
                 if(modelProducts1.size()>0){

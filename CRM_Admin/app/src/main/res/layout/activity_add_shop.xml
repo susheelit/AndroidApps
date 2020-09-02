@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="ViewModel"
+            type="com.irg.crm_admin.viewModel.AddShopViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.AddShopActivity">
+
+       <!-- <include
+            android:id="@+id/include"
+            layout="@layout/layout_toolbar" />-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                tools:ignore="MissingConstraints">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    app:navigationIcon="?homeAsUpIndicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    app:title="@{ViewModel.mTitle}"
+                    android:onClick="@{(v) -> ViewModel.onClickBackArrow(v)}"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/llPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/llButton"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <LinearLayout style="@style/main_layout">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivImage"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="@dimen/_120sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/app_logo"
+                        app:profileImage="@{ViewModel.shop_img}" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnUpload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:onClick="@{(v) -> ViewModel.onClickUploadImage(v)}"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/upload" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etShopName"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/shop_name"
+                            android:inputType="textPersonName"
+                            android:text="@={ViewModel.shop_name}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etOwner"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/owner_name"
+                            android:inputType="textPersonName"
+                            android:text="@={ViewModel.owner_name}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etEmail"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/your_email_id"
+                            android:inputType="textEmailAddress"
+                            android:text="@={ViewModel.owner_email_id}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etMobile"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/hint_enter_mobile_no"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="@={ViewModel.owner_mobile}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--Landline no-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etLandline"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/Landline"
+                            android:inputType="number"
+                            android:maxLength="12"
+                            android:text="@={ViewModel.owner_landline_no}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--Address-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etAddress"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/shop_address"
+                            android:inputType="text"
+                            android:text="@={ViewModel.address}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--Pincode-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextLabelStyle"
+                        app:hintTextAppearance="@style/TextHintSize">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etPincode"
+                            style="@style/editTextStyle_2"
+                            android:hint="@string/m_pincode"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:text="@={ViewModel.pincode}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--state-->
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/spState"
+                        style="@style/editTextStyle_2"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/edit_tv_back"
+                        android:clickable="true"
+                        android:drawableEnd="@drawable/arrow_drop_down_black"
+                        android:focusable="false"
+                        android:hint="Select State"
+                        android:inputType="textCapWords"
+                        android:onClick="@{(v) -> ViewModel.onClickState(v)}"
+                        android:text="@={ViewModel.stateName}"
+                        android:textColorHint="@color/colorPrimary"/>
+
+                    <!--District-->
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/spDist"
+                        style="@style/editTextStyle_2"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/edit_tv_back"
+                        android:clickable="true"
+                        android:drawableEnd="@drawable/arrow_drop_down_black"
+                        android:focusable="false"
+                        android:hint="Select District"
+                        android:inputType="textCapWords"
+                        android:onClick="@{(v) -> ViewModel.onClickDistrict(v)}"
+                        android:text="@={ViewModel.districtName}"
+                        android:textColorHint="@color/colorPrimary"/>
+
+                    <!--City-->
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/spCity"
+                        style="@style/editTextStyle_2"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/edit_tv_back"
+                        android:clickable="true"
+                        android:drawableEnd="@drawable/arrow_drop_down_black"
+                        android:focusable="false"
+                        android:hint="Select City"
+                        android:inputType="textCapWords"
+                        android:onClick="@{(v) -> ViewModel.onClickCity(v)}"
+                        android:text="@={ViewModel.cityName}"
+                        android:textColorHint="@color/colorPrimary"/>
+
+                    <!--Area-->
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/spArea"
+                        style="@style/editTextStyle_2"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/edit_tv_back"
+                        android:clickable="true"
+                        android:drawableEnd="@drawable/arrow_drop_down_black"
+                        android:focusable="false"
+                        android:hint="Select Area"
+                        android:inputType="textCapWords"
+                        android:onClick="@{(v) -> ViewModel.onClickArea(v)}"
+                        android:text="@={ViewModel.areaName}"
+                        android:textColorHint="@color/colorPrimary"/>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/llButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_red_back"
+                    android:onClick="@{(v) -> ViewModel.onClickAddShop(v)}"
+                    android:text="@string/submit_request"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

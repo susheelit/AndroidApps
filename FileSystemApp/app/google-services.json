@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1077761296918",
+    "firebase_url": "https://fileapp-19b92.firebaseio.com",
+    "project_id": "fileapp-19b92",
+    "storage_bucket": "fileapp-19b92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077761296918:android:60b7623759e90a88038337",
+        "android_client_info": {
+          "package_name": "com.ceodelhi.filesystemapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1077761296918-uacpvelptcdtlf2591noqtohev8te5gs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ceodelhi.filesystemapp",
+            "certificate_hash": "54ba65b99bea649dadd4087f0e6049a187d0d84b"
+          }
+        },
+        {
+          "client_id": "1077761296918-p3bdf8adntnt3njo45qr5v03ktht2gng.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAH1Zx6E8twzLB0Tt7w_sPJN3WveQZHcLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1077761296918-p3bdf8adntnt3njo45qr5v03ktht2gng.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

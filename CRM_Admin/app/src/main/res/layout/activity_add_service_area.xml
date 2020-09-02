@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="ViewModel"
+            type="com.irg.crm_admin.viewModel.ServiceAreaViewModel" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="sale"
+            type="java.lang.Boolean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--<include
+            android:id="@+id/include"
+            layout="@layout/layout_toolbar"
+          />-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                tools:ignore="MissingConstraints">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    app:navigationIcon="?homeAsUpIndicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    app:title="@{ViewModel.mTitle}"
+                    android:onClick="@{(v) -> ViewModel.onClickBackArrow(v)}"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+                <!--app:onNavigationBackClick="@{1}"-->
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <LinearLayout style="@style/main_layout">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnAddNewState"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_red_back"
+                            android:onClick="@{(v) -> ViewModel.onClickAddNewState(v)}"
+                            android:text="@string/add_state"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:visibility="@{ViewModel.btnAddNewState , default=visible}" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnAddNewDistrict"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_red_back"
+                            android:onClick="@{(v) -> ViewModel.onClickAddNewDistrict(v)}"
+                            android:text="@string/add_district"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:visibility="@{ViewModel.btnAddNewDistrict , default=visible}" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnAddNewCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_red_back"
+                            android:onClick="@{(v) -> ViewModel.onClickAddNewCity(v)}"
+                            android:text="@string/add_city"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:visibility="@{ViewModel.btnAddNewCity , default=visible}" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnAddNewArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_red_back"
+                            android:onClick="@{(v) -> ViewModel.onClickAddNewArea(v)}"
+                            android:text="@string/add_area"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:visibility="@{ViewModel.btnAddNewArea , default=visible}" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llButton"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/spState"
+                            style="@style/editTextStyle_2"
+                            android:background="@drawable/edit_tv_back"
+                            android:clickable="true"
+                            android:drawableEnd="@drawable/arrow_drop_down_black"
+                            android:focusable="false"
+                            android:hint="Select state"
+                            android:inputType="textCapWords"
+                            android:onClick="@{(v) -> ViewModel.onClickState(v)}"
+                            android:text="@={ViewModel.stateName}"
+                            android:textColorHint="@color/colorPrimary"
+                            android:visibility="@{ViewModel.spState ? View.VISIBLE : View.GONE, default=gone}" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/spDist"
+                            style="@style/editTextStyle_2"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/edit_tv_back"
+                            android:clickable="true"
+                            android:drawableEnd="@drawable/arrow_drop_down_black"
+                            android:focusable="false"
+                            android:hint="Select District"
+                            android:inputType="textCapWords"
+                            android:onClick="@{(v) -> ViewModel.onClickDistrict(v)}"
+                            android:text="@={ViewModel.districtName}"
+                            android:textColorHint="@color/colorPrimary"
+                            android:visibility="@{ViewModel.spDist  ? View.VISIBLE : View.GONE, default=gone}" />
+
+                        <!--Add district-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tblDist"
+                            style="@style/TextLabelStyle"
+                            android:visibility="@{ViewModel.tblDist  ? View.VISIBLE : View.GONE, default=gone}"
+                            app:hintTextAppearance="@style/TextHintSize">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etDistrict"
+                                style="@style/editTextStyle_2"
+                                android:hint="@string/enter_districtname"
+                                android:inputType="textCapWords"
+                                android:text="@={ViewModel.districtName}" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--Add city-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tblCity"
+                            style="@style/TextLabelStyle"
+                            android:visibility="@{ViewModel.tblCity  ? View.VISIBLE : View.GONE, default=gone}"
+                            app:hintTextAppearance="@style/TextHintSize">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etCity"
+                                style="@style/editTextStyle_2"
+                                android:hint="@string/enter_city"
+                                android:inputType="textCapWords"
+                                android:text="@={ViewModel.cityName}" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--Add Area-->
+                        <LinearLayout
+                            android:id="@+id/llArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="vertical"
+                            android:visibility="@{ViewModel.llArea  ? View.VISIBLE : View.GONE, default=gone}">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/spCity"
+                                style="@style/editTextStyle_2"
+                                android:background="@drawable/edit_tv_back"
+                                android:clickable="true"
+                                android:drawableEnd="@drawable/arrow_drop_down_black"
+                                android:focusable="false"
+                                android:hint="Select City"
+                                android:inputType="textCapWords"
+                                android:onClick="@{(v) -> ViewModel.onClickCity(v)}"
+                                android:text="@={ViewModel.cityName}"
+                                android:textColorHint="@color/colorPrimary" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/TextLabelStyle"
+                                app:hintTextAppearance="@style/TextHintSize">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etZone"
+                                style="@style/editTextStyle_2"
+                                android:hint="@string/zone_name"
+                                android:inputType="textCapWords"
+                                android:text="@={ViewModel.zoneName}" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/TextLabelStyle"
+                                app:hintTextAppearance="@style/TextHintSize">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etArea"
+                                    style="@style/editTextStyle_2"
+                                    android:hint="@string/enter_area"
+                                    android:inputType="textCapWords"
+                                    android:text="@={ViewModel.areaname}" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnSubmit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_red_back"
+                            android:onClick="@{(v) -> ViewModel.onClickAddServiceArea(v)}"
+                            android:text="ADD"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:visibility="@{ViewModel.btnSubmit  ? View.VISIBLE : View.GONE, default=gone}" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/home_page3"
+    tools:context=".activities.LoginActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/mytoolbar" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:text="File Disposal System"
+            android:textColor="@color/darkgrey"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/electionType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/outerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rect_corners"
+            android:padding="30dp">
+
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_edittext"
+                android:hint=" Mobile number"
+                android:text="@string/mob_no"
+                android:inputType="number"
+                android:maxLength="10"
+                android:padding="5dp"
+                android:textColorHint="@color/grey"
+                android:translationY="10dp" />
+
+            <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:id="@+id/input_layout_username"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/rect_corners"-->
+            <!--android:padding="5dp">-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/et_mobile"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:hint="Enter your mobile number"-->
+            <!--android:inputType="number"-->
+            <!--android:textColorHint="#ffffff"-->
+            <!--android:maxLength="10"-->
+            <!--android:translationY="10dp" />-->
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+
+            <TextView
+                android:id="@+id/submitbtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/et_mobile"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/rect_tv_white"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Submit"
+                android:textColor="#ffffff"
+                android:textSize="19sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

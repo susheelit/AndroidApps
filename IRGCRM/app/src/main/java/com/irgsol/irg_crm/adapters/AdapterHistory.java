@@ -41,7 +41,7 @@ public class AdapterHistory extends RecyclerView.Adapter<AdapterHistory.MyViewHo
 
         final ModelHistoryList modelHistoryList = modelHistoryListArrayList.get(position);
 
-
+holder.setIsRecyclable(true);
         int imgUrl = modelHistoryList.getShopImg();
         int imageResource = context.getResources().getIdentifier("" + imgUrl, null, context.getPackageName());
 

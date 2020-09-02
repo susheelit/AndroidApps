@@ -35,6 +35,15 @@ public class SharedPref {
         return getSharedPreferences(context, "reg_id", "");
     }
 
+
+    public static void putUserRole(Context context, String user_name) {
+        putSharedPreferences(context, "user_role", user_name);
+    }
+
+    public static String getUserRole(Context context) {
+        return getSharedPreferences(context, "user_role", "");
+    }
+
     public static void putUserName(Context context, String user_name) {
         putSharedPreferences(context, "user_name", user_name);
     }

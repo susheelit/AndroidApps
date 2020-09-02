@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SplashActivity"
+    android:background="@drawable/bg"
+    android:fitsSystemWindows="true">
+
+    <ProgressBar
+        android:id="@+id/simpleProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_8sdp"
+        android:indeterminate="true"
+        android:layout_alignParentTop="true"
+        android:progress="25" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_marginTop="@dimen/_160sdp"
+        android:fitsSystemWindows="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_eci_logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_16sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textColor="@color/primaryDarkColor"
+        android:text="@string/electoral_literacy_club" />
+
+    <!--  <ImageView
+
+          android:layout_width="200dp"
+          android:layout_height="100dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginBottom="8dp"
+          android:fitsSystemWindows="true"
+          android:src="@drawable/spotonlogo1"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.497"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/imageView"
+          app:layout_constraintVertical_bias="0.0" />-->
+
+</RelativeLayout>

@@ -2,6 +2,7 @@ package com.irg.crm_admin.fragment;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -22,7 +23,8 @@ import com.irg.crm_admin.adapter.AdapterShopList;
 import com.irg.crm_admin.common.Config;
 import com.irg.crm_admin.common.MySingleton;
 import com.irg.crm_admin.databinding.FragmentShopListBinding;
-import com.irg.crm_admin.model.ModelShopList;
+import com.irg.crm_admin.model.ModelShop;
+import com.irg.crm_admin.viewModel.ClickEvent;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,21 +34,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShopListFragment extends Fragment {
-    FragmentShopListBinding binding;
+
+   static FragmentShopListBinding binding;
 
     @SuppressLint("FragmentLiveDataObserve")
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shop_list, container, false);
         View view = binding.getRoot();
-        getShopList();
+        ClickEvent handlers = new ClickEvent(getContext());
+        binding.setHandlers(handlers);
+        getShopList(getContext());
         return view;
     }
 
-    private void getShopList() {
+    public static void getShopList(final Context context) {
 
-        final ProgressDialog progressDialog = ProgressDialog.show(getContext(), "", "Please wait...", true, false);
-        String apiUrl = Config.baseUrl + "/shopList.php";
+        final ProgressDialog progressDialog = ProgressDialog.show(context, "", "Please wait...", true, false);
+        String apiUrl = Config.baseUrl + "adminShopList.php";
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, apiUrl, new Response.Listener<String>() {
             @Override
@@ -57,40 +62,32 @@ public class ShopListFragment extends Fragment {
                     JSONObject jsonObject = new JSONObject(response);
                     String resultCode = jsonObject.getString("ResultCode");
                     if (resultCode.equalsIgnoreCase("1")) {
-                        List<ModelShopList> modelShopLists1= new ArrayList<>();
-
+                        List<ModelShop> modelShopLists1 = new ArrayList<>();
+                        modelShopLists1.clear();
                         JSONArray jsonArray = jsonObject.getJSONArray("Data");
-                        Log.e("jsonArray", ""+jsonArray.length());
-                        Log.e("shopList ", response);
                         for (int i = 0; i < jsonArray.length(); i++) {
 
                             JSONObject jsonObject1 = jsonArray.getJSONObject(i);
 
-                            ModelShopList modelShopList = new ModelShopList(
+                            ModelShop modelShop = new ModelShop(jsonObject1.getString("addBy"),
+                                    jsonObject1.getString("shop_id"), jsonObject1.getString("shop_img"),
+                                    jsonObject1.getString("shop_name"), jsonObject1.getString("owner_name"),
+                                    jsonObject1.getString("owner_email_id"), jsonObject1.getString("owner_mobile"),
+                                    jsonObject1.getString("owner_landline_no"), jsonObject1.getString("address"),
+                                    jsonObject1.getString("city_name"), jsonObject1.getString("dist_name"),
+                                    jsonObject1.getString("state_name"), jsonObject1.getString("pincode"),
+                                    jsonObject1.getString("isActive"), jsonObject1.getString("area_id"),
+                                    jsonObject1.getString("state_id"), jsonObject1.getString("dist_id"),
+                                    jsonObject1.getString("city_id"), jsonObject1.getString("area_name"),
+                                    jsonObject1.getString("addOn"));
 
-                                    jsonObject1.getString("shop_id"),
-                                    jsonObject1.getString("area_id"),
-                                    jsonObject1.getString("shop_img"),
-                                    jsonObject1.getString("shop_name"),
-                                    jsonObject1.getString("owner_name"),
-                                    jsonObject1.getString("owner_email_id"),
-                                    jsonObject1.getString("owner_mobile"),
-                                    jsonObject1.getString("owner_landline_no"),
-                                    jsonObject1.getString("address"),
-                                    jsonObject1.getString("city"),
-                                    jsonObject1.getString("district"),
-                                    jsonObject1.getString("state"),
-                                    jsonObject1.getString("pincode"),
-                                    jsonObject1.getString("active_status")
-                            );
-                            modelShopLists1.add(modelShopList);
+                            modelShopLists1.add(modelShop);
                         }
-
-                        AdapterShopList adapter = new AdapterShopList(modelShopLists1, getContext());
+                        AdapterShopList adapter = new AdapterShopList(modelShopLists1, context);
                         binding.setAdapter(adapter);
 
                     } else {
-                        Config.toastShow(jsonObject.getString("Message"), getContext());
+                        Config.toastShow(jsonObject.getString("Message"), context);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -111,6 +108,6 @@ public class ShopListFragment extends Fragment {
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
-        MySingleton.getInstance(getContext()).addToRequestQueue(stringRequest);
+        MySingleton.getInstance(context).addToRequestQueue(stringRequest);
     }
 }

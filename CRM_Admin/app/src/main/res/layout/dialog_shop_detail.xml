@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="ViewModel"
+            type="com.irg.crm_admin.model.ModelShop" />
+    </data>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivImage"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/app_logo"
+                app:profileImage="@{ViewModel.shop_img}" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/etShopName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:padding="@dimen/_5sdp"
+                android:text="@={ViewModel.shop_name}"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_17sdp"
+                android:textStyle="bold" />
+            <!-- android:text="@={ViewModel.shop_name}" />-->
+
+            <!--owner name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:text="Owner" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/ownerName"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.owner_name}" />
+
+            </LinearLayout>
+
+            <!--owner Email-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:text="Email" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/ownerEmail"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.owner_email_id}"  />
+
+            </LinearLayout>
+
+            <!--owner mobile-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:text="Mobile No" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mobile"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.owner_mobile}"  />
+
+            </LinearLayout>
+
+            <!--Landline no-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:text="Landline No" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/landline"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.owner_landline_no}"  />
+
+            </LinearLayout>
+
+            <!--Address-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/detail_title_style"
+                    android:text="Address" />
+
+                <androidx.appcompat.widget.AppCompatTextView style="@style/dot_style" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/address"
+                    style="@style/detail_style"
+                    android:text="@={ViewModel.address}" />
+                   <!-- android:text="@={ViewModel.address + ViewModel.pincode + `\nArea: `
+                    + ViewModel.areaName + `\nCity: ` +ViewModel.cityName + `\nDistrict: ` +ViewModel.districtName
+                    + `\nState: ` +ViewModel.stateName}" />
+-->
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnApprove"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_red_back"
+                android:text="APPROVE"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnUpdate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_red_back"
+                android:text="UPDATE"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRemove"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_red_back"
+                android:text="REMOVE"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        </ScrollView>
+   <!-- </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
+
+</layout>

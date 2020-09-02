@@ -13,6 +13,10 @@
 
         <LinearLayout style="@style/main_layout">
 
+            <TextView
+                style="@style/titleStyle"
+                android:text="Payment Information"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -20,30 +24,31 @@
                 android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="120dp"
+                    android:layout_width="140dp"
                     android:layout_height="wrap_content"
-                    android:text="Payable Amount" />
+                    android:gravity="end"
+                    android:text="Total Item" />
 
                 <TextView
-                   style="@style/dot_style"/>
+                    style="@style/dot_style"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/etTotalItem"
-                    style="@style/editTextStyle_2"
-                    android:text="12" />
+                    style="@style/editTextStyle_2" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_5"
                 android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="120dp"
+                    android:layout_width="140dp"
                     android:layout_height="wrap_content"
-                    android:text="Payable Amount" />
+                    android:gravity="end"
+                    android:text="Total Amount" />
 
                 <TextView
                     style="@style/dot_style"/>
@@ -51,50 +56,114 @@
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/etTotalAmt"
                     style="@style/editTextStyle_2"
-                    android:drawableLeft="@drawable/ic_rupee"
-                    android:text="1230" />
+                    android:drawableLeft="@drawable/ic_rupee" />
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="horizontal">
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/TextLabelStyle"
-                app:hintTextAppearance="@style/TextHintSize">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="Previous Due Amount" />
+
+                <TextView
+                    style="@style/dot_style"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etDueAmt"
+                    style="@style/editTextStyle_2"
+                    android:drawableLeft="@drawable/ic_rupee" />
+
+            </LinearLayout>
+
+            <!--Discount-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="Discount" />
+
+                <TextView
+                    style="@style/dot_style"/>
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etContactPerson"
+                    android:id="@+id/etDiscountAmt"
                     style="@style/editTextStyle_2"
-                    android:hint="@string/contact_person"
-                    android:inputType="textPersonName"
+                    android:hint="Enter Amount"
+                    android:digits="0123456789"
+                    android:inputType="numberDecimal"
+                    android:drawableLeft="@drawable/ic_rupee"
                     android:maxLines="1" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+                <!--  <androidx.appcompat.widget.AppCompatTextView
+                      android:id="@+id/etTotalPayableAmt"
+                      style="@style/editTextStyle_2"
+                      android:drawableLeft="@drawable/ic_rupee" /> -->
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="horizontal">
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/TextLabelStyle"
-                app:hintTextAppearance="@style/TextHintSize">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="Payable Amount" />
+
+                <TextView
+                    style="@style/dot_style"/>
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etMobileNo"
+                    android:id="@+id/etTotalPayableAmt"
                     style="@style/editTextStyle_2"
-                    android:hint="@string/mobile_no"
-                    android:inputType="number"
-                    android:maxLength="10"
+                    android:hint="Enter Payable Amount"
+                    android:inputType="numberDecimal"
+                    android:digits="0123456789"
+                    android:drawableLeft="@drawable/ic_rupee"
                     android:maxLines="1" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+              <!--  <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etTotalPayableAmt"
+                    style="@style/editTextStyle_2"
+                    android:drawableLeft="@drawable/ic_rupee" /> -->
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGetDues"
+                style="@style/androidx.appcompat.widget.AppCompatButtonStyle"
+                android:layout_width="@dimen/margin_150"
+                android:layout_height="@dimen/margin_40"
+                android:layout_gravity="end"
+                android:visibility="gone"
+                android:text="Get Dues Amount" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="120dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/subtitleStyle"
+                android:layout_marginTop="@dimen/margin_10"
                 android:text="Payment Mode" />
+
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/margin_20"
-                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_10"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -113,10 +182,37 @@
 
             </RadioGroup>
 
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabelStyle"
+                app:hintTextAppearance="@style/TextHintSize">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etContactPerson"
+                    style="@style/editTextStyle_2"
+                    android:hint="@string/contact_person"
+                    android:inputType="textPersonName"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabelStyle"
+                app:hintTextAppearance="@style/TextHintSize">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etMobileNo"
+                    style="@style/editTextStyle_2"
+                    android:hint="@string/mobile_no"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnSubmit"
                 style="@style/androidx.appcompat.widget.AppCompatButtonStyle"
-                android:text="@string/submit" />
+                android:text="@string/place_order" />
 
         </LinearLayout>
 

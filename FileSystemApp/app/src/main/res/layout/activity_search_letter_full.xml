@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/home_page3"
+    android:orientation="vertical"
+    tools:context=".activities.FileFullScreen">
+
+    <include
+        android:id="@+id/tool"
+        layout="@layout/mytoolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/letterImageGridView"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rect_corners"
+                android:padding="10dp"
+                android:scrollbars="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/rect_corners"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+
+                <TextView
+                    android:id="@+id/letter_number_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:gravity="center|left"
+                    android:padding="5dp"
+                    android:text="dskajdkasj"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="@color/darkgrey" />
+
+                <TextView
+                    android:id="@+id/letter_subject_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center|left"
+                    android:padding="5dp"
+                    android:text="dskajdkasj"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <!--select reserved part for allocate-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="@color/darkgrey" />
+
+                <TextView
+                    android:id="@+id/source_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center|left"
+                    android:padding="5dp"
+                    android:text="dskajdkasj"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <!--select reserved part for allocate-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="@color/darkgrey" />
+
+                <TextView
+                    android:id="@+id/etStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center|left"
+                    android:padding="5dp"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="@color/darkgrey" />
+
+                <TextView
+                    android:id="@+id/markedOfficersTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left|center"
+                    android:padding="5dp"
+                    android:text="Mark"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="16sp"
+                    android:textStyle="bold|italic"
+                    android:visibility="visible" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="@color/darkgrey" />
+
+                <TextView
+                    android:id="@+id/readOfficersTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left|center"
+                    android:padding="5dp"
+                    android:text="Read By: "
+                    android:textColor="@color/darkgrey"
+                    android:textSize="16sp"
+                    android:textStyle="bold|italic"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="@color/darkgrey" />
+
+                <TextView
+                    android:id="@+id/etComments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center|left"
+                    android:padding="5dp"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="@color/darkgrey" />
+
+                <TextView
+                    android:id="@+id/etInstructions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center|left"
+                    android:padding="5dp"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

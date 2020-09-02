@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/home_page3"
+    android:orientation="vertical"
+    tools:context=".activities.FileFullScreen">
+
+    <include
+        android:id="@+id/tool"
+        layout="@layout/mytoolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fileImageGridView"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rect_corners"
+                android:padding="10dp"
+                android:scrollbars="vertical" />
+
+
+            <!--    <ImageView-->
+            <!--        android:id="@+id/fullimg"-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="200dp"-->
+            <!--        android:layout_gravity="center_horizontal"-->
+            <!--        android:layout_marginTop="10dp"-->
+            <!--        android:layout_marginBottom="10dp"-->
+            <!--        android:scaleType="fitCenter"-->
+            <!--        android:src="@mipmap/home_page3" />-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/rect_corners"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+
+                <TextView
+                    android:id="@+id/file_id_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:gravity="center|left"
+                    android:padding="5dp"
+                    android:text="dskajdkasj"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="@color/grey" />
+
+                <TextView
+                    android:id="@+id/file_name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center|left"
+                    android:padding="5dp"
+                    android:text="dskajdkasj"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <!--select reserved part for allocate-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="@color/grey" />
+
+                <TextView
+                    android:id="@+id/file_desc_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center|left"
+                    android:padding="5dp"
+                    android:text="dskajdkasj"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <!--select reserved part for allocate-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="@color/grey" />
+
+                <TextView
+                    android:id="@+id/file_page_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center|left"
+                    android:padding="5dp"
+                    android:text="dskajdkasj"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <!--select reserved part for allocate-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="@color/grey" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center|left"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/spinner_selector" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="@color/grey" />
+
+                <EditText
+                    android:id="@+id/etStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:hint=" Enter comments"
+                    android:inputType="textMultiLine"
+                    android:maxLength="5000"
+                    android:maxLines="5"
+                    android:minLines="2"
+                    android:padding="5dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/etInstructions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:hint=" Instructions to CA"
+                    android:inputType="textMultiLine"
+                    android:maxLength="5000"
+                    android:maxLines="5"
+                    android:minLines="2"
+                    android:padding="5dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/rect_tv_white"
+                    android:gravity="center"
+                    android:text="SUBMIT"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

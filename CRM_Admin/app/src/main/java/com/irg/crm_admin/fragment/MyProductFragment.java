@@ -1,6 +1,7 @@
 package com.irg.crm_admin.fragment;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -22,6 +23,7 @@ import com.irg.crm_admin.common.Config;
 import com.irg.crm_admin.common.MySingleton;
 import com.irg.crm_admin.databinding.FragmentMyProductBinding;
 import com.irg.crm_admin.model.ModelProduct;
+import com.irg.crm_admin.viewModel.ClickEvent;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,23 +34,25 @@ import java.util.List;
 
 public class MyProductFragment extends Fragment {
 
-    FragmentMyProductBinding binding;
+    static FragmentMyProductBinding binding;
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
          binding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_my_product, container, false);
         View view = binding.getRoot();
+        ClickEvent handlers = new ClickEvent(getContext());
+        binding.setHandlers(handlers);
         //here data must be an instance of the class MarsDataProvider
        // binding.setMarsdata(data);
-        getProductList();
+        getProductList(view.getContext());
         return view;
     }
 
-    private void getProductList() {
+    public static void getProductList(final Context context) {
 
-        final ProgressDialog progressDialog = ProgressDialog.show(getContext(), "", "Please wait...", true, false);
-        String apiUrl = Config.baseUrl + "/productList.php";
+        final ProgressDialog progressDialog = ProgressDialog.show(context, "", "Please wait...", true, false);
+        String apiUrl = Config.baseUrl + "/adminProductList.php";
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, apiUrl, new Response.Listener<String>() {
             @Override
@@ -69,7 +73,7 @@ public class MyProductFragment extends Fragment {
                             JSONObject jsonObject1 = jsonArray.getJSONObject(i);
 
                             ModelProduct modelProduct = new ModelProduct(
-                                    jsonObject1.getInt("prod_id"),
+                                    jsonObject1.getString("prod_id"),
                                     jsonObject1.getString("prod_name"),
                                     jsonObject1.getString("prod_img"),
                                     jsonObject1.getString("prod_mrp"),
@@ -77,6 +81,7 @@ public class MyProductFragment extends Fragment {
                                     jsonObject1.getString("prod_qty"),
                                     jsonObject1.getString("prod_type"),
                                     jsonObject1.getString("total_sticks"),
+                                    jsonObject1.getString("prod_weight"),
                                     jsonObject1.getString("prod_color"),
                                     jsonObject1.getString("prod_sent"),
                                     jsonObject1.getString("prod_company"),
@@ -85,15 +90,15 @@ public class MyProductFragment extends Fragment {
                                     jsonObject1.getString("prod_offer"),
                                     jsonObject1.getString("prod_instock"),
                                     jsonObject1.getString("prod_desc"),
-                                    jsonObject1.getString("isProdActive"));
+                                    jsonObject1.getString("isActive"));
 
                             productLists.add(modelProduct);
                         }
 
-                        AdapterProduct adapter = new AdapterProduct(productLists, getContext());
-                        binding.setMyAdapter(adapter);
+                        AdapterProduct adapter = new AdapterProduct(productLists, context);
+                        binding.setAdapter(adapter);
                     } else {
-                        Config.toastShow(jsonObject.getString("Message"), getContext());
+                        Config.toastShow(jsonObject.getString("Message"), context);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -114,6 +119,6 @@ public class MyProductFragment extends Fragment {
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
-        MySingleton.getInstance(getContext()).addToRequestQueue(stringRequest);
+        MySingleton.getInstance(context).addToRequestQueue(stringRequest);
     }
 }
