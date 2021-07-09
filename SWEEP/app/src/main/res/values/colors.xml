@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#11485d</color>
+    <color name="primaryLightColor">#44738a</color>
+    <color name="colorPrimaryDark">#002133</color>
+
+    <color name="highLiteColor">#5D99B6</color>
+    <color name="btnNormal">#002133</color>
+    <color name="colorControlActivated">#CC66DD</color>
+
+    <color name="white">#ffffff</color>
+    <color name="colorAccent">#9C27B0</color>
+    <color name="hintColor">#aaffffff</color>
+
+    <color name="grey">#aa585858</color>
+    <color name="darkGrey">#585858</color>
+    <color name="black">#60000000</color>
+
+
+    <!--<color name="blue_unpress">#1286E3</color>-->
+
+   <!-- <color name="highliteColor">#5D99B6</color>
+    <color name="btnNormal">#002133</color>
+    <color name="colorControlActivated">#CC66DD</color>
+
+    <color name="textColorPrimary">#ffffff</color>
+    <color name="colorAccent">#9C27B0</color>
+
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+
+    <color name="title_text">#11485D</color>
+
+    <color name="hintcolor">#aaffffff</color>
+
+    <color name="white">#ffffff</color>
+    <color name="offwhite">#f5f7f6</color>
+    <color name="transparent">#00000000</color>
+    <color name="grey">#aa585858</color>
+    <color name="darkgrey">#585858</color>
+    <color name="lightgrey">#6E6E6E</color>
+    <color name="grey_background">#e5e5e5</color>
+    <color name="black">#000000</color>
+    <color name="white_alpha">#aaffffff</color>
+
+    <color name="dashboard_blue">#3368e8</color>
+    <color name="dashboard_yellow">#eeb311</color>
+    <color name="dashboard_red">#d50f26</color>
+    <color name="dashboard_green">#009925</color>
+    <color name="text_shadow">#000000</color>
+    <color name="red">#CC0000</color>
+    <color name="green">#044C15</color>
+    <color name="cefron">#783905</color>
+    <color name="textBlue">#0379dd</color>
+    <color name="skyblue">#d1c4e9</color>
+    <color name="greenlight">#c8e6c9</color>
+    <color name="orange">#ff8a80</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorSecondary">#616161</color>
+    <color name="grey_40">#999999</color>
+    <color name="light_blue_900">#0056b3</color>
+    <color name="grid_border">#0056b3</color>
+    <color name="open_color">#eeb311</color>
+    <color name="closed_color">#044C15</color>
+    <color name="cancel_color">#CC0000</color>
+    <color name="dialogBackground">#60000000</color>
+
+    <color name="blue_unpress">#1286E3</color>-->
+
+</resources>

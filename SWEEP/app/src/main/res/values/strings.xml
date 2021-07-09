@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">SVEEP</string>
+    <string name="file_path">Sveep_app</string>
+    <string name="sveep">Systematic Voters’ Education \n and Electoral Participation</string>
+    <string name="ceo">Chief Electoral Officer</string>
+    <string name="no_internet">No Internet connection</string>
+    <string name="went_wrong">Some error occurred, please try again</string>
+
+</resources>

@@ -1,0 +1,76 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.SWEEP" parent="SWEEP">
+        <!--  <item name="colorPrimary">@color/colorPrimary</item>
+          <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+          <item name="colorAccent">@color/blue_unpress</item>
+
+          <item name="colorControlHighlight">@color/highliteColor</item>
+          <item name="colorButtonNormal">@color/btnNormal</item>
+          <item name="colorControlActivated">@color/colorControlActivated</item>-->
+    </style>
+
+    <style name="SWEEP" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="colorControlHighlight">@color/highLiteColor</item>
+        <item name="colorButtonNormal">@color/btnNormal</item>
+        <item name="colorControlActivated">@color/colorControlActivated</item>
+    </style>
+
+    <!-- <style name="Theme.SWEEP" parent="Theme.AppCompat.Light.NoActionBar">
+         <item name="colorPrimary">@color/colorPrimary</item>
+         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+         <item name="colorAccent">@color/blue_unpress</item>
+
+         <item name="colorControlHighlight">@color/highliteColor</item>
+         <item name="colorButtonNormal">@color/btnNormal</item>
+         <item name="colorControlActivated">@color/colorControlActivated</item>
+     </style>-->
+
+    <style name="CustomDialogTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <style name="MyToolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="materialThemeOverlay">@style/MyThemeOverlay_Toolbar</item>
+    </style>
+
+    <style name="MyThemeOverlay_Toolbar" parent="">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:homeAsUpIndicator">@drawable/abc_vector_test</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/_15sdp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextViewStyle">
+        <item name="android:textColor">@color/darkGrey</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:padding">@dimen/_2sdp</item>
+    </style>
+
+    <style name="verView">
+        <item name="android:layout_width">0.2dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginBottom">@dimen/_3sdp</item>
+        <item name="android:background">@color/grey</item>
+    </style>
+
+    <style name="horView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.2dp</item>
+        <item name="android:background">@color/grey</item>
+    </style>
+
+     <style name="elevation">
+         <item name="elevation">@dimen/_4sdp</item>
+     </style>
+
+</resources>

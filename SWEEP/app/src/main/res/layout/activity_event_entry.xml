@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parent"
+    android:background="@mipmap/img_form_bg"
+    tools:context=".activities.EventEntryActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/layout_toolbar" />
+
+    <EditText
+        android:id="@+id/etEventName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/rect_corners"
+        android:elevation="@dimen/_4sdp"
+        android:ems="10"
+        android:hint="Event Name*"
+        android:inputType="textPersonName"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/rect_corners"
+        android:clickable="true"
+        android:elevation="@dimen/_4sdp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Event Date*"
+        android:inputType="date"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/etEventName"
+        app:layout_constraintStart_toStartOf="@+id/etEventName"
+        app:layout_constraintTop_toBottomOf="@+id/etEventName" />
+
+    <EditText
+        android:id="@+id/etRemark"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/rect_corners"
+        android:elevation="@dimen/_4sdp"
+        android:ems="10"
+        android:gravity="center_vertical|top"
+        android:hint="Remark"
+        android:inputType="text"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/etDate"
+        app:layout_constraintStart_toStartOf="@+id/etDate"
+        app:layout_constraintTop_toBottomOf="@+id/etDate" />
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/btn_pri_back"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:theme="@style/elevation"
+        app:layout_constraintEnd_toEndOf="@+id/etRemark"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/etRemark"
+        app:layout_constraintTop_toBottomOf="@+id/etRemark" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ceo"
+        android:textColor="@color/primaryLightColor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubmit"
+        app:layout_constraintVertical_bias="0.95" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
